@@ -1,19 +1,36 @@
 <p>開始辨識</p>
-var recognition = new webkitSpeechRecognition();
+<!DOCTYPE html>
+<html lang="en">
 
-recognition.continuous=true;
-recognition.interimResults=true;
-recognition.lang="cmn-Hant-TW";
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="oxxo.studio">
+  <meta name="copyright" content="oxxo.studio">
+  <title>Google 語音辨識 API demo1 - OXXO.STUDIO</title>
+</head>
 
-recognition.onstart=function(){
-  console.log('開始辨識...');
-};
-recognition.onend=function(){
-  console.log('停止辨識!');
-};
+<body>
 
-recognition.onresult=function(event){
-  console.log(event);
-};
+  <script>
+    var recognition = new webkitSpeechRecognition();
 
-recognition.start();
+    recognition.continuous=true;
+    recognition.interimResults=true;
+    recognition.lang="cmn-Hant-TW";
+
+    recognition.onstart=function(){
+      console.log('開始辨識...');
+    };
+    recognition.onend=function(){
+      console.log('停止辨識!');
+    };
+
+    recognition.onresult=function(event){
+      console.log(event);
+    };
+
+    recognition.start();  
+  </script>
+</body>
+
+</html>
