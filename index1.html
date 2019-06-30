@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-  <!--<h4>辨識的文字會顯示在下方：<h4>
-  <h1 id="show"></h1>-->
+  <h4>辨識的文字會顯示在下方：<h4>
+  <h1 id="show"></h1>
   <script>
     var show = document.getElementById('show');
     var recognition = new webkitSpeechRecognition();
-if (!('webkitSpeechRecognition' in window)) {
-  <p>請使用google瀏覽器</p>
-} else {<p>辨識的文字會顯示在下方：</p>
+if (!('webkitSpeechRecognition' in window)) {  
+  <h4>請使用google瀏覽器<h4>
+  <h1 id="show"></h1>
+} else {
+  <h4>辨識的文字會顯示在下方：<h4>
+  <h1 id="show"></h1>
+  
    recognition.continuous=true;
     recognition.interimResults=true;
     recognition.lang="cmn-Hant-TW";
