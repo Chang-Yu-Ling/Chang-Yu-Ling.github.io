@@ -18,7 +18,7 @@
     recognition.onresult=function(event){
       var i = event.resultIndex;
       var j = event.results[i].length-1;
-      <!--show.innerHTML = event.results[i][j].transcript;-->
+      show.innerHTML = event.results[i][j].transcript;
 
 var helloWorldBold = new HTMLString.String(event.results[i][j].transcript);
 <!--show.innerHTML=helloWorldBold;-->
