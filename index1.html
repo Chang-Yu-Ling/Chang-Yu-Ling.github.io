@@ -1,13 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="oxxo.studio">
   <meta name="copyright" content="oxxo.studio">
   <title>Google 語音辨識 API demo2 - OXXO.STUDIO</title>
 </head>
-
 <body>
   <h4>辨識的文字會顯示在下方：<h4>
   <h1 id="show"></h1>
@@ -25,14 +24,15 @@
     recognition.onend=function(){
       console.log('停止辨識!');
     };
-
-    recognition.onresult=function(event){
+    function ShowAnswer(){recognition.onresult=function(event){
       var i = event.resultIndex;
       var j = event.results[i].length-1;
       show.innerHTML = event.results[i][j].transcript;
     };
-
+} 
     recognition.start();  
+    Q1=<span id="AnswerBox">_</span>　
+<input type="button" value="Q1" onclick="ShowAnswer()">
   </script>
 </body>
 
