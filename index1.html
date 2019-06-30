@@ -6,8 +6,10 @@
   <script>
     var show = document.getElementById('show');
     var recognition = new webkitSpeechRecognition();
-
-    recognition.continuous=true;
+if (!('webkitSpeechRecognition' in window)) {
+  <p>請使用google瀏覽器<p>
+} else {
+   recognition.continuous=true;
     recognition.interimResults=true;
     recognition.lang="cmn-Hant-TW";
 
@@ -22,29 +24,9 @@
       var j = event.results[i].length-1;
       show.innerHTML = event.results[i][j].transcript;
     };
-    recognition.start();  
-    <h4>辨識的文字會顯示在下方：<h4>
-  <h1 id="show"></h1>
-  <script>
-    var show = document.getElementById('show');
-    var recognition = new webkitSpeechRecognition();
-
-    recognition.continuous=true;
-    recognition.interimResults=true;
-    recognition.lang="cmn-Hant-TW";
-
-    recognition.onstart=function(){
-      console.log('開始辨識...');
-    };
-    recognition.onend=function(){
-      console.log('停止辨識!');
-    };
-    recognition.onresult=function(event){
-      var i = event.resultIndex;
-      var j = event.results[i].length-1;
-      show.innerHTML = event.results[i][j].transcript;
-    };
-    recognition.start();  
+    recognition.start();
+}
+     
   </script>
 </body>
 
