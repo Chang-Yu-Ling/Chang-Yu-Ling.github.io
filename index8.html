@@ -11,7 +11,6 @@ var recognizing = false; // 是否辨識中
 
 function startButton(event) {
   infoBox = document.getElementById("infoBox"); // 取得訊息控制項 infoBox
-
   textBox = document.getElementById("textBox"); // 取得最終的辨識訊息控制項 textBox
   tempBox = document.getElementById("tempBox"); // 取得中間的辨識訊息控制項 tempBox
   startStopButton = document.getElementById("startStopButton"); // 取得「辨識/停止」這個按鈕控制項
@@ -56,30 +55,29 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
         interim_transcript += event.results[i][0].transcript; // 將其加入中間結果中
       }
     }
-    if (final_transcript.trim().length > 0){ // 如果有最終辨識文字
+    if (final_transcript.trim().length > 0) // 如果有最終辨識文字
         textBox.value = final_transcript; // 顯示最終辨識文字
-      }
     if (interim_transcript.trim().length > 0) // 如果有中間辨識文字
         tempBox.value = interim_transcript; // 顯示中間辨識文字
    
     var reg = RegExp(/肚子痛/);
    
     if ( reg.exec(interim_transcript)!=null) // 如果有中間辨識文字
-        tempBox.value = "123"; // 顯示中間辨識文字    
+        tempBox.value = "123"; // 顯示中間辨識文字
+    
   };
 }
-</script>   
-
-使用語言：
+</script>  
+  辨識語言：
 <select id="langCombo">
-    <option value="cmn-Hant-TW">中文(台灣)</option>
   <option value="en-US">英文(美國)</option>
+  <option value="cmn-Hant-TW">中文(台灣)</option>
 </select>
-<input id="startStopButton" type="button" value="開始辨識" onclick="startButton(event)"/><BR/>
+<input id="startStopButton" type="button" value="辨識" onclick="startButton(event)"/><BR/>
+<label id="infoBox"></label>
+<BR/>
+最後結果：<input id="textBox" type="text" size="60" value=""/><BR/>
+中間結果：<input id="tempBox" type="text" size="60" value=""/><BR/>
 
-  <BR/>
-症狀回答：<textarea input id="textBox" type="text" textarea cols="60" rows="15" value=""/></textarea><BR/><BR/>
-   <textBox/><BR/>
-  <label id="infoBox"></label>
 </body>
 </html>
