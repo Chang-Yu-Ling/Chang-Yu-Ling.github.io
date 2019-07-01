@@ -24,10 +24,11 @@
       var i = event.resultIndex;
       var j = event.results[i].length-1;
       <!--show.innerHTML = event.results[i][j].transcript;-->
-        var y[10];
-      y[x] = new String(event.results[i][j].transcript);
-      show.innerHTML = y;
-      x++;
+        var y;
+      y= new String(event.results[i][j].transcript);
+      <!--show.innerHTML = y;-->
+      document.write(y);
+　document.write("<br />");
     };
     recognition.start();  
   </script>
