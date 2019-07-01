@@ -1,0 +1,9 @@
+<script type="text/javascript">
+function ChangeString(){
+    var NewStringValue=document.getElementById("StringTextBox").value;
+    document.getElementById("NewStringBox").innerHTML=NewStringValue;
+}
+</script>
+<p id="NewStringBox">請輸入新的文字來改變這段文字</p>
+<input type="text" id="StringTextBox">
+<input type="button" value="變更文字" onclick="ChangeString()">
