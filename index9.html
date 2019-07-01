@@ -4,7 +4,7 @@
   
 </head>
 <body>
-  <h4>辨識的文字會顯示在下方：++-<h4>
+  <h4>辨識的文字會顯示在下方：@@<h4>
   <h1 id="show"></h1>
   <script>
     var show = document.getElementById('show');
@@ -22,7 +22,7 @@
     recognition.start();       
   </script>   
     <script>
-    show.innerHTML="尋找子字串：myStr.lastIndexOf(\"肚子痛\") = " + myStr.lastIndexOf(\"肚子痛\") +"123"+ "<br>";
+    document.write("尋找子字串：myStr.lastIndexOf(\"肚子痛\") = " + myStr.lastIndexOf(\"肚子痛\") +"123"+ "<br>");
     </script>   
 </body> 
 </html>
