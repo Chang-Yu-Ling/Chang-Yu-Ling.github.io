@@ -66,8 +66,7 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
    
     if ( reg.exec(interim_transcript)!=null) // 如果有中間辨識文字
         tempBox.value = "12345"; // 顯示中間辨識文字    
-  };  
-   document.write(document.getElementById("textBox")); 
+  };
 }
 </script>   
 <BR/>
