@@ -24,10 +24,9 @@
       var i = event.resultIndex;
       var j = event.results[i].length-1;
       <!--show.innerHTML = event.results[i][j].transcript;-->
-        var y;
-      y= new String(event.results[i][j].transcript);
+      var y= new String(event.results[i][j].transcript);
       <!--show.innerHTML = y;-->
-      show.innerHTML =y+"<br />";
+      show.innerHTML =y;
 　<!--document.write("<br />");-->
     };
     recognition.start();  
