@@ -58,20 +58,21 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
     }
     if (final_transcript.trim().length > 0){ // 如果有最終辨識文字
         textBox.value = final_transcript; // 顯示最終辨識文字
-      document.write(document.getElementById("textBox")); }
+      }
     if (interim_transcript.trim().length > 0) // 如果有中間辨識文字
         tempBox.value = interim_transcript; // 顯示中間辨識文字
    
     var reg = RegExp(/肚子痛/);
    
     if ( reg.exec(interim_transcript)!=null) // 如果有中間辨識文字
-        tempBox.value = "12345"; // 顯示中間辨識文字    
+        tempBox.value = "123"; // 顯示中間辨識文字    
   };
 }
 </script>   
 <BR/>
 最後結果：<input id="textBox" type="text" size="60" value=""/><BR/>
 中間結果：<input id="tempBox" type="text" size="60" value=""/><BR/>
+   document.write(document.getElementById("textBox"));
 辨識語言：
 <select id="langCombo">
   <option value="en-US">英文(美國)</option>
