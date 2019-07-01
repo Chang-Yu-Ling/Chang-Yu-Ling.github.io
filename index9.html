@@ -7,8 +7,6 @@
   <h4>辨識的文字會顯示在下方：--<h4>
   <h1 id="show"></h1>
   <script>
-   
-    show.innerHTML="尋找子字串：myStr.lastIndexOf(\"肚子痛\") = " + myStr.lastIndexOf("情") + "<br>";
     var show = document.getElementById('show');
     var recognition = new webkitSpeechRecognition();
     recognition.continuous=true; 
@@ -23,5 +21,8 @@
        };
     recognition.start();       
   </script>   
+    <script>
+    show.innerHTML="尋找子字串：myStr.lastIndexOf(\"肚子痛\") = " + myStr.lastIndexOf("情") + "<br>";
+    </script>   
 </body> 
 </html>
