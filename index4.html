@@ -1,2 +1,9 @@
-var str = "123";
-console.log(str.indexOf("3") != -1 );
+<?php
+$subject="今天的天氣真是好";
+$pattern="天氣";
+if (preg_match("/\天氣/i", $subject)){
+　echo "match";
+}else {
+　echo "not match";
+}
+?>
