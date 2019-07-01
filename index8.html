@@ -51,7 +51,7 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
     var interim_transcript = ''; // 中間結果
     for (var i = event.resultIndex; i < event.results.length; ++i) { // 對於每一個辨識結果
       if (event.results[i].isFinal) { // 如果是最終結果
-        final_transcript= final_transcript +" / " +event.results[i][0].transcript; // 將其加入最終結果中
+        final_transcript= final_transcript +event.results[i][0].transcript; // 將其加入最終結果中
       } else { // 否則
         interim_transcript += event.results[i][0].transcript; // 將其加入中間結果中
       }
