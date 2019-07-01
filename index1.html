@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <bgsound src="https://chang-yu-ling.github.io/1.mp3" loop="1">
 </head>
 <body>
   <h4>辨識的文字會顯示在下方：<h4>
@@ -12,12 +11,7 @@
     recognition.continuous=true;
     recognition.interimResults=true;
     recognition.lang="cmn-Hant-TW";
-   recognition.onstart=function(){
-      console.log('開始辨識...');
-    };
-    recognition.onend=function(){
-      console.log('停止辨識!');
-    };
+   
     recognition.onresult=function(event){
       var i = event.resultIndex;
       var j = event.results[i].length-1;
