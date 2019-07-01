@@ -25,7 +25,6 @@ function startButton(event) {
     recognition.lang = langCombo.value; // 設定辨識語言
     recognition.start(); // 開始辨識
   }
-   document.write(document.getElementById("textBox")); 
 }
 
 if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitSpeechRecognition 這個屬性
@@ -65,9 +64,10 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
     var reg = RegExp(/肚子痛/);
    
     if ( reg.exec(interim_transcript)!=null) // 如果有中間辨識文字
-        tempBox.value = "1234"; // 顯示中間辨識文字
-    
+        tempBox.value = "1234"; // 顯示中間辨識文字    
   };
+  
+   document.write(document.getElementById("textBox")); 
 }
 </script>   
 <BR/>
