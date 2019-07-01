@@ -1,0 +1,19 @@
+<script>
+    var show = document.getElementById('show');
+    var recognition = new webkitSpeechRecognition();
+    recognition.continuous=true;
+    recognition.interimResults=true;
+    recognition.lang="cmn-Hant-TW";
+<script type="text/javascript">
+function ShowAnswer(){
+ecognition.onresult=function(event){
+      var i = event.resultIndex;
+      var j = event.results[i].length-1;
+    document.getElementById("AnswerBox").innerHTML=event.results[i][j].transcript;
+var speech= new String(event.results[i][j].transcript);
+      show.innerHTML=speech;
+}
+</script>
+<h4>辨識的文字會顯示在下方：<h4>
+  <h1 id="show"></h1>=<span id="AnswerBox">_</span>　
+<input type="button" value="顯示" onclick="ShowAnswer()">
