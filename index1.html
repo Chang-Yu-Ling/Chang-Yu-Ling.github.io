@@ -12,22 +12,16 @@
     recognition.continuous=true;
     recognition.interimResults=true;
     recognition.lang="cmn-Hant-TW";
-
    <!-- recognition.onstart=function(){
       console.log('開始辨識...');
     };
     recognition.onend=function(){
       console.log('停止辨識!');
     };-->
-      x=0;
     recognition.onresult=function(event){
       var i = event.resultIndex;
       var j = event.results[i].length-1;
-      <!--show.innerHTML = event.results[i][j].transcript;-->
-      var y= new String(event.results[i][j].transcript);
-      <!--show.innerHTML = y;-->
-      show.innerHTML =y;
-　<!--document.write("<br />");-->
+      show.innerHTML = event.results[i][j].transcript;
     };
     recognition.start();  
   </script>
