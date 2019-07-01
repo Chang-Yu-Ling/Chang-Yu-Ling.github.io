@@ -11,14 +11,15 @@
     recognition.continuous=true;
     recognition.interimResults=true;
     recognition.lang="cmn-Hant-TW";
-   
+   function startDetect(){
     recognition.onresult=function(event){
       var i = event.resultIndex;
       var j = event.results[i].length-1;
       var speech= new String(event.results[i][j].transcript);
       show.innerHTML=speech;
     };
-    recognition.start();  
+    recognition.start();  }
+    <input type="button" value="開始辨識" onclick="startDetect()">
   </script>
 </body>
 </html>
