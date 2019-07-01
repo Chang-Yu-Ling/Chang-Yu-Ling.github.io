@@ -19,7 +19,7 @@
       var j = event.results[i].length-1;
       var speech= new String(event.results[i][j].transcript);
       show.innerHTML=speech;
-      if(speech=="肚子痛")var a="https://chang-yu-ling.github.io/index%20(%E8%A1%9B%E6%95%99%E8%B3%87%E8%A8%8A).html"
+      if(speech.match("肚子痛"))var a="https://chang-yu-ling.github.io/index%20(%E8%A1%9B%E6%95%99%E8%B3%87%E8%A8%8A).html"
     };
     recognition.start();  
       <input type="button" value="文字" onclick=a>
