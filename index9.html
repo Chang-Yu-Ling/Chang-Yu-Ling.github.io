@@ -18,13 +18,13 @@
       var j = event.results[i].length-1;
       var speech= new String(event.results[i][j].transcript);
       show.innerHTML=speech;
-       };
-    recognition.start(); 
       var B= new String("肚子痛");
     show.innerHTML="<br>";
     show.innerHTML=B;
      if(speech.indexOf(B) > -1){<a href="https://chang-yu-ling.github.io/index%20(%E8%A1%9B%E6%95%99%E8%B3%87%E8%A8%8A).html">文字2</a>
    }
+       };
+    recognition.start();       
   </script>   
 </body> 
 </html>
