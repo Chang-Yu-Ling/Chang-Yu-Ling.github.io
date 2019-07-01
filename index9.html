@@ -7,6 +7,8 @@
   <h4>辨識的文字會顯示在下方：__<h4>
   <h1 id="show"></h1>
   <script>
+   
+    document.write("尋找子字串：myStr.lastIndexOf(\"肚子痛\") = " + myStr.lastIndexOf("情") + "<br>");
     var show = document.getElementById('show');
     var recognition = new webkitSpeechRecognition();
     recognition.continuous=true; 
@@ -17,12 +19,7 @@
       var i = event.resultIndex;
       var j = event.results[i].length-1;
       var speech= new String(event.results[i][j].transcript);
-      show.innerHTML=speech;
-      var B= new String("肚子痛");
-    show.innerHTML="<br>";
-    show.innerHTML=B;
-     if(speech.indexOf(B) > -1){<a href="https://chang-yu-ling.github.io/index%20(%E8%A1%9B%E6%95%99%E8%B3%87%E8%A8%8A).html">文字2</a>
-   }
+      show.innerHTML=speech;      
        };
     recognition.start();       
   </script>   
