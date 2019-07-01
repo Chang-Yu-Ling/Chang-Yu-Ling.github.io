@@ -25,6 +25,7 @@ function startButton(event) {
     recognition.lang = langCombo.value; // 設定辨識語言
     recognition.start(); // 開始辨識
   }
+   show.innerHTML=document.getElementById("textBox"); 
 }
 
 if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitSpeechRecognition 這個屬性
