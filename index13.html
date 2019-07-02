@@ -80,8 +80,10 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
 症狀回答：<BR/><textarea input  id="textBox" type="text" cols="60" rows="5" value=""/>
   </textarea><BR/>
  衛教連結：
-   if ( reg.exec(final_transcript)!=null){ // 如果有中間辨識文字
+    <script> 
+  if ( reg.exec(final_transcript)!=null){ // 如果有中間辨識文字
       document.write( ' <a href="https://chang-yu-ling.github.io/index%20(衛教資訊).html">連結</a>');
+    }</script> 
   <input id="tempBox" type="text" size="60" value=""/><BR/>
 
 </body>
