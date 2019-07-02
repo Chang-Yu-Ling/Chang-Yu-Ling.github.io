@@ -8,8 +8,8 @@ var tempBox; // 中間的辨識訊息 text input
 var startStopButton; // 「辨識/停止」按鈕
 var final_transcript = ''; // 最終的辨識訊息的變數
 var recognizing = false; // 是否辨識中
-var num="0";
-var num1="0";
+var num;
+var num1;
 
 
 function startButton(event) {
@@ -27,6 +27,8 @@ function startButton(event) {
     final_transcript = ''; // 最終的辨識訊息變數
     recognition.lang = langCombo.value; // 設定辨識語言
     recognition.start(); // 開始辨識
+    num.value="0";
+    num1.value="0";
   }
 }
 
@@ -47,9 +49,7 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
   recognition.onend = function() { // 辨識完成
     recognizing = false; // 設定為「非辨識中」
     startStopButton.value = "開始辨識";  // 辨識完成...按鈕改為「開始辨識」。
-    infoBox.innerText = ""; // 不顯示訊息
-    num1.value="0";
-    num.value="0";    
+    infoBox.innerText = ""; // 不顯示訊息      
   };
 
   recognition.onresult = function(event) { // 辨識有任何結果時
@@ -86,7 +86,7 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
 <label id="infoBox"></label>
 <BR/>
 症狀回答：<BR/><textarea input  id="textBox" type="text" cols="60" rows="5" value=""/>
-  </textarea><BR/><BR/>
+  </textarea><BR/><BR/><BR/>
  衛教連結：<BR/><BR/>
   <script> 
   if ( num1=="1"){ // 如果有中間辨識文字
