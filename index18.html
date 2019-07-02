@@ -28,8 +28,8 @@ function startButton(event) {
     final_transcript = ''; // 最終的辨識訊息變數
     recognition.lang = langCombo.value; // 設定辨識語言
     recognition.start(); // 開始辨識
-    info=''; // 清除info的辨識訊息
-    infoID.value='';
+    //info=''; // 清除info的辨識訊息
+    //infoID.value='';
   }
 }
 
@@ -72,7 +72,7 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
    
     var reg = RegExp(/肚子痛/);
    
-    if ( reg.exec(final_transcript)!=null){ // 如果有中間辨識文字
+    if ( reg.exec(interim_transcrip)!=null){ // 如果有中間辨識文字
         tempBox.value = "1"; // 顯示中間辨識文字
     ///document.write( ' <a href="https://chang-yu-ling.github.io/index%20(衛教資訊).html">連結</a>');
       info="1";
@@ -96,9 +96,9 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
   if ( tempBox=="1"){ // 如果有中間辨識文字
       document.write( ' <a href="https://chang-yu-ling.github.io/index%20(衛教資訊).html">連結</a>');
     }
-    //else  if (infoID=="0"){document.write( ' <a href="https://chang-yu-ling.github.io/index%20(%E9%80%A3%E7%B5%A1%E6%88%91%E5%80%91).html">連結</a>');}
-   //else {document.write( ' <a href="https://chang-yu-ling.github.io/index%20(%E9%86%AB%E8%97%A5%E5%B0%88%E6%AC%84).html">連結</a>');}
-   document.write("   infoID："+final_transcript+"  & "+info+"  (( ");
+    else  if (infoID=="0"){document.write( ' <a href="https://chang-yu-ling.github.io/index%20(%E9%80%A3%E7%B5%A1%E6%88%91%E5%80%91).html">連結</a>');}
+   else {document.write( ' <a href="https://chang-yu-ling.github.io/index%20(%E9%86%AB%E8%97%A5%E5%B0%88%E6%AC%84).html">連結</a>');}
+   document.write("   infoID："+infoID+"  & "+info+"  >> ");
   </script> <BR/><BR/>
   <input id="tempBox" type="text" size="60" value=""/><BR/>
 
