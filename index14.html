@@ -8,6 +8,7 @@ var tempBox; // 中間的辨識訊息 text input
 var startStopButton; // 「辨識/停止」按鈕
 var final_transcript = ''; // 最終的辨識訊息的變數
 var recognizing = false; // 是否辨識中
+var num1="0";
 
 
 function startButton(event) {
@@ -67,8 +68,8 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
     if ( reg.exec(interim_transcript)!=null){ // 如果有中間辨識文字
         tempBox.value = "https://chang-yu-ling.github.io/index%20(%E8%A1%9B%E6%95%99%E8%B3%87%E8%A8%8A).html"; // 顯示中間辨識文字
     <!--ment.write( ' <a href="https://chang-yu-ling.github.io/index%20(衛教資訊).html">連結</a>');-->
-      num1="1";
-    }else num1="0";
+      num1.value="1";
+    }else num1.value="0";
   };
 }
 </script>  
@@ -81,7 +82,7 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
 <label id="infoBox"></label>
 <BR/>
 症狀回答：<BR/><textarea input  id="textBox" type="text" cols="60" rows="5" value=""/>
-  </textarea><BR/><BR/>
+  </textarea><BR/>
  衛教連結：<BR/>
   <script> 
   if ( num1=="1"){ // 如果有中間辨識文字
