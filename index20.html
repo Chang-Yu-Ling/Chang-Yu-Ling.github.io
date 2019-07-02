@@ -78,15 +78,15 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
 <BR/>
 症狀回答：<BR/><textarea input  id="textBox" type="text" cols="60" rows="5" value=""/>
   </textarea><BR/>
- 衛教連結：<BR/>
+ 衛教連結：<BR/><BR/>
 <script> 
   var reg1="https://chang-yu-ling.github.io/index%20(%E8%A1%9B%E6%95%99%E8%B3%87%E8%A8%8A).html";
   if ( reg1.exec(tempBox)!=null){ // 如果有中間辨識文字
       document.write( ' <a href="https://chang-yu-ling.github.io/index%20(衛教資訊).html">連結</a>');
     }
-    else document.write( ' <a href="https://chang-yu-ling.github.io/index%20(%E9%80%A3%E7%B5%A1%E6%88%91%E5%80%91).html">連結</a>');
-    </script> 
-  <input id="tempBox" type="text" size="60" value=""/><BR/>
+    else {document.write( ' <a href="https://chang-yu-ling.github.io/index%20(%E9%80%A3%E7%B5%A1%E6%88%91%E5%80%91).html">連結</a>');
+         } </script> 
+  <BR/><BR/><input id="tempBox" type="text" size="60" value=""/><BR/>
 
 </body>
 </html>
