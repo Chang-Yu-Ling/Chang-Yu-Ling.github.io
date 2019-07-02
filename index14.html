@@ -18,6 +18,7 @@ function startButton(event) {
   tempBox = document.getElementById("tempBox"); // 取得中間的辨識訊息控制項 tempBox
   startStopButton = document.getElementById("startStopButton"); // 取得「辨識/停止」這個按鈕控制項
   langCombo = document.getElementById("langCombo"); // 取得「辨識語言」這個選擇控制項
+  num1 = document.getElementById("num1");
   if (recognizing) { // 如果正在辨識，則停止。
     recognition.stop();
   } else { // 否則就開始辨識
