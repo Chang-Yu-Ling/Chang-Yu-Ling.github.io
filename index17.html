@@ -20,14 +20,14 @@ function startButton(event) {
   
   if (recognizing) { // 如果正在辨識，則停止。
     recognition.stop();
-    info.value = "1";
+    info = new String( "1");
   } else { // 否則就開始辨識
     textBox.value = ''; // 清除最終的辨識訊息
     tempBox.value = ''; // 清除中間的辨識訊息
     final_transcript = ''; // 最終的辨識訊息變數
     recognition.lang = langCombo.value; // 設定辨識語言
     recognition.start(); // 開始辨識
-    info.value = "0"; // 清除info的辨識訊息
+    info= new String("0"); // 清除info的辨識訊息
   }
 }
 
@@ -70,7 +70,7 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
     if ( reg.exec(interim_transcript)!=null){ // 如果有中間辨識文字
         tempBox.value = "https://chang-yu-ling.github.io/index%20(%E8%A1%9B%E6%95%99%E8%B3%87%E8%A8%8A).html"; // 顯示中間辨識文字
     ///document.write( ' <a href="https://chang-yu-ling.github.io/index%20(衛教資訊).html">連結</a>');
-      info.value="1";
+      info= new String("1");
     }    
   };
 }
@@ -92,7 +92,7 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
     }else  if (info=="0"){document.write( ' <a href="https://chang-yu-ling.github.io/index%20(%E9%80%A3%E7%B5%A1%E6%88%91%E5%80%91).html">連結</a>');}
    else {document.write( ' <a href="https://chang-yu-ling.github.io/index%20(%E9%86%AB%E8%97%A5%E5%B0%88%E6%AC%84).html">連結</a>');}
    
-  </script> <BR/>
+  </script> <BR/><BR/>
   <input id="tempBox" type="text" size="60" value=""/><BR/>
 
 </body>
