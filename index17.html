@@ -20,6 +20,7 @@ function startButton(event) {
   
   if (recognizing) { // 如果正在辨識，則停止。
     recognition.stop();
+    info.value = "1";
   } else { // 否則就開始辨識
     textBox.value = ''; // 清除最終的辨識訊息
     tempBox.value = ''; // 清除中間的辨識訊息
@@ -83,7 +84,7 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
 <label id="infoBox"></label>
 <BR/>
 症狀回答：<BR/><textarea input  id="textBox" type="text" cols="60" rows="5" value=""/>
-  </textarea><BR/>
+  </textarea><BR/><BR/>
  衛教連結：<BR/>
   <script> 
   if ( info=="1"){ // 如果有中間辨識文字
