@@ -8,6 +8,7 @@ var tempBox; // 中間的辨識訊息 text input
 var startStopButton; // 「辨識/停止」按鈕
 var final_transcript = ''; // 最終的辨識訊息的變數
 var recognizing = false; // 是否辨識中
+var info; // info
 
 function startButton(event) {
   infoBox = document.getElementById("infoBox"); // 取得訊息控制項 infoBox
@@ -15,6 +16,8 @@ function startButton(event) {
   tempBox = document.getElementById("tempBox"); // 取得中間的辨識訊息控制項 tempBox
   startStopButton = document.getElementById("startStopButton"); // 取得「辨識/停止」這個按鈕控制項
   langCombo = document.getElementById("langCombo"); // 取得「辨識語言」這個選擇控制項
+  info = document.getElementById("info"); // 取得info這個選擇控制項
+  
   if (recognizing) { // 如果正在辨識，則停止。
     recognition.stop();
   } else { // 否則就開始辨識
@@ -23,6 +26,7 @@ function startButton(event) {
     final_transcript = ''; // 最終的辨識訊息變數
     recognition.lang = langCombo.value; // 設定辨識語言
     recognition.start(); // 開始辨識
+    info.value = "0"; // 清除info的辨識訊息
   }
 }
 
@@ -61,12 +65,12 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
         tempBox.value = interim_transcript; // 顯示中間辨識文字
    
     var reg = RegExp(/肚子痛/);
-   var num=0;
+   //var num=0;
     if ( reg.exec(interim_transcript)!=null){ // 如果有中間辨識文字
         tempBox.value = "https://chang-yu-ling.github.io/index%20(%E8%A1%9B%E6%95%99%E8%B3%87%E8%A8%8A).html"; // 顯示中間辨識文字
     document.write( ' <a href="https://chang-yu-ling.github.io/index%20(衛教資訊).html">連結</a>');
-      num=1;
-    }else num=0;
+      info.value="1";
+    }    
   };
 }
 </script>  
@@ -81,10 +85,12 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
 症狀回答：<BR/><textarea input  id="textBox" type="text" cols="60" rows="5" value=""/>
   </textarea><BR/>
  衛教連結：<BR/>
-  <!--  <script> 
-  if ( num==1){ // 如果有中間辨識文字
+  <script> 
+  if ( info=="1"){ // 如果有中間辨識文字
       document.write( ' <a href="https://chang-yu-ling.github.io/index%20(衛教資訊).html">連結</a>');
-    }</script> -->
+    }else  document.write( ' <a href="https://chang-yu-ling.github.io/index%20(%E9%80%A3%E7%B5%A1%E6%88%91%E5%80%91).html">連結</a>');
+   
+  </script> <BR/>
   <input id="tempBox" type="text" size="60" value=""/><BR/>
 
 </body>
