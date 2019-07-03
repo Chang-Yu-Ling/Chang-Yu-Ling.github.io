@@ -9,6 +9,7 @@
   <script>
     var show = document.getElementById('show');
     var recognition = new webkitSpeechRecognition();
+    var speech;
 
     recognition.continuous=true;
     recognition.interimResults=true;
@@ -17,13 +18,13 @@
     recognition.onresult=function(event){
       var i = event.resultIndex;
       var j = event.results[i].length-1;
-      var speech= new String(event.results[i][j].transcript);
+      speech= new String(event.results[i][j].transcript);
       show.innerHTML=speech;
       var reg = RegExp(/肚子痛/);
-      if ( reg.exec(speech)!=null){ // 如果有中間辨識文字
+    };
+    if ( reg.exec(speech)!=null){ // 如果有中間辨識文字
           document.write( "\n\n\n"+"$$"+' <a href="https://chang-yu-ling.github.io/index%20(衛教資訊).html">連結</a>');
         }
-    };
     recognition.start();  
   </script>
 </body>
