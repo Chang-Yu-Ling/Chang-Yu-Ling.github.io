@@ -8,6 +8,13 @@ var tempBox; // 中間的辨識訊息 text input
 var startStopButton; // 「辨識/停止」按鈕
 var final_transcript = ''; // 最終的辨識訊息的變數
 var recognizing = false; // 是否辨識中
+//待判症狀連結詞
+var reg = RegExp(/肚子痛/);  
+var reg1 = RegExp(/肚子痛/);
+var reg2 = RegExp(/肚子痛/);
+var reg3 = RegExp(/肚子痛/);
+//最終語音辨識
+var ident;
 
 function startButton(event) {
   infoBox = document.getElementById("infoBox"); // 取得訊息控制項 infoBox
@@ -51,6 +58,7 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
     for (var i = event.resultIndex; i < event.results.length; ++i) { // 對於每一個辨識結果
       if (event.results[i].isFinal) { // 如果是最終結果
         final_transcript= final_transcript +" / "+event.results[i][0].transcript; // 將其加入最終結果中
+        ident= ident +" / "+event.results[i][0].transcript; // 將其加入最終結果中
       } else { // 否則
         interim_transcript += event.results[i][0].transcript; // 將其加入中間結果中
       }
@@ -60,13 +68,11 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
     if (interim_transcript.trim().length > 0) // 如果有中間辨識文字
         tempBox.value = interim_transcript; // 顯示中間辨識文字
    
-    var reg = RegExp(/肚子痛/);
-   var num=0;
+   
     if ( reg.exec(interim_transcript)!=null){ // 如果有中間辨識文字
         tempBox.value = "https://chang-yu-ling.github.io/index%20(%E8%A1%9B%E6%95%99%E8%B3%87%E8%A8%8A).html"; // 顯示中間辨識文字
-    document.write( ' <a href="https://chang-yu-ling.github.io/index%20(衛教資訊).html">連結</a>');
-      num=1;
-    }else num=0;
+    //document.write( ' <a href="https://chang-yu-ling.github.io/index%20(衛教資訊).html">連結</a>');     
+    }
   };
 }
 </script>  
@@ -85,6 +91,7 @@ if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitS
   if ( num==1){ // 如果有中間辨識文字
       document.write( ' <a href="https://chang-yu-ling.github.io/index%20(衛教資訊).html">連結</a>');
     }</script> -->
+  document.write("$ "+ident+" ##");<BR/>
   <input id="tempBox" type="text" size="60" value=""/><BR/>
 
 </body>
