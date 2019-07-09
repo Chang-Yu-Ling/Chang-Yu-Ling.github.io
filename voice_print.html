@@ -12,42 +12,42 @@
       function getValue()
       {
         var x=document.getElementById("address")
+        ////////////////////影印/////////
+        function doSave(value, type, name) {
+          var blob;
+          if (typeof window.Blob == "function") {
+            blob = new Blob([value], {type: type});
+          } else {
+            var BlobBuilder = window.BlobBuilder || window.MozBlobBuilder || window.WebKitBlobBuilder || window.MSBlobBuilder;
+            var bb = new BlobBuilder();
+            bb.append(value);
+            blob = bb.getBlob(type);
+          }
+          var URL = window.URL || window.webkitURL;
+          var bloburl = URL.createObjectURL(blob);
+          var anchor = document.createElement("a");
+          if ('download' in anchor) {
+            anchor.style.visibility = "hidden";
+            anchor.href = bloburl;
+            anchor.download = name;
+            document.body.appendChild(anchor);
+            var evt = document.createEvent("MouseEvents");
+            evt.initEvent("click", true, true);
+            anchor.dispatchEvent(evt);
+            document.body.removeChild(anchor);
+          } else if (navigator.msSaveBlob) {
+            navigator.msSaveBlob(blob, name);
+          } else {
+            location.href = bloburl;
+          }
+        }
+
+        doSave(final_transcript, "text/latex", "hello.tex"); 
+        ////////////////////影印/////////
         if(x.value==1){
           document.location.href="https://chang-yu-ling.github.io/index%20(衛教資訊).html";
       /* 遇連結前先顯示其他文字
-          document.write('<a href="https://chang-yu-ling.github.io/index%20(衛教資訊).html">連結</a>');*/
-          ////////////////////影印/////////
-          function doSave(value, type, name) {
-            var blob;
-            if (typeof window.Blob == "function") {
-              blob = new Blob([value], {type: type});
-            } else {
-              var BlobBuilder = window.BlobBuilder || window.MozBlobBuilder || window.WebKitBlobBuilder || window.MSBlobBuilder;
-              var bb = new BlobBuilder();
-              bb.append(value);
-              blob = bb.getBlob(type);
-            }
-            var URL = window.URL || window.webkitURL;
-            var bloburl = URL.createObjectURL(blob);
-            var anchor = document.createElement("a");
-            if ('download' in anchor) {
-              anchor.style.visibility = "hidden";
-              anchor.href = bloburl;
-              anchor.download = name;
-              document.body.appendChild(anchor);
-              var evt = document.createEvent("MouseEvents");
-              evt.initEvent("click", true, true);
-              anchor.dispatchEvent(evt);
-              document.body.removeChild(anchor);
-            } else if (navigator.msSaveBlob) {
-              navigator.msSaveBlob(blob, name);
-            } else {
-              location.href = bloburl;
-            }
-          }
-
-          doSave(final_transcript, "text/latex", "hello.tex"); 
-          ////////////////////影印/////////
+          document.write('<a href="https://chang-yu-ling.github.io/index%20(衛教資訊).html">連結</a>');*/         
         }
       }
 
