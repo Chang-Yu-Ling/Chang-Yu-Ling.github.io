@@ -1,0 +1,65 @@
+<script language="javascript">
+  var sound=0;
+  function Control(x){
+    if(x=='next'){
+      sound=sound+1;
+      document.getElementById(sound).play();
+    }
+    if(x=='re'){
+      sound=sound;
+      document.getElementById(sound).play();
+    }
+  }
+</script>
+<audio id="1" width="360" height="270" >
+  <source src="https://chang-yu-ling.github.io/sound/1.mp3" type="audio/mp3">
+  您的瀏覽器不支援此 HTML5 影片標籤
+</audio>
+
+<audio id="2" width="360" height="270" >
+  <source src="https://chang-yu-ling.github.io/sound/2.MP3" type="audio/mp3">
+  您的瀏覽器不支援此 HTML5 影片標籤
+</audio>
+<audio id="3" width="360" height="270" >
+  <source src="https://chang-yu-ling.github.io/sound/3.MP3" type="audio/mp3">
+  您的瀏覽器不支援此 HTML5 影片標籤
+</audio>
+<audio id="4" width="360" height="270" >
+  <source src="https://chang-yu-ling.github.io/sound/4.MP3" type="audio/mp3">
+  您的瀏覽器不支援此 HTML5 影片標籤
+</audio>
+<audio id="5" width="360" height="270" >
+  <source src="https://chang-yu-ling.github.io/sound/5.MP3" type="audio/mp3">
+  您的瀏覽器不支援此 HTML5 影片標籤
+</audio>
+<audio id="6" width="360" height="270" >
+  <source src="https://chang-yu-ling.github.io/sound/6.MP3" type="audio/mp3">
+  您的瀏覽器不支援此 HTML5 影片標籤
+</audio>
+<audio id="7" width="360" height="270" >
+  <source src="https://chang-yu-ling.github.io/sound/7.MP3" type="audio/mp3">
+  您的瀏覽器不支援此 HTML5 影片標籤
+</audio>
+<audio id="8" width="360" height="270" >
+  <source src="https://chang-yu-ling.github.io/sound/8.MP3" type="audio/mp3">
+  您的瀏覽器不支援此 HTML5 影片標籤
+</audio>
+<audio id="9" width="360" height="270" >
+  <source src="https://chang-yu-ling.github.io/sound/9.MP3" type="audio/mp3">
+  您的瀏覽器不支援此 HTML5 影片標籤
+</audio>
+<audio id="10" width="360" height="270" >
+  <source src="https://chang-yu-ling.github.io/sound/10.mp3" type="audio/mp3">
+  您的瀏覽器不支援此 HTML5 影片標籤
+</audio>
+<audio id="11" width="360" height="270" >
+  <source src="https://chang-yu-ling.github.io/sound/11.mp3" type="audio/mp3">
+  您的瀏覽器不支援此 HTML5 影片標籤
+</audio>
+<audio id="12" width="360" height="270" >
+  <source src="https://chang-yu-ling.github.io/sound/2.mp3" type="audio/mp3">
+  您的瀏覽器不支援此 HTML5 影片標籤
+</audio>
+
+<input type="button" value="再說一次" onclick="Control('re');">
+<input type="button" value="下一題" onclick="Control('next');">
