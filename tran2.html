@@ -22,8 +22,14 @@
       /*for (var i = 0; i < vars.length; i++) {
         if(vars[i]!="") document.write(vars[i]+"@@@");
       };*/
+      
+      
+      document.write("症狀描述 :"+"<BR/>"+"<BR/>");
+      document.write(vars[vars.length-1]+"<BR/>"+"<BR/>");
+      document.write("<HR/>");
       document.write("相關衛教資訊 :"+"<BR/>"+"<BR/>");
-     for (var i = 0; i < vars.length; i++) {
+      
+     for (var i = 0; i < vars.length-1; i++) {
         if(vars[i]!=""){
           if(vars[i]==0){document.write( '<a  href="https://www.youtube.com/watch?v=rHfZA9rBzbA">婦女應力性尿失禁</a>'+"<BR/>");}
           if(vars[i]==1){document.write( '<a  href="https://www.youtube.com/watch?v=cDGASRYRzBI">異位性皮膚炎的照護</a>'+"<BR/>");}
