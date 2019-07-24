@@ -150,25 +150,27 @@
             // document.write(data_sin_cut);//[0]值取單項
             // document.write("-------------------------------------------");    
 
-            var add=[];
-            var int=0;
+            //var add=[];
+            //var int=0;
             for(i=0;i<5;i++){
               reg = RegExp(data_sin_cut[i]);
               if ( reg.exec(final_transcript)!=null&&reg!=""){
-                //address.value=address.value.concat(j);
-                address=j;
+                address.value=address.value.concat(j);
+                var split="?";
+                address.value=address.value.concat(split);
+               // address=j;
                 //address.value=j;
                 document.write(reg);j++;
-                add=add.concat(j);
+                //add=add.concat(j);
                 int++;
-                document.write(address);
+                //document.write(address);
                 
                 break;
               }else j++;            
             }data_sin_cut="";
 
           }//j
-          document.write(add);
+          document.write(address.value);
           //document.write(address);
         }
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@       
