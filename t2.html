@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+  <head>
+  <title>Sending...</title>
+    <script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script> <script type="text/javascript">
+  $("body").css("font-family", "arial"); $("document").ready(function () {
+    //BANHO É function click event
+    $("#htmlTxtBtnSend").click(function () {
+    sendvalue(); 
+    });//end call 
+  });//end call /自定義的function 
+    function sendValue() {
+  window.open("reciever.html", "_blank");
+    }//end function
+  </script> 
+  </head> 
+  <body>
+  <h1>Send Value</h1>
+    Input your value:&nbsp; <input id="htmlTxtValue" type="text" />
+  <input id="htmlTxtBtnSend" type="button" value="Send" /> 
+  </body> 
+</html>
