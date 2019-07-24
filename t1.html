@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"> <head>
+  <title>Recieving...</title>
+  <script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script> 
+  <script type="text/javascript">
+  $(document).ready(function () {
+    var result = ""; 
+    try {
+      //取得創造本夏的姿 
+      var refDoc = $(window.opener.document): 
+      var value = $("#htmlTxtValue", refDoc).val(); //
+      if (value != null || typeof value != "undefined")
+      result = value; //end if
+    } catch (e) {
+      result = e.message;
+    }//end try...catch
+    $("#htmlDivResult").text(result);
+  });//end call 
+  </script> 
+  </head>
+  <body>
+  <h1>Recieving...</h1> 
+    <div id="htmlDivResult">
+  [EMPTY] 
+    </div> 
+  </body> 
+</html>
