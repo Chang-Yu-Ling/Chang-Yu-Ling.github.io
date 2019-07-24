@@ -120,6 +120,7 @@
 
         ////////////////////影印/////////
 
+        var tran=[];
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         //////////////////////////////////////////////////////////////
         var reg = RegExp(/肚子痛/);
@@ -132,7 +133,7 @@
           var reg = "#";      
           var data_sin1_cut="";
           var sta="";
-          var tran=[];
+          
           tran = tran.concat('location.href="tran2.html?');
           for(var j = 0; j<128; ){
             var data_left=data_sin_id[j];//[0]值取單列
@@ -152,7 +153,7 @@
             // document.write("-------------------------------------------");    
 
 
-           
+
             for(i=0;i<5;i++){
               reg = RegExp(data_sin_cut[i]);
               if ( reg.exec(final_transcript)!=null&&reg!=""){
@@ -169,13 +170,14 @@
 
           }//j
           //document.write(address);
-          document.location.href=tran;
+          
           /*<button onclick=tran>
             查看結果
       </button>*/
         }
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@       
         //document.location.href=data_sin_addr[address];
+        document.location.href=tran;
 
 
 
