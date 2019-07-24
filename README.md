@@ -11,6 +11,9 @@
 * sound
 * license.txt
 * style.css
+* 
+* voice_id_data.html
+* tran2.html
 * --雲端檔案----------------------------------
 * Jiugongge.pdf
 * --<過程中間其餘正確版>-----------------------
@@ -19,3 +22,4 @@
 * index13.html
 * 2.html
 * index2.html  //跑馬燈
+* voice_ident_data.html
