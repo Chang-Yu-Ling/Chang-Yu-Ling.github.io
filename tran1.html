@@ -6,42 +6,8 @@
     <title>測試1</title>
   </head>
   <body>
-    <button onclick='location.href="index2.html?a=b&b=c&c=d"'>
+    <button onclick='location.href="tran2.html?a=b&b=c&c=d"'>
       One
-    </button>
-  </body>
-</html>
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <meta charset="utf8">
-    <title>測試2</title>
-    <script type="text/javascript">
-
-      function show () {
-
-        //URL
-        var url = "https://chang-yu-ling.github.io/tran2.html";
-
-        //取得問號之後的值
-        var temp = url.split("?");
-
-        //將值再度分開
-        var vars = temp[1].split("&");
-
-        //一一顯示出來
-        for (var i = 0; i < vars.length; i++) {
-          alert(vars[i]);
-        };
-
-      }
-
-    </script>
-  </head>
-  <body>
-    <button onclick="show()">
-      two
     </button>
   </body>
 </html>
