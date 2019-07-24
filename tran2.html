@@ -6,12 +6,9 @@
   <meta charset="utf8">
   <title>測試2</title>
   <script type="text/javascript">
-   
-   function show () {
-    
     //URL
     var url = "https://chang-yu-ling.github.io/tran1.html";
-    
+    document.write(url);
     //取得問號之後的值
     var temp = url.split("?");
 
@@ -19,17 +16,14 @@
     var vars = temp[1].split("&");
 
     //一一顯示出來
-    for (var i = 0; i < vars.length; i++) {
+   /* for (var i = 0; i < vars.length; i++) {
      alert(vars[i]);
-    };
+    };*/
 
-   }
+   
 
   </script>
  </head>
  <body>
-  <button onclick="show()">
-   two
-  </button>
  </body>
 </html>
