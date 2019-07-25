@@ -12,7 +12,7 @@
 * license.txt
 * style.css
 * ---new---
-* voice_id_data_ok.html
+* voice_id_data_ok.html         <正式版>
 * data_anal.html
 * 介面.html
 * data_cut_address.html
