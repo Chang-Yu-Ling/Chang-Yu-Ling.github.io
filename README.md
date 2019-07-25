@@ -11,9 +11,16 @@
 * sound
 * license.txt
 * style.css
+* ---new---
+* voice_id_data_ok.html
+* data_anal.html
+* 介面.html
+* data_cut_address.html
+* ----------
 * 
 * voice_id_data.html
 * tran2.html
+
 * --雲端檔案----------------------------------
 * Jiugongge.pdf
 * --<過程中間其餘正確版>-----------------------
