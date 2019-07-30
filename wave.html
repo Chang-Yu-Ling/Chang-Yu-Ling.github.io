@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Made with Thimble</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <img id=mirror src="https://chang-yu-ling.github.io/images/img02.jpg" width="290" height="294">
+    <script language=JavaScript>
+      function f1(){
+        setInterval("mdiv.filters.wave.phase+=10",100);
+      }
+      if (document.all){
+        document.write('<img id=mdiv src="'+document.all.mirror.src+'"
+                       style="filter:wave(strength=3,freq=3,phase=0,lightstrength=30) blur() flipv()">')
+                       window.onload=f1
+                       }
+    </script>
+  </body>
+</html>
