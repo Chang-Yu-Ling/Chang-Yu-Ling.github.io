@@ -11,11 +11,11 @@
   function Control(x){
     if(x=='next'){
       sound=sound+1;
-      document.getElementById(sound).play();
+      document.getElementById(sound);
     }
     if(x=='re'){
       sound=sound;
-      document.getElementById(sound).play();
+      document.getElementById(sound);
     }
   }
   </script>
@@ -30,6 +30,6 @@
 </audio-->
   </body>
 <input type="button" value="再說一次" onclick="Control('re');">
-<input type="button" value="下一題" onclick="Control('next');">
+<input type="button" value="下一題?" onclick="Control('next');">
   
 </html>
