@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scal
+    <title>Thimble Sample</title>
+    <link rel="stylesheet href="style.css">
+  </head>
+  <script language="javascript">
+  var sound=0;
+  function Control(x){
+    if(x=='next'){
+      sound=sound+1;
+      document.getElementById(sound).play();
+    }
+    if(x=='re'){
+      sound=sound;
+      document.getElementById(sound).play();
+    }
+  }
+  </script>
+  <body id="1" background="https://chang-yu-ling.github.io/images/img02.jpg">
+    <h1>Welcome to Thimble</h1>
+    <p>
+      Make something <strong>amazing</strong> with the web!
+    </p>
+    <!--audio id="12" width="360" height="270" >
+  <source src="https://chang-yu-ling.github.io/sound/2.mp3" type="audio/mp3">
+  您的瀏覽器不支援此 HTML5 影片標籤
+</audio-->
+  </body>
+<input type="button" value="再說一次" onclick="Control('re');">
+<input type="button" value="下一題" onclick="Control('next');">
+  
+</html>
