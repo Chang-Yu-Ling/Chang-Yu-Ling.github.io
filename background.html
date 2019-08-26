@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  
+  <head>    
+    <meta charset="utf-8">
+    <title>设置背景图片</title>
+    <style type="text/css">
+      #ant {
+        width:400px;
+        height:300px;
+        background-image:url(https://chang-yu-ling.github.io/images/img04.jpg);
+        background-color:#ccc;
+      }
+     /* #ant1 {
+        width:400px;
+        height:300px;
+        background-image:url(https://chang-yu-ling.github.io/images/img05.jpg);
+        background-color:#ccc;
+      }*/
+    </style>
+   <script>
+     
+      window.onload = function () {
+        var page=0;
+        var odiv = document.getElementById("ant");
+        var obt = document.getElementById("bt");        
+        obt.onclick = function () {
+          if(page==0){
+          odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/images/img05.jpg')";
+          odiv.style.backgroundRepeat = "no-repeat";
+          odiv.style.backgroundPosition = "0px -33px";
+            
+          }  
+          
+          if(page==1){
+            odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/images/img04.jpg')";
+            odiv.style.backgroundRepeat = "no-repeat";
+            odiv.style.backgroundPosition = "0px -33px";
+          }
+          if(page==2){
+            odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/images/img06.jpg')";
+            odiv.style.backgroundRepeat = "no-repeat";
+            odiv.style.backgroundPosition = "0px -33px";
+          }
+          page=page+1;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="ant">My DIV element</div>
+    <input type="button" id="bt" value="查看演示"/>
+  </body>
+  
+</html>
