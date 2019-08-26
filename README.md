@@ -18,6 +18,11 @@
 * 介面.html
 * data_cut_address.html
 * ----------
+* ---new_2---
+* info_basicFunction_almost_page1.html   <正式版>(無bug有隱形項目)
+* info_basicFunction_almost_從第2提起_已刪正確版.html  (無bug有隱形項目)       
+* info_basicFunction_almost_沒刪.html
+* ----------
 * 
 * voice_id_data.html
 * tran2.html
