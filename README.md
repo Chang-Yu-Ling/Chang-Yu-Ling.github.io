@@ -20,10 +20,10 @@
 * ----------
 * ---new_2---
 * info_basicFunction_almost_page1.html   <正式版>(無bug有隱形項目)
-
+* ___________
 * info_basicFunction_almost_page1_new.html    (去control 播音函式==>精)
 * info_basicFunction_page1_new.html           (留control 播音函式==>稍繁)
-
+* ___________
 * info_basicFunction_almost_從第2提起_已刪正確版.html  (無bug有隱形項目)       
 * info_basicFunction_almost_沒刪.html
 * ----------
