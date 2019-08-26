@@ -25,10 +25,14 @@
 * info_basicFunction_almost_page1_new.html    (去control 播音函式==>精)
 * info_basicFunction_page1_new.html           (留control 播音函式==>稍繁)
 * .................
+* >>.................
+* info_basicFunction2_timeCON.html(時間大致剛好)
+* info_basicFunction_1id.html(電腦可播音)
+* >>.................
+* .................
 * info_basicFunction_almost_從第2提起_已刪正確版.html  (無bug有隱形項目)       
 * info_basicFunction_almost_沒刪.html
 * ----------
-* 
 * voice_id_data.html
 * tran2.html
 
