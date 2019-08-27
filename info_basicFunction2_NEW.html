@@ -443,6 +443,7 @@
       //>>>>>>>>>>>>>>>>>>>>>語音撥放<<<<<<<<<<<<<<<<<
       var sound=1;
       var identifying=0;
+      var page=0;
       function Control(x){
         if(x=='next'){
           if(sound>0){document.getElementById(sound).pause();}
@@ -455,32 +456,68 @@
 
           //>>>>>>>>>>>>>>>>>>>>>語音辨識 第N重複題<<<<<<<<<<<<<<<<<
           if(sound==1){
+            //if(identifying==1){startButton(event);identifying=0;}
+            //if(identifying==0){setTimeout(function(){startButton(event);identifying=1; },6000);}
+
             if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},6000);}}
+            if(identifying==0){setTimeout(function(){if(page==0){startButton(event);identifying=1;}},6000);  }
+          }
           if(sound==2){
+            //if(identifying==1){startButton(event);identifying=0;}
+            //if(identifying==0){setTimeout(function(){startButton(event);identifying=1; },6000);}
+
             if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){ setTimeout(function(){startButton(event);identifying=1; },6000);}}
+            if(identifying==0){setTimeout(function(){if(page==1){startButton(event);identifying=1;}},6000);  }
+          }
           if(sound==3){
+            //if(identifying==1){startButton(event);identifying=0;}
+            //if(identifying==0){setTimeout(function(){startButton(event);identifying=1; },5000);}
+
             if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){startButton(event);identifying=1; },5000);}}
+            if(identifying==0){setTimeout(function(){if(page==2){startButton(event);identifying=1;}},5000);  }
+          }
           if(sound==4){
             if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){startButton(event);identifying=1; },8000);}}
+            if(identifying==0){setTimeout(function(){startButton(event);identifying=1; },8000);}
+
+            if(identifying==1){startButton(event);identifying=0;}
+            if(identifying==0){setTimeout(function(){if(page==3){startButton(event);identifying=1;}},8000);  }
+          }
           if(sound==5){
-            if(identifying==1){startButton(event);identifying=0:}
-            if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},8000);}}
+            //if(identifying==1){startButton(event);identifying=0:}
+            //if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},8000);}
+
+            if(identifying==1){startButton(event);identifying=0;}
+            if(identifying==0){setTimeout(function(){if(page==4){startButton(event);identifying=1;}},8000);  }
+          }
           if(sound==6){
+            //if(identifying==1){startButton(event);identifying=0;}
+            //if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},7000);}
+
             if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},7000);}}
+            if(identifying==0){setTimeout(function(){if(page==5){startButton(event);identifying=1;}},7000);  }
+          }
           if(sound==7){
+            //if(identifying==1){startButton(event);identifying=0;}
+            //if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},7000);}
+
             if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},7000);}}
+            if(identifying==0){setTimeout(function(){if(page==6){startButton(event);identifying=1;}},7000);  }
+          }
           if(sound==8){
+            //if(identifying==1){startButton(event);identifying=0;}
+           // if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},7700);}
+
             if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},7700);}}
+            if(identifying==0){setTimeout(function(){if(page==7){startButton(event);identifying=1;}},7700);  }
+          }
           if(sound==9){
+            //if(identifying==1){startButton(event);identifying=0;}
+            //if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},7700);}
+
             if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},7700);}}
+            if(identifying==0){setTimeout(function(){if(page==8){startButton(event);identifying=1;}},7700);  }
+          }
           //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         }
       }
@@ -489,7 +526,7 @@
 
       //>>>>>>>>>>>>>>>>>>>>>设置背景图片<<<<<<<<<<<<<<<<<
       window.onload = function () {
-        var page=0;
+        
         var odiv = document.getElementById("ant");
         var obt = document.getElementById("bt");   
         odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/images/IN-FO UI-1.jpg')";
