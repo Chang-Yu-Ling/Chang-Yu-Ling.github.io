@@ -20,6 +20,8 @@
 * ----------
 * ---new_2---
 * info_basicFunction_almost_page1.html   <正式版>(無bug有隱形項目)
+#### info_basicFunction_start.html   <可播歡迎詞>
+#### nfo_basicFunction_2_避免重開辨識.html  <避免重開辨識>
 * .................
 * info_basicFunction_almost_page1_newnew.html (去control 播音函式==>重複多次激發)
 * info_basicFunction_almost_page1_new.html    (去control 播音函式==>精)
