@@ -24,6 +24,13 @@
 ## * nfo_basicFunction_2_避免重開辨識.html  <避免重開辨識>
 ## * info_basicFunction_2.html <下一題可避免重開語音辨識>
 ## * info_basicFunction2_NEW.html <下一題可避免重開語音辨識，重複有寫但不可用>
+* ----------
+* ----------
+# * info_basicFunction_start.html  <空殼連結(為手機撥音用)==>轉跳到page 1>
+# * info_basicFunction_almost_page1_new.html  <page 1連結(使用說明頁)==>轉跳到page 2(開始答題頁)>
+# * info_basicFunction_backPage2.html  <page 2連結(開始答題頁)>
+* ----------
+* ----------
 * .................
 * info_basicFunction_almost_page1_newnew.html (去control 播音函式==>重複多次激發)
 * info_basicFunction_almost_page1_new.html    (去control 播音函式==>精)
