@@ -29,10 +29,10 @@
 ----------
 * info_basicFunction_almost_page1.html   <正式版>(無bug有隱形項目)
 >> ## * --<調整辨識時機(待改進中)>--------------------------
->> ## info_basicFunction_start.html   <可播歡迎詞>
->> ## info_basicFunction_2_避免重開辨識.html  <避免重開辨識>
->> ## info_basicFunction_2.html <下一題可避免重開語音辨識>
->> ## info_basicFunction2_NEW.html <下一題可避免重開語音辨識，重複有寫但不可用>
+>> ### info_basicFunction_start.html   <可播歡迎詞>
+>> ### info_basicFunction_2_避免重開辨識.html  <避免重開辨識>
+>> ### info_basicFunction_2.html <下一題可避免重開語音辨識>
+>> ### info_basicFunction2_NEW.html <下一題可避免重開語音辨識，重複有寫但不可用>
 >> ----------
 >> * --<調整首頁(說明頁)程式精簡度>--------------------------
 >> info_basicFunction_almost_page1_newnew.html (去control 播音函式==>重複多次激發)
