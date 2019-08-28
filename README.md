@@ -23,7 +23,7 @@
 >> ## * info_basicFunction_start.html   <可播歡迎詞>
 >> ## * nfo_basicFunction_2_避免重開辨識.html  <避免重開辨識>
 >> ## * info_basicFunction_2.html <下一題可避免重開語音辨識>
-## * info_basicFunction2_NEW.html <下一題可避免重開語音辨識，重複有寫但不可用>
+>> ## * info_basicFunction2_NEW.html <下一題可避免重開語音辨識，重複有寫但不可用>
 * ----------
 * ----------
 > ## * info_basicFunction_start.html  <空殼連結(為手機撥音用)==>轉跳到page 1>
@@ -36,10 +36,10 @@
 * info_basicFunction_almost_page1_new.html    (去control 播音函式==>精)
 * info_basicFunction_page1_new.html           (留control 播音函式==>稍繁)
 * .................
-* >>.................
+>> * .................
 >> * info_basicFunction2_timeCON.html(時間大致剛好)
 >> * info_basicFunction_1id.html(電腦可播音)
-* >>.................
+>> * .................
 * .................
 * info_basicFunction_almost_從第2提起_已刪正確版.html  (無bug有隱形項目)       
 * info_basicFunction_almost_沒刪.html
