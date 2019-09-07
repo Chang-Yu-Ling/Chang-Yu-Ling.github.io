@@ -23,7 +23,7 @@
 ----------
 > # * --<目前正式完整正確版>--------------------------
 > ## * info_basicFunction_start.html  <空殼連結(為手機撥音用)==>轉跳到page 1>
-> ## * info_basicFunction_almost_page1_new.html  <page 1連結(使用說明頁)==>轉跳到page 2(開始答題頁)<font color="#FF0000">+問卷 >
+> ## * info_basicFunction_almost_page1_new.html  <page 1連結(使用說明頁)==>轉跳到page 2(開始答題頁)<font color="blue">+問卷</font> >
 > ## * info_basicFunction_backPage2.html  <page 2連結(開始答題頁)>
 > ## * info_basicFunction_backPage2_2.html  <page 2連結(開始答題頁)+問卷 >
 ----------
