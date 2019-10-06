@@ -67,5 +67,5 @@
 * 2.html
 * index2.html  //跑馬燈
 * voice_ident_data.html
-<iframe width="560" height="315" src="https://www.youtube.com/embed/J-8fqOlvvsQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Audi R8](http://img.youtube.com/vi/KOxbO0EI4MA/0.jpg)](https://www.youtube.com/watch?v=KOxbO0EI4MA "Audi R8")
 {% youtube https://www.youtube.com/embed/J-8fqOlvvsQ %}
