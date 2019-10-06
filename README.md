@@ -67,8 +67,3 @@
 * 2.html
 * index2.html  //跑馬燈
 * voice_ident_data.html
-[![Audi R8](http://img.youtube.com/vi/KOxbO0EI4MA/0.jpg)](https://www.youtube.com/watch?v=KOxbO0EI4MA "Audi R8")
-{% youtube https://www.youtube.com/embed/J-8fqOlvvsQ %}
-{%youtube J-8fqOlvvsQ %}
-{%youtube 1G4isv_Fylg %}
-[![Audi R8](http://img.youtube.com/vi/J-8fqOlvvsQ/0.jpg)](https://www.youtube.com/embed/J-8fqOlvvsQ "Audi R8")
