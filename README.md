@@ -67,3 +67,4 @@
 * 2.html
 * index2.html  //跑馬燈
 * voice_ident_data.html
+<embed src="https://www.youtube.com/embed/F9Bo89m2f6g" allowfullscreen="true" width="425" height="344">
