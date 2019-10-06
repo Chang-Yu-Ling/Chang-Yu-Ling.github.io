@@ -67,3 +67,4 @@
 * 2.html
 * index2.html  //跑馬燈
 * voice_ident_data.html
+<a href="example.mpeg" title="下载影片">电影名</a>
