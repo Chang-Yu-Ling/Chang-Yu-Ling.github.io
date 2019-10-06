@@ -71,4 +71,4 @@
 {% youtube https://www.youtube.com/embed/J-8fqOlvvsQ %}
 {%youtube J-8fqOlvvsQ %}
 {%youtube 1G4isv_Fylg %}
-[![Audi R8](http://img.youtube.com/vi/J-8fqOlvvsQ/0.jpg)(https://www.youtube.com/embed/J-8fqOlvvsQ "Audi R8")
+[![Audi R8](http://img.youtube.com/vi/J-8fqOlvvsQ/0.jpg)](https://www.youtube.com/embed/J-8fqOlvvsQ "Audi R8")
