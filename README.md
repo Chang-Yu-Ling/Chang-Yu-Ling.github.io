@@ -67,5 +67,3 @@
 * 2.html
 * index2.html  //跑馬燈
 * voice_ident_data.html
-<iframe  width="425" height="344" src="https://drive.google.com/open?id=1p1P1RFp4VyV7zHvPNFTI3BP-4wI_ZKF_" frameborder="0" allowfullscreen></iframe>
-![red](https://drive.google.com/open?id=1p1P1RFp4VyV7zHvPNFTI3BP-4wI_ZKF_)
