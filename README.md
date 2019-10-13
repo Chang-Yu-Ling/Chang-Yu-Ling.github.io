@@ -67,4 +67,4 @@
 * 2.html
 * index2.html  //跑馬燈
 * voice_ident_data.html
-<HR>
+
