@@ -1,0 +1,182 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant" xml:lang="zh-Hant">
+  <head>
+    <meta http-equiv='Content-Type' content='text/html charset=UTF-8' /> 
+    <title>測試2</title>
+    <script type="text/javascript">
+      //URL
+      var url = location.href;
+
+      //url="https://chang-yu-ling.github.io/tran2.html,,0,11";
+      //document.write(url);
+
+      //var temp = url.split(","); //取得問號之後的值
+      var vars_utf_8 = url.split(","); //取得問號之後的值
+      var vars=decodeURIComponent(vars_utf_8);
+      //document.write(vars+"<BR/>"+"<BR/>");
+      //document.write(vars);
+      
+      //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      //var str1 = "你好javascript";
+      //var str2 = encodeURIComponent(str1);
+      //document.write(str2);   //输出%E4%BD%A0%E5%A5%BDjavascript
+      //var str3 = decodeURIComponent(str2);
+      //document.write("<br/>" + str3+"<br/>" )  //输出    你好javascript
+      //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      
+      //var vars = temp[1].split(",");//將後方值再度分開
+
+      //一一顯示出來
+      /*for (var i = 0; i < vars.length; i++) {
+        if(vars[i]!="") document.write(vars[i]+"@@@");
+      };*/
+
+
+      document.write("症狀描述 :"+"<BR/>"+"<BR/>");
+      document.write(vars[vars.length-1]+"<BR/>"+"<BR/>");
+      document.write("<HR/>");
+      document.write("相關衛教資訊 :"+"<BR/>"+"<BR/>");
+
+      for (var i = 0; i < vars.length-1; i++) {
+        if(vars[i]!=""){
+          if(vars[i]==0){document.write( '<a  href="https://www.youtube.com/watch?v=rHfZA9rBzbA">婦女應力性尿失禁</a>'+"<BR/>");}
+          if(vars[i]==1){document.write( '<a  href="https://www.youtube.com/watch?v=cDGASRYRzBI">異位性皮膚炎的照護</a>'+"<BR/>");}
+          if(vars[i]==2){document.write( '<a  href="https://www.youtube.com/watch?v=CMBLpBNHjWA">麻醉術前身體評估</a>'+"<BR/>");}
+          if(vars[i]==3){document.write( '<a  href="https://www.youtube.com/watch?v=75bYlXMs0xw">從出院準備服務銜接長照2.0談起</a>'+"<BR/>");}
+          if(vars[i]==4){document.write( '<a  href="https://www.youtube.com/watch?v=6DozE77SGTw">心房顫動與中風防治</a>'+"<BR/>");}
+          if(vars[i]==5){document.write( '<a  href="https://www.youtube.com/watch?v=CxoOJ3pqdGw">漫談顳顎疾病</a>'+"<BR/>");}
+          if(vars[i]==6){document.write( '<a  href="https://www.youtube.com/watch?v=xs7MkL2ZVG4">惱人的飛蚊症</a>'+"<BR/>");}
+          if(vars[i]==7){document.write( '<a  href="https://www.youtube.com/watch?v=_K_RTNSaSTc">好孕難？不難!!</a>'+"<BR/>");}
+          if(vars[i]==8){document.write( '<a  href="https://www.youtube.com/watch?v=HM48UCIrqR0">液狀泡沫硬化劑(Polidocanol)治療蜘蛛網曲張靜脈之成果</a>'+"<BR/>");}
+          if(vars[i]==9){document.write( '<a  href="https://www.youtube.com/watch?v=nfZlmJ5CyLo">器官移植後，用藥守護報你知</a>'+"<BR/>");}
+          if(vars[i]==10){document.write( '<a  href="https://www.youtube.com/watch?v=Z6ZRBAaDGfU">頭頸癌知多少？漫談病因與有效治療</a>'+"<BR/>");}
+          if(vars[i]==11){document.write( '<a  href="https://www.youtube.com/watch?v=ALvztvHfuYM">女性當自強–談子宮頸癌的放射線治療</a>'+"<BR/>");}
+          if(vars[i]==12){document.write( '<a  href="https://www.youtube.com/watch?v=Nb2SwI-gsuo">每天10分鐘，遠離肩膀疼痛</a>'+"<BR/>");}
+          if(vars[i]==13){document.write( '<a  href="https://www.youtube.com/watch?v=L2IhQ_-Dsw8">淺談癲癇　發生了癲癇該怎麼辦？</a>'+"<BR/>");}
+          if(vars[i]==14){document.write( '<a  href="https://www.youtube.com/watch?v=sERN8E6F4Fs">不可輕忽的【手腕扭傷】～淺談手腕舟狀骨骨折</a>'+"<BR/>");}
+          if(vars[i]==15){document.write( '<a  href="https://www.youtube.com/watch?v=tWjkAzX3Qcw">用愛相伴 守護小腳ㄚ‐巴掌仙子早產兒的照護</a>'+"<BR/>");}
+          if(vars[i]==16){document.write( '<a  href="https://www.youtube.com/watch?v=nclA9PQWsuM">肺動脈高壓患者復健運動</a>'+"<BR/>");}
+          if(vars[i]==17){document.write( '<a  href="https://www.youtube.com/watch?v=FeNwuzcD4mY">民以食為天 新版每日飲食指南</a>'+"<BR/>");}
+          if(vars[i]==18){document.write( '<a  href="https://www.youtube.com/watch?v=HqG2_KDcm98">思覺失調的早期發現與介入</a>'+"<BR/>");}
+          if(vars[i]==19){document.write( '<a  href="https://www.youtube.com/watch?v=ZwMETpzhDp8">聲門閉合不全與吸入性肺炎之相關性</a>'+"<BR/>");}
+          if(vars[i]==20){document.write( '<a  href="https://www.youtube.com/watch?v=D080n_eS46M">特殊健康檢查做什麼？</a>'+"<BR/>");}
+          if(vars[i]==21){document.write( '<a  href="https://www.youtube.com/watch?v=K3KPVMpSxwI">小腸疾病之診斷與治療</a>'+"<BR/>");}
+          if(vars[i]==22){document.write( '<a  href="https://www.youtube.com/watch?v=e9v0y0Mh9VA">蕁麻疹大哉問</a>'+"<BR/>");}
+          if(vars[i]==23){document.write( '<a  href="https://www.youtube.com/watch?v=mo6SBujlOLk">認識麻疹及其治療與預防</a>'+"<BR/>");}
+          if(vars[i]==24){document.write( '<a  href="https://www.youtube.com/watch?v=b-W0kVcaxlc">您的肩膀幾歲了呢？淺談五十肩</a>'+"<BR/>");}
+          if(vars[i]==25){document.write( '<a  href="https://www.youtube.com/watch?v=6DLCC20Pvzs">上了年紀就一定動作慢嗎？談巴金森症</a>'+"<BR/>");}
+          if(vars[i]==26){document.write( '<a  href="https://www.youtube.com/watch?v=bNG5zpgATus">延緩近視 散瞳劑、角膜塑型片知多少？</a>'+"<BR/>");}
+          if(vars[i]==27){document.write( '<a  href="https://www.youtube.com/watch?v=5yb68VE5_Uk">藥袋資訊停看聽  正確用藥最安心</a>'+"<BR/>");}
+          if(vars[i]==28){document.write( '<a  href="https://www.youtube.com/watch?v=jT06EFtmF_c">高科技治癌 選擇適合的放射治療</a>'+"<BR/>");}
+          if(vars[i]==29){document.write( '<a  href="https://www.youtube.com/watch?v=OG7EZ5fHS7w">泌尿道結石一百問 告別石頭一族</a>'+"<BR/>");}
+          if(vars[i]==30){document.write( '<a  href="https://www.youtube.com/watch?v=3H992D4PPu4">發炎與身心疾病的預防治療之道</a>'+"<BR/>");}
+          if(vars[i]==31){document.write( '<a  href="https://www.youtube.com/watch?v=DqDyFO4rgaI">癌症病友術後的痛 談淋巴水腫治療</a>'+"<BR/>");}
+          if(vars[i]==32){document.write( '<a  href="https://www.youtube.com/watch?v=9mI9dVaIqYw">癮君子看過來 醫師教你輕鬆戒菸</a>'+"<BR/>");}
+          if(vars[i]==33){document.write( '<a  href="https://www.youtube.com/watch?v=RhH3tGnUjxU">下背痛的個人化復健治療</a>'+"<BR/>");}
+          if(vars[i]==34){document.write( '<a  href="https://www.youtube.com/watch?v=NV2o-9f54jE">子宮異常出血 小心是子宮內膜癌</a>'+"<BR/>");}
+          if(vars[i]==35){document.write( '<a  href="https://www.youtube.com/watch?v=ATEvTu3boxs">沉默的肝  認識B、C型肝炎</a>'+"<BR/>");}
+          if(vars[i]==36){document.write( '<a  href="https://www.youtube.com/watch?v=5JYF2WdtMGM">認識惱人的疤痕  談蟹足腫的預防與治療</a>'+"<BR/>");}
+          if(vars[i]==37){document.write( '<a  href="https://www.youtube.com/watch?v=bgjk2DDxIOY">肺癌居十大癌症之首 認識病徵成因及治療</a>'+"<BR/>");}
+          if(vars[i]==38){document.write( '<a  href="https://www.youtube.com/watch?v=bgjk2DDxIOY">大隻雞慢啼？當心錯過自閉症治療黃金期</a>'+"<BR/>");}
+          if(vars[i]==39){document.write( '<a  href="https://www.youtube.com/watch?v=WFv5Mi_dP_A">肝病怎麼吃才健康</a>'+"<BR/>");}
+          if(vars[i]==40){document.write( '<a  href="https://www.youtube.com/watch?v=Mlqb7rW82kE">認識下背痛等腰椎疾病  正確診斷遠離疼痛</a>'+"<BR/>");}
+          if(vars[i]==41){document.write( '<a  href="https://www.youtube.com/watch?v=8yVQ6pLncf4">駕駛談過勞成大職傷防治中心職場守護</a>'+"<BR/>");}
+          if(vars[i]==42){document.write( '<a  href="https://www.youtube.com/watch?v=S_bcWaasWls">新手爸媽100問  解答育兒疑難雜症</a>'+"<BR/>");}
+          if(vars[i]==43){document.write( '<a  href="https://www.youtube.com/watch?v=RzS_6tbFf5w">矯正牙齒好幫手  小小骨釘立大功</a>'+"<BR/>");}
+          if(vars[i]==44){document.write( '<a  href="https://www.youtube.com/watch?v=s6hhKFkPz9s">慢性中耳炎的外科治療－經耳道內視鏡手術</a>'+"<BR/>");}
+          if(vars[i]==45){document.write( '<a  href="https://www.youtube.com/watch?v=YYNjeZOM-ts">心血管狹窄阻塞  光學掃描檢查新利器</a>'+"<BR/>");}
+          if(vars[i]==46){document.write( '<a  href="https://www.youtube.com/watch?v=Yx0hcAOwLso">門診常見足踝問題 早期發現診斷治療</a>'+"<BR/>");}
+          if(vars[i]==47){document.write( '<a  href="https://www.youtube.com/watch?v=ONvihBFtr1M">給失智者理想的家 談失智症照護</a>'+"<BR/>");}
+          if(vars[i]==48){document.write( '<a  href="https://www.youtube.com/watch?v=VwdzYn9Z4Cs">屁股流血怎麼辦 當心痔瘡或腫瘤輕忽不得</a>'+"<BR/>");}
+          if(vars[i]==49){document.write( '<a  href="https://www.youtube.com/watch?v=LfjW0Qwp4t0">腦內的不定時炸彈 顱內動脈瘤</a>'+"<BR/>");}
+          if(vars[i]==50){document.write( '<a  href="https://www.youtube.com/watch?v=KbeVE6YJfHk">女性經血過多及子宮內投藥系統治療</a>'+"<BR/>");}
+          if(vars[i]==51){document.write( '<a  href="https://www.youtube.com/watch?v=RWQ2_utBVro">老人脊椎的介入性治療</a>'+"<BR/>");}
+          if(vars[i]==52){document.write( '<a  href="https://www.youtube.com/watch?v=mS9ThAm3V-k">可怕的視力殺手 視網膜剝離</a>'+"<BR/>");}
+          if(vars[i]==53){document.write( '<a  href="https://www.youtube.com/watch?v=WGO0lSdSuPo">出現血尿輕忽不得 正確診斷釐清病因</a>'+"<BR/>");}
+          if(vars[i]==54){document.write( '<a  href="https://www.youtube.com/watch?v=QthPAXXXVA4">戒除檳榔菸酒 勇敢手術對抗頭頸癌</a>'+"<BR/>");}
+          if(vars[i]==55){document.write( '<a  href="https://www.youtube.com/watch?v=9JStLaOwhPE">舊情也眠眠 談憂鬱症及失眠</a>'+"<BR/>");}
+          if(vars[i]==56){document.write( '<a  href="https://www.youtube.com/watch?v=scHTBYhMgG0">對抗高血脂吃對飲食 調整生活控制體重</a>'+"<BR/>");}
+          if(vars[i]==57){document.write( '<a  href="https://www.youtube.com/watch?v=o4Oo2c4-vgQ">讓孫悟空心驚的緊箍咒 慢性頭痛</a>'+"<BR/>");}
+          if(vars[i]==58){document.write( '<a  href="https://www.youtube.com/watch?v=rFYVyTBoRhk">結核菌無所不在 兒童青少年要當心</a>'+"<BR/>");}
+          if(vars[i]==59){document.write( '<a  href="https://www.youtube.com/watch?v=4px8uLHEbdk">老年科病房提供跨專業團隊照護治療</a>'+"<BR/>");}
+          if(vars[i]==60){document.write( '<a  href="https://www.youtube.com/watch?v=mpF4pyKhVGo">假牙植牙學問多 審慎評估擺脫無「齒」之徒</a>'+"<BR/>");}
+          if(vars[i]==61){document.write( '<a  href="https://www.youtube.com/watch?v=-OTb-MZyiAs">認識原廠藥各學名藥 保障全民用藥安全</a>'+"<BR/>");}
+          if(vars[i]==62){document.write( '<a  href="https://www.youtube.com/watch?v=epq2Ts4knlY">因應台灣高齡化 您準備好了嗎？</a>'+"<BR/>");}
+          if(vars[i]==63){document.write( '<a  href="https://www.youtube.com/watch?v=yVFOEpDqu7Y">阿基里斯腱及其傷害</a>'+"<BR/>");}
+          if(vars[i]==64){document.write( '<a  href="https://www.youtube.com/watch?v=EkJ9Ba9xn2k">上腹痛原因百百種及早診斷莫輕忽</a>'+"<BR/>");}
+          if(vars[i]==65){document.write( '<a  href="https://www.youtube.com/watch?v=KMXk4p5efnQ">破解頭頸癌放療常見疑思</a>'+"<BR/>");}
+          if(vars[i]==66){document.write( '<a  href="https://www.youtube.com/watch?v=jMGoF2Spmjo">拒絕當低頭族 遠離頸肩退化</a>'+"<BR/>");}
+          if(vars[i]==67){document.write( '<a  href="https://www.youtube.com/watch?v=qBQ6tJWbo_Q">蚊子快退散!!談登革熱二三事</a>'+"<BR/>");}
+          if(vars[i]==68){document.write( '<a  href="https://www.youtube.com/watch?v=peufFT_tKZc">常見職業性手臂肩頸疾病 預防保健</a>'+"<BR/>");}
+          if(vars[i]==69){document.write( '<a  href="https://www.youtube.com/watch?v=Ehf3qFJoT84">乾癬不是傳染病 配合醫囑化「癬」為夷</a>'+"<BR/>");}
+          if(vars[i]==70){document.write( '<a  href="https://www.youtube.com/watch?v=_MiWt6nF_YU">老年性黃斑部病變</a>'+"<BR/>");}
+          if(vars[i]==71){document.write( '<a  href="https://www.youtube.com/watch?v=7dxG_FiUbsk&amp;list=PLjJ4XcW3nZ7j1XtkA6Win7IkD32XNH5W5&amp;index=12">擾人的肩膀疼痛</a>'+"<BR/>");}
+          if(vars[i]==72){document.write( '<a  href="https://www.youtube.com/watch?v=JU23mE2prSE&amp;list=PLjJ4XcW3nZ7j1XtkA6Win7IkD32XNH5W5&amp;index=13">職業及環境醫學的新趨勢</a>'+"<BR/>");}
+          if(vars[i]==73){document.write( '<a  href="https://www.youtube.com/watch?v=cNu7N5AhTBk&amp;list=PLjJ4XcW3nZ7j1XtkA6Win7IkD32XNH5W5&amp;index=14">生育要趁早［談年齡與不孕症及高危險妊娠］</a>'+"<BR/>");}
+          if(vars[i]==74){document.write( '<a  href="https://www.youtube.com/watch?v=hiq7_FloUto&amp;list=PLjJ4XcW3nZ7j1XtkA6Win7IkD32XNH5W5&amp;index=15">麻醉前訪視與麻醉風險</a>'+"<BR/>");}
+          if(vars[i]==75){document.write( '<a  href="https://www.youtube.com/watch?v=hxHG6trMCT8&amp;index=16&amp;list=PLjJ4XcW3nZ7j1XtkA6Win7IkD32XNH5W5">加護病房病人的復健運動</a>'+"<BR/>");}
+          if(vars[i]==76){document.write( '<a  href="https://www.youtube.com/watch?v=LyVkMapCvcw&amp;list=PLjJ4XcW3nZ7j1XtkA6Win7IkD32XNH5W5&amp;index=17">多發性骨髓瘤</a>'+"<BR/>");}
+          if(vars[i]==77){document.write( '<a  href="https://www.youtube.com/watch?v=kyzxAfUs6os&amp;list=PLjJ4XcW3nZ7j1XtkA6Win7IkD32XNH5W5&amp;index=18">運動是良方</a>'+"<BR/>");}
+          if(vars[i]==78){document.write( '<a  href="https://www.youtube.com/watch?v=MxrCHAsBvjo">躁鬱、憂鬱還是焦躁不安？</a>'+"<BR/>");}
+          if(vars[i]==79){document.write( '<a  href="https://www.youtube.com/watch?v=ngkSRHsVFz4&amp;list=PLjJ4XcW3nZ7j1XtkA6Win7IkD32XNH5W5&amp;index=24">乾癬的治療</a>'+"<BR/>");}
+          if(vars[i]==80){document.write( '<a  href="https://www.youtube.com/watch?v=S_lCemw0sQc&amp;list=PLjJ4XcW3nZ7j1XtkA6Win7IkD32XNH5W5&amp;index=26">注意力不足過動症</a>'+"<BR/>");}
+          if(vars[i]==81){document.write( '<a  href="https://www.youtube.com/watch?v=3nEAv1AGk90">幼兒飲食原則</a>'+"<BR/>");}
+          if(vars[i]==82){document.write( '<a  href="https://www.youtube.com/watch?v=CJtqcvSlmps">人骨拼圖-淺談顏面骨骨折</a>'+"<BR/>");}
+          if(vars[i]==83){document.write( '<a  href="https://www.youtube.com/watch?v=Nq_DBPx7cUg">急性中風之治療及預防</a>'+"<BR/>");}
+          if(vars[i]==84){document.write( '<a  href="https://www.youtube.com/watch?v=UeaGfnGqNyQ">噓噓樂 尿得健康又快樂</a>'+"<BR/>");}
+          if(vars[i]==85){document.write( '<a  href="https://www.youtube.com/watch?v=9ObjxPZxKVc&amp;list=PLjJ4XcW3nZ7j1XtkA6Win7IkD32XNH5W5&amp;index=6">口腔黑色素瘤</a>'+"<BR/>");}
+          if(vars[i]==86){document.write( '<a  href="https://www.youtube.com/watch?v=meU9QvmcGp0&amp;list=PLjJ4XcW3nZ7j1XtkA6Win7IkD32XNH5W5&amp;index=7">聰明用藥健康加分</a>'+"<BR/>");}
+          if(vars[i]==87){document.write( '<a  href="https://www.youtube.com/watch?v=dbQkDirfnUc&amp;list=PLjJ4XcW3nZ7j1XtkA6Win7IkD32XNH5W5&amp;index=8">杜微「腎」防：談幼兒泌尿道感染</a>'+"<BR/>");}
+          if(vars[i]==88){document.write( '<a  href="https://www.youtube.com/watch?v=79dCUI7Iue8&amp;list=PLjJ4XcW3nZ7j1XtkA6Win7IkD32XNH5W5&amp;index=9">用真正有效的方法治療膝關節退化</a>'+"<BR/>");}
+          if(vars[i]==89){document.write( '<a  href="https://www.youtube.com/watch?v=Q4sGekyrdHo&amp;index=10&amp;list=PLjJ4XcW3nZ7j1XtkA6Win7IkD32XNH5W5">蜂窩性組織炎不可忽視之皮膚組織感染</a>'+"<BR/>");}
+          if(vars[i]==90){document.write( '<a  href="https://www.youtube.com/watch?v=-IdHieeaiFs&amp;list=PLjJ4XcW3nZ7j1XtkA6Win7IkD32XNH5W5&amp;index=11">何謂打鼾症、睡眠呼吸中止症 及其現況？</a>'+"<BR/>");}
+          if(vars[i]==91){document.write( '<a  href="https://www.youtube.com/watch?v=kOHiwbT7V_U">血糖控制不良失智風險高</a>'+"<BR/>");}
+          if(vars[i]==92){document.write( '<a  href="https://www.youtube.com/watch?v=NeBqWxOWcO0">以代謝減重手術治療糖尿病</a>'+"<BR/>");}
+          if(vars[i]==93){document.write( '<a  href="https://www.youtube.com/watch?v=7b8CcDvQJRc">達文西機械手臂在手術的運用1</a>'+"<BR/>");}
+          if(vars[i]==94){document.write( '<a  href="https://www.youtube.com/watch?v=1M9q_aY5F70">達文西機械手臂在手術的運用2</a>'+"<BR/>");}
+          if(vars[i]==95){document.write( '<a  href="https://www.youtube.com/watch?v=lIK7Ls7muNQ&amp;index=25&amp;list=PLjJ4XcW3nZ7j1XtkA6Win7IkD32XNH5W5">達文西機械手臂在手術的運用3</a>'+"<BR/>");}
+          if(vars[i]==96){document.write( '<a  href="https://www.youtube.com/watch?v=l3LKHFXXz4U&amp;list=PLjJ4XcW3nZ7jCFT1eTllEVVBRbj95lMzA">高尿酸血症與痛風飲食原則</a>'+"<BR/>");}
+          if(vars[i]==97){document.write( '<a  href="https://www.youtube.com/watch?v=svuw1FknA0Y&amp;list=PLjJ4XcW3nZ7jCFT1eTllEVVBRbj95lMzA">頸動脈阻塞之治療</a>'+"<BR/>");}
+          if(vars[i]==98){document.write( '<a  href="https://www.youtube.com/watch?v=zaK5qGuG9ik&amp;list=PLjJ4XcW3nZ7jCFT1eTllEVVBRbj95lMzA">無痛內視鏡麻醉</a>'+"<BR/>");}
+          if(vars[i]==99){document.write( '<a  href="https://www.youtube.com/watch?v=icxBy5DlYnE&amp;list=PLjJ4XcW3nZ7jCFT1eTllEVVBRbj95lMzA">鼻炎的治療及預防</a>'+"<BR/>");}
+          if(vars[i]==100){document.write( '<a  href="https://www.youtube.com/watch?v=DPJE5KxhAEQ&amp;list=PLjJ4XcW3nZ7jCFT1eTllEVVBRbj95lMzA">陪你一生 伴乳一世</a>'+"<BR/>");}
+          if(vars[i]==101){document.write( '<a  href="https://www.youtube.com/watch?v=fAJoqaGsasE&amp;list=PLjJ4XcW3nZ7jCFT1eTllEVVBRbj95lMzA">創傷後壓力症候群</a>'+"<BR/>");}
+          if(vars[i]==102){document.write( '<a  href="https://www.youtube.com/watch?v=3FGhdpAv1_g&amp;list=PLjJ4XcW3nZ7jCFT1eTllEVVBRbj95lMzA">經皮內視鏡胃造口病人之照顧</a>'+"<BR/>");}
+          if(vars[i]==103){document.write( '<a  href="https://www.youtube.com/watch?v=m1TC7OxdvMM&amp;list=PLjJ4XcW3nZ7jCFT1eTllEVVBRbj95lMzA">骨質疏鬆症之預防與治療</a>'+"<BR/>");}
+          if(vars[i]==104){document.write( '<a  href="https://www.youtube.com/watch?v=i__iyPVSpdk&amp;list=PLjJ4XcW3nZ7jCFT1eTllEVVBRbj95lMzA">糖尿病與周邊神經病變</a>'+"<BR/>");}
+          if(vars[i]==105){document.write( '<a  href="https://www.youtube.com/watch?v=c4hecqdvKL4&amp;list=PLjJ4XcW3nZ7jCFT1eTllEVVBRbj95lMzA">倒睫毛及眼皮常見疾病</a>'+"<BR/>");}
+          if(vars[i]==106){document.write( '<a  href="https://www.youtube.com/watch?list=PLjJ4XcW3nZ7jCFT1eTllEVVBRbj95lMzA&amp;v=r5IdxLtDyhY">漫談直腸癌的術前放射線治療</a>'+"<BR/>");}
+          if(vars[i]==107){document.write( '<a  href="https://www.youtube.com/watch?v=y3hrUbwDKNc&amp;list=PLjJ4XcW3nZ7jCFT1eTllEVVBRbj95lMzA">認識注意力不集中過動症</a>'+"<BR/>");}
+          if(vars[i]==108){document.write( '<a  href="https://www.youtube.com/watch?v=De0aAevx7mY&amp;feature=youtu.be">保可淨-藥品衛教影片</a>'+"<BR/>");}
+          if(vars[i]==109){document.write( '<a  href="https://www.youtube.com/watch?v=lRHZDw0V8yA&amp;feature=youtu.be">Spiriva Respimat適喘樂 舒沛噴</a>'+"<BR/>");}
+          if(vars[i]==110){document.write( '<a  href="https://www.youtube.com/watch?v=ErIK2URZDjQ&amp;feature=youtu.be">潤娃易利達92/22 mcg乾粉吸入劑</a>'+"<BR/>");}
+          if(vars[i]==111){document.write( '<a  href="https://www.youtube.com/watch?v=kgxdWaAdmbA&amp;feature=youtu.be">Klean-Prep powder 衛教影片(國語版)</a>'+"<BR/>");}
+          if(vars[i]==112){document.write( '<a  href="https://www.youtube.com/watch?v=ghdFT-8zkiU&amp;feature=youtu.be">Klean-Prep powder 衛教影片(台語版)</a>'+"<BR/>");}
+          if(vars[i]==113){document.write( '<a  href="https://www.youtube.com/watch?v=rtzVORWyGXg">旋達碟 Relenza 衛教影片</a>'+"<BR/>");}
+          if(vars[i]==114){document.write( '<a  href="http://nckupharmacy.hosp.ncku.edu.tw/newhomepage/service_handout%20forms_detail.asp?page=&amp;kind=4&amp;SearchText=&amp;H_SerialNo=97">淨菸經皮吸收戒菸NICOTINE貼片衛教影片</a>'+"<BR/>");}
+          if(vars[i]==115){document.write( '<a  href="http://nckupharmacy.hosp.ncku.edu.tw/newhomepage/service_handout%20forms_detail.asp?page=&amp;kind=4&amp;SearchText=&amp;H_SerialNo=95">內舒拿鼻噴劑衛教影片</a>'+"<BR/>");}
+          if(vars[i]==116){document.write( '<a  href="http://nckupharmacy.hosp.ncku.edu.tw/newhomepage/service_handout%20forms_detail.asp?page=&amp;kind=4&amp;SearchText=&amp;H_SerialNo=94">安肺樂易利達衛教影片</a>'+"<BR/>");}
+          if(vars[i]==117){document.write( '<a  href="http://nckupharmacy.hosp.ncku.edu.tw/newhomepage/service_handout%20forms_detail.asp?page=&amp;kind=4&amp;SearchText=&amp;H_SerialNo=92">昂帝博吸入衛教影片</a>'+"<BR/>");}
+          if(vars[i]==118){document.write( '<a  href="http://nckupharmacy.hosp.ncku.edu.tw/newhomepage/service_handout%20forms_detail.asp?page=&amp;kind=4&amp;SearchText=&amp;H_SerialNo=77">艾敏釋鼻噴劑衛教影片</a>'+"<BR/>");}
+          if(vars[i]==119){document.write( '<a  href="https://www.youtube.com/watch?v=h0hp3s7eP9Q">新滑蓋式安全胰島素空針使用方式</a>'+"<BR/>");}
+          if(vars[i]==120){document.write( '<a  href="https://www.youtube.com/watch?v=tZmY4Pm4gMM&amp;feature=player_embedded">吩坦尼穿皮貼片衛教影片</a>'+"<BR/>");}
+          if(vars[i]==121){document.write( '<a  href="https://www.youtube.com/watch?v=ZY_CPgGlvEw&amp;feature=player_embedded">普力馬林陰道乳膏衛教影片</a>'+"<BR/>");}
+          if(vars[i]==122){document.write( '<a  href="https://www.youtube.com/watch?v=XAI54qaUCPM&amp;feature=player_embedded">憶思能貼片衛教影片</a>'+"<BR/>");}
+          if(vars[i]==123){document.write( '<a  href="https://www.youtube.com/watch?v=GdXgcILnOIw&amp;feature=player_embedded">日舒懸液用粉衛教影片</a>'+"<BR/>");}
+          if(vars[i]==124){document.write( '<a  href="https://www.youtube.com/watch?v=J7JGGm8SO2Y&amp;feature=player_embedded">肺舒坦吸入劑衛教影片</a>'+"<BR/>");}
+          if(vars[i]==125){document.write( '<a  href="https://www.youtube.com/watch?v=-dMEFEcbq70">骨穩注射劑衛教影片</a>'+"<BR/>");}
+          if(vars[i]==126){document.write( '<a  href="https://www.youtube.com/watch?v=NrPqS7Wjk5w">吸必擴都保吸入劑衛教影片</a>'+"<BR/>");}
+          if(vars[i]==127){document.write( '<a  href="https://www.youtube.com/watch?v=BPUk11oZrIY">迷你寧鼻噴劑衛教影片</a>'+"<BR/>");}
+        }
+      }   
+
+
+    </script>
+  </head>
+  <body>
+
+    <!--<a id="1" href=data_sin_addr[x.value]>data_sin_titl[x.value]</a><BR/>-->
+
+  </body>
+</html>
