@@ -98,8 +98,9 @@
       //>>>>>>>> 決定輸出(網址/標題)  <<<<<<<<<<<<<<<<<<<<<<<<<<<<      
       //function getValue()
       //////{
-        var url = location.href;
-        var vars_utf_8 = url.split(","); //取得問號之後的值
+      var url = location.href;
+      var sep ="?";
+      var vars_utf_8 = [url.substr(url.indexOf(sep)+1, url.trim().length)]; //取得問號之後的值
         var final_transcript=decodeURIComponent(vars_utf_8);
         //var x=document.getElementById("address")
 
@@ -164,7 +165,7 @@
         var tran=[];
         //>>>>>>>>>>>>>>> 衛教連結 搜尋 結果輸出頁面 <<<<<<<<<<<<<<<<<<<<<<<<<<<<        
         //////////////////////////////////////////////////////////////
-        var reg = RegExp(/肚子痛/);
+        //var reg = RegExp(/肚子痛/);
         if (final_transcript.trim().length > 0){ // 如果有最終辨識文字
           var data_sin_cut=[];      
           var reg = "#";
@@ -361,7 +362,7 @@
        
 
       //>>>>>>>>>>>>>>>>>>>>>語音撥放<<<<<<<<<<<<<<<<<      
-      function Control(x){document.location.href="https://chang-yu-ling.github.io/info_basicFunction_almost_page1_new.html";
+      function Control(x){document.location.href="https://chang-yu-ling.github.io/V2/code/7_print.html";
       }
       //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
