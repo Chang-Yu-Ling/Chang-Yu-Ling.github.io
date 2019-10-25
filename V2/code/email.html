@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+  </head>
+  <script src="https://smtpjs.com/v3/smtp.js">
+  
+    Email.send({
+      Host : "smtp.gmail.com",
+      Username : "alice310ch",
+      Password : "ch310103310",
+      To : 'alice310ch@gmail.com',
+      From : "alice310ch@gmail.com",
+      Subject : "This is the subject",
+      Body : "And this is the body"
+    })
+      .then(
+      message => alert(message)
+    );
+  
+  </script>
+  <body>
+    
+  </body>
+</html>
