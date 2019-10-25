@@ -5,6 +5,9 @@
     #ant {
       width:2030.1px;
       height:1240px;
+      font-size:60;
+      font-family:cursive;
+      color:rgba(165, 114, 54, 0.96) ;
       /*background-image:url('https://chang-yu-ling.github.io/images/IN-FO UI-1.jpg');*?        
       /*background-color:#ccc;*/
     }
@@ -64,7 +67,7 @@
         recognition.onstart = function() { // 開始辨識
           recognizing = true; // 設定為辨識中
           startStopButton.value = "按此停止"; // 辨識中...按鈕改為「按此停止」。  
-          infoBox.innerText = "辨識中...";  // 顯示訊息為「辨識中」...
+          infoBox.innerText = "語音辨識中...";  // 顯示訊息為「辨識中」...
         };
 
         recognition.onend = function() { // 辨識完成
@@ -376,11 +379,12 @@
 
     <!-------------------设置背景图片-------------------> 
     <div id="ant">
+      <label id="infoBox"style="position: absolute; left: 933; top: 555;background-color: transparent;border:2px blue none"></label>
       <!-- <BR> &nbsp; -->
       <input type="button" value=""style="width:340px;height:95px;position: absolute; left: 653; top: 705;background-color: transparent;border:2px blue none" onclick="Control('re');"/>
 
       <input type="button" id="bt" value=""style="width:340px;height:95px;position:absolute; left: 1059; top: 705;background-color: transparent;border:2px blue none"onclick="Control('next');"/>
-
+      
 
       <!--  
 <BR><BR>  
@@ -462,13 +466,13 @@
     <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@語音撥放@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
     <!-------------------症狀回答(完整版)-------------------------------->    
+    
 
     <!--      
 症狀回答：
 -->
     <BR/><textarea input  id="textBox" type="text" cols="60" rows="5" value=""style="position: absolute; left: 103; top: 1973;background-color: transparent;border:2px blue none"></textarea><BR/>
-
-
+    
     <!--////////////////////////////顯示辨識address///////////////-->
     <!-- <textarea input  id="address" type="text" cols="60" rows="5" value=""></textarea><BR/>-->
     <!--////////////////////////////顯示辨識address///////////////-->
