@@ -1,0 +1,98 @@
+
+<!DOCTYPE>
+<html>
+  <head>
+    <title>
+      html2canvas example
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: white;
+      }
+      header, section {
+        overflow: hidden;
+      }
+      ul {
+        margin: 0;
+        border: 0;
+        padding: 0;
+      }
+      li {
+        display: block; /* i.e., suppress marker */
+        color: black;
+        height: 4em;
+        width: 25%;
+        margin: 0;
+        float: left;
+        background-color: green;
+        text-align: center;
+        line-height: 4em;
+      }
+
+      aside {
+        width: 20%;
+        float: left;
+        text-align: center;
+      }
+
+      aside a {
+        display: block;
+        height: 4em;
+        color: blue;
+      }
+
+      article {
+        padding: 2em 0;
+        width: 80%;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      
+    </header>
+    <section>
+      
+      
+        <button id="renderPdf">DOWNLOAD PDF</button>
+        <h2>Stone Giant</h2>
+        <p>
+          Coming 
+        </p>
+        <p>
+          以
+        </p>
+      
+    </section>
+    <!--<footer>write by linwalker @2017</footer>-->
+    <script type="text/javascript" src="./js/html2canvas.js"></script>
+    <script type="text/javascript" src="./js/jsPdf.debug.js"></script>
+    <script type="text/javascript">
+
+      var downPdf = document.getElementById("renderPdf");
+
+      downPdf.onclick = function() {
+        html2canvas(document.body, {
+          onrendered:function(canvas) {
+
+            //返回图片URL，参数：图片格式和清晰度(0-1)
+            var pageData = canvas.toDataURL('image/jpeg', 1.0);
+
+            //方向默认竖直，尺寸ponits，格式a4【595.28,841.89]
+            var pdf = new jsPDF('', 'pt', 'a4');
+
+            //需要dataUrl格式
+            pdf.addImage(pageData, 'JPEG', 0, 0, 595.28, 592.28/canvas.width * canvas.height );
+
+            pdf.save('content.pdf');
+
+          }
+        })
+      }
+    </script>
+  </body>
+</html>
