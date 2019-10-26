@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  <head>
+
+
+    <title>Title of the document</title>
+  </head>
+
+  <body>
+    The content of the document......
+  </body>
+
+  <script>
+
+    Email.send({
+
+      Host : "smtp.elasticemail.com",
+      Username : "info20191111@gmail.com",
+      Password : "74436d3a-3562-4838-ad0a-49d4af152fff",
+      To : 'alice310ch@gmail.com',
+      From : "info20191111@gmail.com",
+      Subject : "测试案例",
+      Body : "收到请回复"
+
+    }).then(
+      message => alert(message)
+    );;
+  </script>
+
+</html>
