@@ -5,21 +5,19 @@
   </head>
   <script src="https://smtpjs.com/v3/smtp.js">
   
-    Email.send({
-      Host : "smtp.gmail.com",
-      Username : "info20191111",
-      Password : "ncku_info_1111",
-      To : 'info20191111@gmail.com',
+   Email.send({
+
+      Host : "smtp.elasticemail.com",
+      Username : "info20191111@gmail.com",
+      Password : "74436d3a-3562-4838-ad0a-49d4af152fff",
+      To : 'alice310ch@gmail.com',
       From : "info20191111@gmail.com",
-      Subject : "This is the subject",
-      Body : "And this is the body"
-    })
-      .then(
+      Subject : "测试案例",
+      Body : "收到请回复"
+
+    }).then(
       message => alert(message)
-    );
-  
+    );;
   </script>
-  <body>
-    
-  </body>
+
 </html>
