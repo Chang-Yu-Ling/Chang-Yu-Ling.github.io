@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-zh_TW.min.js"></script> 
+    <script language="javascript">
+
+      //資料夾及 TITLE
+      var mapDATE = {"0812":"0", "0814":"1", "0813":"2"};  // 日期　=> index
+      var arrTITLE = ["<font style='color:blue'>8/12(六)</font>","<font style='color:red'>8/13(日)</font>", "8/14(一)"];
+      var arrREVIEW = ["0B4FHrOa0JsA3TWM4Ulh2N01rVnc", "0B4FHrOa0JsA3c0t2enBwTkFDdUE", "0B4FHrOa0JsA3WnRaNm0zVkpHU28"];
+      var arrFOLDER = ["Day1x", "Day2x", "Day3x"];
+
+      // 回傳本日 mmdd
+      function today() {
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yyyy = today.getFullYear();
+        if(dd<10) {
+          dd = '0'+dd
+        } 
+        if(mm<10) {
+          mm = '0'+mm
+        } 
+        today = mm + dd;
+        return today;
+      }
+
+      function up_page() {
+        alert(location.href);
+        return true;
+      }
+
+      $(function() {
+        var td = today();
+        if (typeof mapDATE[td] == 'undefined') 
+          td = "0812";
+        var idx = mapDATE[td];
+        var up_folder = arrFOLDER[idx];
+        var title = arrTITLE[idx];
+        var review_url = arrREVIEW[idx];
+        $("#title").html(title);
+        $("#folder").text(td + " - " + up_folder);
+        $("[name=up_folder]").val(up_folder);
+        $("[name=review_url]").val(review_url);
+
+        // We can attach the `fileselect` event to all file inputs on the page
+        $(document).on('change', ':file', function() {
+          var input = $(this),
+              numFiles = input.get(0).files ? input.get(0).files.length : 1,
+              label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+          input.trigger('fileselect', [numFiles, label]);
+        });
+
+        // We can watch for our custom `fileselect` event like this
+        $(document).ready( function() {
+          $(':file').on('fileselect', function(event, numFiles, label) {
+
+            var input = $(this).parents('.input-group').find(':text'),
+                log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+            if( input.length ) {
+              input.val(log);
+            } else {
+              if( log ) alert(log);
+            }
+
+          });
+        });
+
+      });
+
+    </script>
+
+  </head>
+  <body>
+    <span id="folder">zzz..</span>
+    <center>
+      <h1>照片上傳系統 - <span id="title"></span></h1>
+      <hr>
+      <form class="form-horizontal" role="form" id="myForm">
+        <input type="hidden" name="up_folder" value="" />
+        <input type="hidden" name="review_url" value="" />
+        <input type="hidden" name="up_url" value="" />
+        <div class="form-group">
+          <label class="input-lg">選擇學員：</label>
+          <select class="selectpicker" data-live-search="true" name="myName">
+            <option value="">請選擇</option>
+            <option value="11">11(蕭OO)</option>
+            <option value="12">12(陳OO)</option>
+            <option value="13">13(林OO)</option>
+            <option value="14">14(胡OO)</option>
+            <option value="15">15(王OO)</option>
+            <option value="21">21(鄭OO)</option>
+            <option value="22">22(張OO)</option>
+            <option value="23">23(盧OO)</option>
+            <option value="24">24(蔡OO)</option>
+            <option value="25">25(杜OO)</option>
+            <option value="31">31(陳OO)</option>
+            <option value="32">32(黃OO)</option>
+            <option value="33">33(劉OO)</option>
+            <option value="34">34(蘇OO)</option>
+            <option value="35">35(李OO)</option>
+            <option value="41">41(盧OO)</option>
+            <option value="42">42(謝OO)</option>
+            <option value="43">43(張OO)</option>
+            <option value="44">44(陳OO)</option>
+            <option value="45">45(趙OO)</option>
+          </select>
+          <!-- input class="input-lg" style="width:200px;" type="text" name="myName" / -->
+        </div>
+        <!-- 上傳按鈕 -->
+        <? for (var i = 1; i <=5; i++) { ?>
+        <div class="form-group" style="margin-left:10%;margin-right:10%;width:60%;">
+          <label class="btn btn-default btn-file">
+            <div class="col-lg-6 col-sm-6 col-12">
+              <div class="input-group">
+                <label class="input-group-btn">
+                  <span class="btn btn-primary btn-lg">
+                    瀏覽&hellip; <input name="myFile<?=i?>" type="file" style="display: none;" multiple>
+                  </span>
+                </label>
+                <input type="text" class="form-control input-lg" style="width:500px;" readonly>
+              </div>
+            </div>
+          </label>
+        </div>
+        <?}?>
+        <div class="form-group" style="margin-left:10%;width:60%;">
+          <input type="submit" class="btn btn-lg btn-primary" value="全部上傳"
+                 onclick="return UP(this);">
+        </div>
+      </form>
+    </center>
+    <div id="output"></div>
+
+    <script>
+      function UP(elm){
+        if( $("[name=myName]").val() == "" ) {
+          alert("請先設定一位學員!");
+          return false;
+        }
+        $(elm).val('檔案上傳中...');
+        google.script.run.withSuccessHandler(fileUploaded)
+          .uploadFiles($('#myForm').get(0));
+        return false;
+      }
+
+      function fileUploaded(status) {
+        document.getElementById('myForm').style.display = 'none';
+        document.getElementById('output').innerHTML = status;
+      }
+    </script>
+  </body>
+</html>
