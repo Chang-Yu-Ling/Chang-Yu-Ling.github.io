@@ -1,0 +1,43 @@
+<html>
+  <head><meta charset="utf-8" /></head>
+  <!--///////////////设置背景图片/////////////////-->
+  <style type="text/css">
+    #ant {
+      width:2030.1px;
+      height:1240px;
+      background-repeat: no-repeat;
+    }
+  </style>
+  <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+  <body background="https://chang-yu-ling.github.io/V2/image/IN-FO UI new_3.jpg";>
+    <script type="text/javascript">
+      document.body.style.backgroundRepeat = "no-repeat";
+      //>>>>>>>>>>>>>>>>>>>>>語音撥放<<<<<<<<<<<<<<<<<
+      var sound=1;
+      //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      //>>>>>>>>>>>>>>>>>>>>>设置背景图片<<<<<<<<<<<<<<<<<
+      window.onload = function () {
+        var page=1;
+        var odiv = document.getElementById("ant");
+        var obt = document.getElementById("bt");   
+        //odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/V2/image/IN-FO UI new_3.jpg')";
+        //odiv.style.backgroundRepeat = "no-repeat";
+        //odiv.style.backgroundPosition = "0px -33px";
+        //>>>>>>>>>>>>>>>>>>>>>語音撥放 第1題<<<<<<<<<<<<<<<<<        
+        setTimeout(function(){document.getElementById(sound).play();},1500);
+      }
+      //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    </script>  
+
+    <!-------------------设置背景图片-------------------> 
+    <div id="ant">
+      <!-- <BR> &nbsp; -->
+      <input type="button" value="" onclick="location.href='https://chang-yu-ling.github.io/V2/code/p4_DEMO.html'"style="width:525px;height:110px;position: absolute; left: 755; top: 672;background-color:transparent;border:2px blue none"/>      
+    </div>
+    <!-------------------語音撥放-------------------------------->    
+    <audio id="1" width="360" height="270" > 
+      <source src="https://chang-yu-ling.github.io/sound/1.mp3" type="audio/mp3">
+      您的瀏覽器不支援此 HTML5 影片標籤
+    </audio>
+  </body>
+</html> 
