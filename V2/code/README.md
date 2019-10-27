@@ -7,7 +7,7 @@
 * 6_SHOWresult.html
 * 7_print.html
 * 8_bye.html
-<HR>
+
 # < 目前正確版_加列印 >
 * P1_home.html
 * P2_menu.html
