@@ -7,3 +7,12 @@
 * 6_SHOWresult.html
 * 7_print.html
 * 8_bye.html
+<HR>
+* P1_home.html
+* P2_menu.html
+* P3_Introduction.html
+* P4_DEMO.html
+* P5_QAonly.html
+* P6_SHOWresult.html
+* P7_print.html
+* P8_bye.html
