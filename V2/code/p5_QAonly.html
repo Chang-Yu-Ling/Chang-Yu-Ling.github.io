@@ -16,7 +16,7 @@
   <body>
     <script type="text/javascript">
       //>>>>>>>> data_存放(有斷詞[上]+沒斷詞[下])  <<<<<<<<<<<<<<<<<<<<<<<<<<<<
-      
+
       //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
       var infoBox; // 訊息 label
@@ -34,7 +34,7 @@
 
 
       //>>>>>>>> 決定輸出(網址/標題)  <<<<<<<<<<<<<<<<<<<<<<<<<<<<      
-      
+
       //>>>>>>>> 語音辨識資訊取得(用於輸出)  <<<<<<<<<<<<<<<<<<<<<<<<<<<<
       function startButton(event) {        
         address = document.getElementById("address");
@@ -368,7 +368,9 @@
             if(identifying==0){setTimeout(function(){if(page==8){startButton(event);identifying=1;}},7700);}  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
           }
           if(page==9){
-            document.location.href="https://chang-yu-ling.github.io/V2/code/p6_SHOWresultFRONTok.html?"+final_transcript;
+            setTimeout(function(){document.location.href="https://chang-yu-ling.github.io/V2/code/p6_SHOWresultFRONTok.html?"+final_transcript;},2000);
+            //startButton(event);
+            //document.location.href="https://chang-yu-ling.github.io/V2/code/p6_SHOWresultFRONTok.html?"+final_transcript;
           }
 
         }
@@ -384,7 +386,7 @@
       <input type="button" value=""style="width:340px;height:95px;position: absolute; left: 653; top: 705;background-color: transparent;border:2px blue none" onclick="Control('re');"/>
 
       <input type="button" id="bt" value=""style="width:340px;height:95px;position:absolute; left: 1059; top: 705;background-color: transparent;border:2px blue none"onclick="Control('next');"/>
-      
+
 
       <!--  
 <BR><BR>  
@@ -466,13 +468,13 @@
     <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@語音撥放@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
     <!-------------------症狀回答(完整版)-------------------------------->    
-    
+
 
     <!--      
 症狀回答：
 -->
     <BR/><textarea input  id="textBox" type="text" cols="60" rows="5" value=""style="position: absolute; left: 103; top: 1973;background-color: transparent;border:2px blue none"></textarea><BR/>
-    
+
     <!--////////////////////////////顯示辨識address///////////////-->
     <!-- <textarea input  id="address" type="text" cols="60" rows="5" value=""></textarea><BR/>-->
     <!--////////////////////////////顯示辨識address///////////////-->
