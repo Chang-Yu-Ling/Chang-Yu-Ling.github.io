@@ -15,6 +15,6 @@
 * P4_DEMO.html
 * P5_QAonly.html
 * P6_SHOWresult.html
-`* p6_BackFrontRESULT.html(列印和輸出格式軍正確)`
+* `p6_BackFrontRESULT.html(列印和輸出格式軍正確)`
 * P7_print.html
 * P8_bye.html
