@@ -3,7 +3,6 @@
   <!--///////////////设置背景图片/////////////////-->
   <style type="text/css">
     body {
-
       /*background-image: url("https://chang-yu-ling.github.io/V2/cellphone/image/1.jpg");*/
       background-repeat: no-repeat;
       /* background-attachment: fixed;*/
@@ -17,7 +16,6 @@
       height:2000px;
     }
     #ant {
-
       width:500px;
       height:1640px;
       background-repeat: no-repeat;      
@@ -33,15 +31,17 @@
       var sound=1;
       //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
       //>>>>>>>>>>>>>>>>>>>>>设置背景图片<<<<<<<<<<<<<<<<<
-      /*window.onload = function () {
+      window.onload = function () {
         var page=1;
         var odiv = document.getElementById("ant");
         var obt = document.getElementById("bt");   
         //odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/V2/image/IN-FO UI new_1.jpg')";
-        odiv.style.backgroundRepeat = "no-repeat";
-        odiv.style.backgroundPosition = "0px -33px";
+        //odiv.style.backgroundRepeat = "no-repeat";
+        //odiv.style.backgroundPosition = "0px 0px";
+        setTimeout(function(){document.getElementById(sound).play();},500);
+
         //>>>>>>>>>>>>>>>>>>>>>語音撥放 第1題<<<<<<<<<<<<<<<<< 
-      }*/
+      }
       //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     </script>  
 
@@ -50,7 +50,10 @@
 <!-- <BR> &nbsp; -->
     <input type="button" value="" onclick="location.href='https://chang-yu-ling.github.io/V2/cellphone/code/c1_home.html'"style="width:24%;height:3%;position:relative; left:2.2%;top: 1%;background-color:transparent;border:2px blue none"/>
     <input type="button" value="" onclick="location.href='https://chang-yu-ling.github.io/V2/cellphone/code/c4_DEMO.html'"style="width:63.7%;height:7%;position:relative; left: -6.9%;top: 72.45%;background-color:transparent;border:2px blue none"/>
-    
-  <!-------------------語音撥放-------------------------------->    
+
+    <!-------------------語音撥放--------------------------------> <audio id="1" width="360" height="270" > 
+    <source src="https://chang-yu-ling.github.io/sound/1.mp3" type="audio/mp3">
+    您的瀏覽器不支援此 HTML5 影片標籤
+    </audio>
   </body>
 </html>  
