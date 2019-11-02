@@ -1,4 +1,4 @@
-# 手機板正確版()
+# 手機板正確版(final verson)
 * c1_home.html	
 * c3_Introduction.html	
 * c4_DEMO.html	
