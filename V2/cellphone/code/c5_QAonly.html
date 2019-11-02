@@ -21,7 +21,7 @@
       height:2030px;
       background-size:100% 2030px; 
       background-repeat: no-repeat;   
-      
+
       font-size:40;
       font-family:cursive;
       color:rgba(165, 114, 54, 0.96) ;
@@ -44,6 +44,7 @@
       var final_transcript = ''; // 最終的辨識訊息的變數
       var recognizing = false; // 是否辨識中
       var address;
+      var iden=0;
       // document.write(data_sin_titl);//單列網址
       // document.write("-------------------------------------------");
       //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -79,11 +80,13 @@
           recognizing = true; // 設定為辨識中
           startStopButton.value = "按此停止"; // 辨識中...按鈕改為「按此停止」。  
           infoBox.innerText = "語音辨識中...";  // 顯示訊息為「辨識中」...
+          iden=1;
         };
         recognition.onend = function() { // 辨識完成
           recognizing = false; // 設定為「非辨識中」
           startStopButton.value = "開始辨識";  // 辨識完成...按鈕改為「開始辨識」。
           infoBox.innerText = ""; // 不顯示訊息
+          iden=0;
         };
         recognition.onresult = function(event) { // 辨識有任何結果時
           var interim_transcript = ''; // 中間結果
@@ -130,7 +133,7 @@
           if (interim_transcript.trim().length > 0) // 如果有中間辨識文字
             tempBox.value = interim_transcript; // 顯示中間辨識文字
         };
-      }      
+            
       //>>>>>>>>>>>>>>>>>>>>>語音撥放<<<<<<<<<<<<<<<<<
       var sound=1;
       var identifying=0;
@@ -145,59 +148,87 @@
           document.getElementById(sound).pause();
           document.getElementById(sound).play();  
           //>>>>>>>>>>>>>>>>>>>>>語音辨識 第N重複題<<<<<<<<<<<<<<<<<
-          if(sound==1){
+          //window.alert(sound);
+          if(sound==1+1){
             //if(identifying==1){startButton(event);identifying=0;}
             //if(identifying==0){setTimeout(function(){startButton(event);identifying=1; },6000);}
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==0){startButton(event);identifying=1;}},6000);  }
+            if(iden==1){startButton(event);setTimeout(function(){if(page==0){startButton(event);}},6000);}
+            if(iden==0){setTimeout(function(){if(page==0){startButton(event);}},6000);}
+            
+            //if(identifying==1){startButton(event);identifying=0;}
+            //if(identifying==0){setTimeout(function(){if(page==0){startButton(event);}},6000);  }
           }
-          if(sound==2){
+          if(sound==2+1){
             //if(identifying==1){startButton(event);identifying=0;}
             //if(identifying==0){setTimeout(function(){startButton(event);identifying=1; },6000);}
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==1){startButton(event);identifying=1;}},6000);  }
+            if(iden==1){startButton(event);setTimeout(function(){if(page==1){startButton(event);}},6000);}
+            if(iden==0){setTimeout(function(){if(page==1){startButton(event);}},6000);}
+            
+            //if(identifying==1){startButton(event);identifying=0;}
+            //if(identifying==0){setTimeout(function(){if(page==1){startButton(event);}},6000);  }
           }
-          if(sound==3){
+          if(sound==3+1){
             //if(identifying==1){startButton(event);identifying=0;}
             //if(identifying==0){setTimeout(function(){startButton(event);identifying=1; },5000);}
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==2){startButton(event);identifying=1;}},5000);  }
+            if(iden==1){startButton(event);setTimeout(function(){if(page==2){startButton(event);}},5000);}
+            if(iden==0){setTimeout(function(){if(page==2){startButton(event);}},5000);}
+            
+            //if(identifying==1){startButton(event);identifying=0;}
+            //if(identifying==0){setTimeout(function(){if(page==2){startButton(event);}},5000);  }
           }
-          if(sound==4){
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){startButton(event);identifying=1; },8000);}
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==3){startButton(event);identifying=1;}},8000);  }
+          if(sound==4+1){
+            //if(identifying==1){startButton(event);identifying=0;}
+            //if(identifying==0){setTimeout(function(){startButton(event);identifying=1; },8000);}
+            if(iden==1){startButton(event);setTimeout(function(){if(page==3){startButton(event);}},8000);}
+            if(iden==0){setTimeout(function(){if(page==3){startButton(event);}},8000);}
+            
+            //if(identifying==1){startButton(event);identifying=0;}
+            //if(identifying==0){setTimeout(function(){if(page==3){startButton(event);}},8000);}
           }
-          if(sound==5){
+          if(sound==5+1){
             //if(identifying==1){startButton(event);identifying=0:}
             //if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},8000);}
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==4){startButton(event);identifying=1;}},8000);  }
+            if(iden==1){startButton(event);setTimeout(function(){if(page==4){startButton(event)}},8000);}
+            if(iden==0){setTimeout(function(){if(page==4){startButton(event)}},8000);}
+            
+            //if(identifying==1){startButton(event);identifying=0;}
+            //if(identifying==0){setTimeout(function(){if(page==4){startButton(event)}},8000);  }
           }
-          if(sound==6){
+          if(sound==6+1){
             //if(identifying==1){startButton(event);identifying=0;}
             //if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},7000);}
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==5){startButton(event);identifying=1;}},7000);  }
+            if(iden==1){startButton(event);setTimeout(function(){if(page==5){startButton(event);}},7000);}
+            if(iden==0){setTimeout(function(){if(page==5){startButton(event);}},7000);}
+            
+            //if(identifying==1){startButton(event);identifying=0;}
+            //if(identifying==0){setTimeout(function(){if(page==5){startButton(event);}},7000);  }
           }
-          if(sound==7){
+          if(sound==7+1){
             //if(identifying==1){startButton(event);identifying=0;}
             //if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},7000);}
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==6){startButton(event);identifying=1;}},7000);  }
+            if(iden==1){startButton(event);setTimeout(function(){if(page==6){startButton(event);}},7000);}
+            if(iden==0){setTimeout(function(){if(page==6){startButton(event);}},7000);}
+            
+            //if(identifying==1){startButton(event);identifying=0;}
+            //if(identifying==0){setTimeout(function(){if(page==6){startButton(event);}},7000);  }
           }
-          if(sound==8){
+          if(sound==8+1){
             //if(identifying==1){startButton(event);identifying=0;}
             // if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},7700);}
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==7){startButton(event);identifying=1;}},7700);  }
+            if(iden==1){startButton(event);setTimeout(function(){if(page==7){startButton(event);}},7700);}
+            if(iden==0){setTimeout(function(){if(page==7){startButton(event);}},7700);}
+            
+            //if(identifying==1){startButton(event);identifying=0;}
+            //if(identifying==0){setTimeout(function(){if(page==7){startButton(event);}},7700);  }
           }
-          if(sound==9){
+          if(sound==9+1){
             //if(identifying==1){startButton(event);identifying=0;}
             //if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},7700);}
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==8){startButton(event);identifying=1;}},7700);  }
+            if(iden==1){startButton(event);setTimeout(function(){if(page==8){startButton(event);}},7700);}
+            if(iden==0){setTimeout(function(){if(page==8){startButton(event);}},7700);}
+            
+            //if(identifying==1){startButton(event);identifying=0;}
+            //if(identifying==0){setTimeout(function(){if(page==8){startButton(event);}},7700);  }
           }
           //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         }
@@ -211,14 +242,16 @@
         odiv.style.backgroundRepeat = "no-repeat";
         odiv.style.backgroundPosition = "0px 0px";
         odiv.style.backgroundSize = "100% 2030px";
-        
+
         //>>>>>>>>>>>>>>>>>>>>>語音撥放 第1題<<<<<<<<<<<<<<<<<
         if(sound>0){document.getElementById(sound).pause();}
         sound=sound+1;
         document.getElementById(sound).play(); 
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        //>>>>>>>>>>>>>>>>>>>>>語音辨識 第1題<<<<<<<<<<<<<<<<<
-        if(identifying==0){setTimeout(function(){if(page==0){startButton(event);identifying=1;}},6000);}
+        //>>>>>>>>>>>>>>>>>>>>>語音辨識 第1題<<<<<<<<<<<<<<<<<        
+        //if(recognizing==true){setTimeout(function(){if(page==0){startButton(event);startButton(event);identifying=1;}},6000);}
+        if(iden==0){setTimeout(function(){if(page==0){startButton(event);identifying=1;}},6000);}
+       
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         obt.onclick = function () {
           page=page+1;//換頁
@@ -238,8 +271,9 @@
             document.getElementById(sound).play();             
             //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             //>>>>>>>>>>>>>>>>>>>>>語音辨識 第2題<<<<<<<<<<<<<<<<<
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==1){startButton(event);identifying=1;}},6000);  }//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            if(iden==1){startButton(event);setTimeout(function(){if(page==1){startButton(event);}},6000);}
+            if(iden==0){setTimeout(function(){if(page==1){startButton(event);}},6000);}
+            //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
           }
           if(page==2){
             odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/V2/cellphone/image/6.jpg')";
@@ -252,8 +286,11 @@
             document.getElementById(sound).play(); 
             //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             //>>>>>>>>>>>>>>>>>>>>>語音辨識 第3題<<<<<<<<<<<<<<<<<
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==2){startButton(event);identifying=1;}},5500); }
+            if(iden==1){startButton(event);setTimeout(function(){if(page==2){startButton(event);}},5500);}
+            if(iden==0){setTimeout(function(){if(page==2){startButton(event);}},5500);}
+                        
+            //if(iden==1){startButton(event);identifying=0;}
+            //if(iden==0){setTimeout(function(){if(page==2){startButton(event);}},5500); }
             //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
           }
           if(page==3){
@@ -267,8 +304,11 @@
             document.getElementById(sound).play(); 
             //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             //>>>>>>>>>>>>>>>>>>>>>語音辨識 第4題<<<<<<<<<<<<<<<<<
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==3){startButton(event);identifying=1;}},8000);}
+            if(iden==1){startButton(event);setTimeout(function(){if(page==3){startButton(event);}},8000);}
+            if(iden==0){setTimeout(function(){if(page==3){startButton(event);}},8000);}
+            
+            //if(iden==1){startButton(event);identifying=0;}
+            //if(iden==0){setTimeout(function(){if(page==3){startButton(event);}},8000);}
             //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
           }
           if(page==4){
@@ -282,8 +322,11 @@
             document.getElementById(sound).play(); 
             //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             //>>>>>>>>>>>>>>>>>>>>>語音辨識 第5題<<<<<<<<<<<<<<<<<
-            if(identifying==1){ startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==4){startButton(event);identifying=1;}},8000);  }
+            if(iden==1){startButton(event);setTimeout(function(){if(page==4){startButton(event);}},8000);}
+            if(iden==0){setTimeout(function(){if(page==4){startButton(event);}},8000);}
+            
+            //if(iden==1){ startButton(event);identifying=0;}
+            //if(iden==0){setTimeout(function(){if(page==4){startButton(event);}},8000);  }
             //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
           }
           if(page==5){
@@ -297,8 +340,11 @@
             document.getElementById(sound).play(); 
             //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             //>>>>>>>>>>>>>>>>>>>>>語音辨識 第6題<<<<<<<<<<<<<<<<<
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==5){startButton(event);identifying=1;}},7000);}  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            if(iden==1){startButton(event);setTimeout(function(){if(page==5){startButton(event);}},7000);}
+            if(iden==0){setTimeout(function(){if(page==5){startButton(event);}},7000);}
+            
+            //if(iden==1){startButton(event);identifying=0;}
+            //if(iden==0){setTimeout(function(){if(page==5){startButton(event);}},7000);}  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
           }
           if(page==6){
             odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/V2/cellphone/image/10.jpg')";
@@ -311,8 +357,11 @@
             document.getElementById(sound).play(); 
             //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             //>>>>>>>>>>>>>>>>>>>>>語音辨識 第7題<<<<<<<<<<<<<<<<<
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==6){startButton(event);identifying=1;}},7000);}  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            if(iden==1){startButton(event);setTimeout(function(){if(page==6){startButton(event);}},7000);}
+            if(iden==0){setTimeout(function(){if(page==6){startButton(event);}},7000);}
+            
+            //if(iden==1){startButton(event);identifying=0;}
+            //if(iden==0){setTimeout(function(){if(page==6){startButton(event);}},7000);}  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
           }
           if(page==7){
             odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/V2/cellphone/image/11.jpg')";
@@ -325,8 +374,11 @@
             document.getElementById(sound).play(); 
             //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             //>>>>>>>>>>>>>>>>>>>>>語音辨識 第8題<<<<<<<<<<<<<<<<<
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==7){startButton(event);identifying=1;}},7700);}  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            if(iden==1){startButton(event);setTimeout(function(){if(page==7){startButton(event);}},7700);}
+            if(iden==0){setTimeout(function(){if(page==7){startButton(event);}},7700);}
+            
+            //if(iden==1){startButton(event);identifying=0;}
+            //if(iden==0){setTimeout(function(){if(page==7){startButton(event);}},7700);}  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
           }
           if(page==8){
             odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/V2/cellphone/image/12.jpg')";
@@ -339,8 +391,11 @@
             document.getElementById(sound).play(); 
             //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             //>>>>>>>>>>>>>>>>>>>>>語音辨識 第9題<<<<<<<<<<<<<<<<<
-            if(identifying==1){startButton(event);identifying=0;}
-            if(identifying==0){setTimeout(function(){if(page==8){startButton(event);identifying=1;}},7700);}  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            if(iden==1){startButton(event);setTimeout(function(){if(page==8){startButton(event);}},7700);}
+            if(iden==0){setTimeout(function(){if(page==8){startButton(event);}},7700);}
+            
+            //if(iden==1){startButton(event);identifying=0;}
+            //if(iden==0){setTimeout(function(){if(page==8){startButton(event);}},7700);}  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
           }
           if(page==9){
             setTimeout(function(){document.location.href="https://chang-yu-ling.github.io/V2/cellphone/code/c6_BackFrontRESULT.html?"+final_transcript;},2000);
@@ -348,6 +403,7 @@
             //document.location.href="https://chang-yu-ling.github.io/V2/code/p6_SHOWresultFRONTok.html?"+final_transcript;
           }
         }
+      }
       }
       //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     </script>  
@@ -461,7 +517,7 @@
     <!--      
 片段辨識：
 -->
-    
+
     <input id="tempBox" type="text" size="60" value="" style="display:none; position: absolute; left: 103; top: 2173;background-color:1;transparent;border:2px blue none"/>
 
     <!--///////////////////////////////待去除///////////////-->    
