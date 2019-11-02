@@ -13,7 +13,8 @@
 * P2_menu.html
 * P3_Introduction.html
 * P4_DEMO.html
-* P5_QAonly.html
+* p5_QAonly_辨識時間有誤.html
+* `P5_QAonly.html (更正語音辨識時間)`
 * P6_SHOWresult.html
 * `p6_BackFrontRESULT.html(列印和輸出格式均正確)`
 * P7_print.html
