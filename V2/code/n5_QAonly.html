@@ -1,0 +1,504 @@
+<html>
+  <head><meta charset="utf-8" /></head>
+  <!--///////////////设置背景图片/////////////////-->
+  <style type="text/css">
+    body {
+      /*background-image: url("https://chang-yu-ling.github.io/V2/cellphone/image/1.jpg");*/
+      background-repeat: no-repeat;
+      /* background-attachment: fixed;*/
+      /* background-position: center;*/
+      /*-moz-background-size: cover;
+      background-size: cover;
+      background-position: left top;
+      background-repeat:no-repeat ;*/
+      background-size:100% 100%; 
+      /*width:500px;*/
+      height:100%;
+    }
+    #ant {
+      /*width:500px;*/
+      height:100%;
+      background-size:100% 100%; 
+      background-repeat: no-repeat;    
+      font-size:4vw;
+      font-family:cursive;
+      color:rgba(165, 114, 54, 0.96) ;
+      /*background-image:url('https://chang-yu-ling.github.io/images/IN-FO UI-1.jpg');*?        
+      /*background-color:#ccc;*/
+    }
+    #firstname{
+      display: none;
+    }
+  </style>
+  <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+  <body>
+    <script type="text/javascript">
+      //>>>>>>>> data_存放(有斷詞[上]+沒斷詞[下])  <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+      //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      var infoBox; // 訊息 label
+      var textBox; // 最終的辨識訊息 text input 
+      var tempBox; // 中間的辨識訊息 text input
+      var startStopButton; // 「辨識/停止」按鈕
+      var final_transcript = ''; // 最終的辨識訊息的變數
+      var recognizing = false; // 是否辨識中
+      var address;
+      var iden=0;
+      // document.write(data_sin_titl);//單列網址
+      // document.write("-------------------------------------------");
+      //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      //>>>>>>>> 決定輸出(網址/標題)  <<<<<<<<<<<<<<<<<<<<<<<<<<<<      
+      //>>>>>>>> 語音辨識資訊取得(用於輸出)  <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+      function startButton(event) {        
+        address = document.getElementById("address");
+        infoBox = document.getElementById("infoBox"); // 取得訊息控制項 infoBox
+        textBox = document.getElementById("textBox"); // 取得最終的辨識訊息控制項 textBox
+        tempBox = document.getElementById("tempBox"); // 取得中間的辨識訊息控制項 tempBox
+        startStopButton = 1// document.getElementById("startStopButton"); // 取得「辨識/停止」這個按鈕控制項
+        langCombo = document.getElementById("langCombo"); // 取得「辨識語言」這個選擇控制項
+        if (recognizing) { // 如果正在辨識，則停止。
+          recognition.stop();
+        } else { // 否則就開始辨識
+          textBox.value = ''; // 清除最終的辨識訊息
+          tempBox.value = ''; // 清除中間的辨識訊息
+          //final_transcript = ''; // 最終的辨識訊息變數
+          recognition.lang = langCombo.value; // 設定辨識語言
+          recognition.start(); // 開始辨識
+        }
+      }
+      //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      //>>>>>>>> 實作語音辨識(網頁判斷/取得辨識結果/判斷連結)  <<<<<<<<<<<<<<<<
+      if (!('webkitSpeechRecognition' in window)) {  // 如果找不到 window.webkitSpeechRecognition 這個屬性
+        // 就是不支援語音辨識，要求使用者更新瀏覽器。 
+        infoBox.innerText = "本瀏覽器不支援語音辨識，請更換瀏覽器！(Chrome 25 版以上才支援語音辨識)";
+      } else {
+        var recognition = new webkitSpeechRecognition(); // 建立語音辨識物件 webkitSpeechRecognition
+        recognition.continuous = true; // 設定連續辨識模式
+        recognition.interimResults = true; // 設定輸出中先結果。
+        recognition.onstart = function() { // 開始辨識
+          recognizing = true; // 設定為辨識中
+          startStopButton.value = "按此停止"; // 辨識中...按鈕改為「按此停止」。  
+          infoBox.innerText = "語音辨識中...";  // 顯示訊息為「辨識中」...
+          iden=1;
+        };
+        recognition.onend = function() { // 辨識完成
+          recognizing = false; // 設定為「非辨識中」
+          startStopButton.value = "開始辨識";  // 辨識完成...按鈕改為「開始辨識」。
+          infoBox.innerText = ""; // 不顯示訊息
+          iden=0;
+        };
+        recognition.onresult = function(event) { // 辨識有任何結果時
+          var interim_transcript = ''; // 中間結果
+          for (var i = event.resultIndex; i < event.results.length; ++i) { // 對於每一個辨識結果
+            if (event.results[i].isFinal) { // 如果是最終結果
+              final_transcript= final_transcript +" / "+event.results[i][0].transcript; // 將其加入最終結果中
+            } else { // 否則
+              interim_transcript += event.results[i][0].transcript; // 將其加入中間結果中
+            }
+          }
+          ///////////////////////////////////////////////////////////////
+          var reg = RegExp(/肚子痛/);
+          if (final_transcript.trim().length > 0){ // 如果有最終辨識文字
+            textBox.value = final_transcript; // 顯示最終辨識文字
+            /* //>>>>>>>> "內"判斷網址_語音辨識資訊取得(用於輸出)  <<<<<<<<<<<<<<<<<<<
+            var data_sin_cut=[];      
+            var reg = "#";      
+            var data_sin1_cut="";
+            var sta="";
+            for(var j = 0; j<128; j++){
+              var data_left=data_sin_id[j];//[0]值取單列
+              for (i = 0; i<5; i++) { 
+                if(data_left.indexOf(reg)>0){
+                  sta=data_left.indexOf(reg);
+                  data_sin1_cut=[data_left.substr(0, sta)];
+                  data_sin_cut = data_sin_cut.concat(data_sin1_cut);
+                  data_left=data_left.substr(sta+1, data_left.trim().length);   
+                }
+                else {  
+                  data_sin_cut = data_sin_cut.concat(data_left);
+                  break;}
+              }
+              // document.write(data_sin_cut);//[0]值取單項
+              // document.write("-------------------------------------------");    
+              for(var i=0;i<5;i++){
+                reg = RegExp(data_sin_cut[i]);
+                if ( reg.exec(final_transcript)!=null&&reg!=""){
+                  address.value=address.value.concat(j);
+                  break;
+                }            
+              }
+            }//j*/
+          }
+          if (interim_transcript.trim().length > 0) // 如果有中間辨識文字
+            tempBox.value = interim_transcript; // 顯示中間辨識文字
+        };
+        //>>>>>>>>>>>>>>>>>>>>>語音撥放<<<<<<<<<<<<<<<<<
+        var sound=1;
+        var identifying=0;
+        var page=0;
+        function Control(x){
+          if(x=='next'){
+            if(sound>0){document.getElementById(sound).pause();}
+            sound=sound+1;
+            document.getElementById(sound).play();   
+          }
+          if(x=='re'){
+            document.getElementById(sound).pause();
+            document.getElementById(sound).play();  
+            //>>>>>>>>>>>>>>>>>>>>>語音辨識 第N重複題<<<<<<<<<<<<<<<<<
+            //window.alert(sound);
+            if(sound==1+1){
+              //if(identifying==1){startButton(event);identifying=0;}
+              //if(identifying==0){setTimeout(function(){startButton(event);identifying=1; },6000);}
+              if(iden==1){startButton(event);setTimeout(function(){if(page==0){startButton(event);}},6000);}
+              if(iden==0){setTimeout(function(){if(page==0){startButton(event);}},6000);}
+              //if(identifying==1){startButton(event);identifying=0;}
+              //if(identifying==0){setTimeout(function(){if(page==0){startButton(event);}},6000);  }
+            }
+            if(sound==2+1){
+              //if(identifying==1){startButton(event);identifying=0;}
+              //if(identifying==0){setTimeout(function(){startButton(event);identifying=1; },6000);}
+              if(iden==1){startButton(event);setTimeout(function(){if(page==1){startButton(event);}},5300);}
+              if(iden==0){setTimeout(function(){if(page==1){startButton(event);}},5300);}
+              //if(identifying==1){startButton(event);identifying=0;}
+              //if(identifying==0){setTimeout(function(){if(page==1){startButton(event);}},6000);  }
+            }
+            if(sound==3+1){
+              //if(identifying==1){startButton(event);identifying=0;}
+              //if(identifying==0){setTimeout(function(){startButton(event);identifying=1; },5000);}
+              if(iden==1){startButton(event);setTimeout(function(){if(page==2){startButton(event);}},5500);}
+              if(iden==0){setTimeout(function(){if(page==2){startButton(event);}},5500);}
+              //if(identifying==1){startButton(event);identifying=0;}
+              //if(identifying==0){setTimeout(function(){if(page==2){startButton(event);}},5000);  }
+            }
+            if(sound==4+1){
+              //if(identifying==1){startButton(event);identifying=0;}
+              //if(identifying==0){setTimeout(function(){startButton(event);identifying=1; },8000);}
+              if(iden==1){startButton(event);setTimeout(function(){if(page==3){startButton(event);}},8200);}
+              if(iden==0){setTimeout(function(){if(page==3){startButton(event);}},8200);}
+              //if(identifying==1){startButton(event);identifying=0;}
+              //if(identifying==0){setTimeout(function(){if(page==3){startButton(event);}},8000);}
+            }
+            if(sound==5+1){
+              //if(identifying==1){startButton(event);identifying=0:}
+              //if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},8000);}
+              if(iden==1){startButton(event);setTimeout(function(){if(page==4){startButton(event)}},8000);}
+              if(iden==0){setTimeout(function(){if(page==4){startButton(event)}},8000);}
+              //if(identifying==1){startButton(event);identifying=0;}
+              //if(identifying==0){setTimeout(function(){if(page==4){startButton(event)}},8000);  }
+            }
+            if(sound==6+1){
+              //if(identifying==1){startButton(event);identifying=0;}
+              //if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},7000);}
+              if(iden==1){startButton(event);setTimeout(function(){if(page==5){startButton(event);}},7000);}
+              if(iden==0){setTimeout(function(){if(page==5){startButton(event);}},7000);}
+              //if(identifying==1){startButton(event);identifying=0;}
+              //if(identifying==0){setTimeout(function(){if(page==5){startButton(event);}},7000);  }
+            }
+            if(sound==7+1){
+              //if(identifying==1){startButton(event);identifying=0;}
+              //if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},7000);}
+              if(iden==1){startButton(event);setTimeout(function(){if(page==6){startButton(event);}},7300);}
+              if(iden==0){setTimeout(function(){if(page==6){startButton(event);}},7300);}
+              //if(identifying==1){startButton(event);identifying=0;}
+              //if(identifying==0){setTimeout(function(){if(page==6){startButton(event);}},7000);  }
+            }
+            if(sound==8+1){
+              //if(identifying==1){startButton(event);identifying=0;}
+              // if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},7700);}
+              if(iden==1){startButton(event);setTimeout(function(){if(page==7){startButton(event);}},7400);}
+              if(iden==0){setTimeout(function(){if(page==7){startButton(event);}},7400);}
+              //if(identifying==1){startButton(event);identifying=0;}
+              //if(identifying==0){setTimeout(function(){if(page==7){startButton(event);}},7700);  }
+            }
+            if(sound==9+1){
+              //if(identifying==1){startButton(event);identifying=0;}
+              //if(identifying==0){setTimeout(function(){startButton(event);identifying=1;},7700);}
+              if(iden==1){startButton(event);setTimeout(function(){if(page==8){startButton(event);}},7200);}
+              if(iden==0){setTimeout(function(){if(page==8){startButton(event);}},7200);}
+              //if(identifying==1){startButton(event);identifying=0;}
+              //if(identifying==0){setTimeout(function(){if(page==8){startButton(event);}},7700);  }
+            }
+            //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+          }
+        }
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        //>>>>>>>>>>>>>>>>>>>>>设置背景图片<<<<<<<<<<<<<<<<<
+        window.onload = function () {
+          var odiv = document.getElementById("ant");
+          var obt = document.getElementById("bt");   
+          odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/V2/image/IN-FO UI new_5.jpg')";
+          odiv.style.backgroundRepeat = "no-repeat";
+          odiv.style.backgroundPosition = "0px 0px";
+          odiv.style.backgroundSize = "100% 100%";
+          //>>>>>>>>>>>>>>>>>>>>>語音撥放 第1題<<<<<<<<<<<<<<<<<
+          if(sound>0){document.getElementById(sound).pause();}
+          sound=sound+1;
+          document.getElementById(sound).play(); 
+          //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+          //>>>>>>>>>>>>>>>>>>>>>語音辨識 第1題<<<<<<<<<<<<<<<<<        
+          //if(recognizing==true){setTimeout(function(){if(page==0){startButton(event);startButton(event);identifying=1;}},6000);}
+          if(iden==0){setTimeout(function(){if(page==0){startButton(event);identifying=1;}},6000);}
+          //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+          obt.onclick = function () {
+            page=page+1;//換頁
+            /* if(page==0){
+            odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/images/IN-FO UI-1.jpg')";
+          odiv.style.backgroundRepeat = "no-repeat";
+          odiv.style.backgroundPosition = "0px -33px";
+          }  */
+            if(page==1){
+              odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/V2/image/IN-FO UI new_6.jpg')";
+              odiv.style.backgroundRepeat = "no-repeat";
+              odiv.style.backgroundPosition = "0px 0px";
+              odiv.style.backgroundSize = "100% 100%";
+              //>>>>>>>>>>>>>>>>>>>>>語音撥放 第2題<<<<<<<<<<<<<<<<<
+              if(sound>0){document.getElementById(sound).pause();}
+              sound=sound+1;
+              document.getElementById(sound).play();             
+              //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+              //>>>>>>>>>>>>>>>>>>>>>語音辨識 第2題<<<<<<<<<<<<<<<<<
+              if(iden==1){startButton(event);setTimeout(function(){if(page==1){startButton(event);}},5300);}
+              if(iden==0){setTimeout(function(){if(page==1){startButton(event);}},5300);}
+              //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            }
+            if(page==2){
+              odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/V2/image/IN-FO UI new_7.jpg')";
+              odiv.style.backgroundRepeat = "no-repeat";
+              odiv.style.backgroundPosition = "0px 0px";
+              odiv.style.backgroundSize = "100% 100%";
+              //>>>>>>>>>>>>>>>>>>>>>語音撥放 第3題<<<<<<<<<<<<<<<<<
+              if(sound>0){document.getElementById(sound).pause();}
+              sound=sound+1;
+              document.getElementById(sound).play(); 
+              //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+              //>>>>>>>>>>>>>>>>>>>>>語音辨識 第3題<<<<<<<<<<<<<<<<<
+              if(iden==1){startButton(event);setTimeout(function(){if(page==2){startButton(event);}},5500);}
+              if(iden==0){setTimeout(function(){if(page==2){startButton(event);}},5500);}
+              //if(iden==1){startButton(event);identifying=0;}
+              //if(iden==0){setTimeout(function(){if(page==2){startButton(event);}},5500); }
+              //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            }
+            if(page==3){
+              odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/V2/image/IN-FO UI new_8.jpg')";
+              odiv.style.backgroundRepeat = "no-repeat";
+              odiv.style.backgroundPosition = "0px 0px";
+              odiv.style.backgroundSize = "100% 100%";
+              //>>>>>>>>>>>>>>>>>>>>>語音撥放 第4題<<<<<<<<<<<<<<<<<
+              if(sound>0){document.getElementById(sound).pause();}
+              sound=sound+1;
+              document.getElementById(sound).play(); 
+              //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+              //>>>>>>>>>>>>>>>>>>>>>語音辨識 第4題<<<<<<<<<<<<<<<<<
+              if(iden==1){startButton(event);setTimeout(function(){if(page==3){startButton(event);}},8200);}
+              if(iden==0){setTimeout(function(){if(page==3){startButton(event);}},8200);}
+              //if(iden==1){startButton(event);identifying=0;}
+              //if(iden==0){setTimeout(function(){if(page==3){startButton(event);}},8000);}
+              //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            }
+            if(page==4){
+              odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/V2/image/IN-FO UI new_9.jpg')";
+              odiv.style.backgroundRepeat = "no-repeat";
+              odiv.style.backgroundPosition = "0px 0px";
+              odiv.style.backgroundSize = "100% 100%";
+              //>>>>>>>>>>>>>>>>>>>>>語音撥放 第5題<<<<<<<<<<<<<<<<<
+              if(sound>0){document.getElementById(sound).pause();}
+              sound=sound+1;
+              document.getElementById(sound).play(); 
+              //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+              //>>>>>>>>>>>>>>>>>>>>>語音辨識 第5題<<<<<<<<<<<<<<<<<
+              if(iden==1){startButton(event);setTimeout(function(){if(page==4){startButton(event);}},8000);}
+              if(iden==0){setTimeout(function(){if(page==4){startButton(event);}},8000);}
+              //if(iden==1){ startButton(event);identifying=0;}
+              //if(iden==0){setTimeout(function(){if(page==4){startButton(event);}},8000);  }
+              //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            }
+            if(page==5){
+              odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/V2/image/IN-FO UI new_10.jpg')";
+              odiv.style.backgroundRepeat = "no-repeat";
+              odiv.style.backgroundPosition = "0px 0px";
+              odiv.style.backgroundSize = "100% 100%";
+              //>>>>>>>>>>>>>>>>>>>>>語音撥放 第6題<<<<<<<<<<<<<<<<<
+              if(sound>0){document.getElementById(sound).pause();}
+              sound=sound+1;
+              document.getElementById(sound).play(); 
+              //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+              //>>>>>>>>>>>>>>>>>>>>>語音辨識 第6題<<<<<<<<<<<<<<<<<
+              if(iden==1){startButton(event);setTimeout(function(){if(page==5){startButton(event);}},7000);}
+              if(iden==0){setTimeout(function(){if(page==5){startButton(event);}},7000);}
+              //if(iden==1){startButton(event);identifying=0;}
+              //if(iden==0){setTimeout(function(){if(page==5){startButton(event);}},7000);}  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            }
+            if(page==6){
+              odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/V2/image/IN-FO UI new_11.jpg')";
+              odiv.style.backgroundRepeat = "no-repeat";
+              odiv.style.backgroundPosition = "0px 0px";
+              odiv.style.backgroundSize = "100% 100%";
+              //>>>>>>>>>>>>>>>>>>>>>語音撥放 第7題<<<<<<<<<<<<<<<<<
+              if(sound>0){document.getElementById(sound).pause();}
+              sound=sound+1;
+              document.getElementById(sound).play(); 
+              //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+              //>>>>>>>>>>>>>>>>>>>>>語音辨識 第7題<<<<<<<<<<<<<<<<<
+              if(iden==1){startButton(event);setTimeout(function(){if(page==6){startButton(event);}},7300);}
+              if(iden==0){setTimeout(function(){if(page==6){startButton(event);}},7300);}
+              //if(iden==1){startButton(event);identifying=0;}
+              //if(iden==0){setTimeout(function(){if(page==6){startButton(event);}},7000);}  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            }
+            if(page==7){
+              odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/V2/image/IN-FO UI new_12.jpg')";
+              odiv.style.backgroundRepeat = "no-repeat";
+              odiv.style.backgroundPosition = "0px 0px";
+              odiv.style.backgroundSize = "100% 100%";
+              //>>>>>>>>>>>>>>>>>>>>>語音撥放 第8題<<<<<<<<<<<<<<<<<
+              if(sound>0){document.getElementById(sound).pause();}
+              sound=sound+1;
+              document.getElementById(sound).play(); 
+              //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+              //>>>>>>>>>>>>>>>>>>>>>語音辨識 第8題<<<<<<<<<<<<<<<<<
+              if(iden==1){startButton(event);setTimeout(function(){if(page==7){startButton(event);}},7400);}
+              if(iden==0){setTimeout(function(){if(page==7){startButton(event);}},7400);}
+              //if(iden==1){startButton(event);identifying=0;}
+              //if(iden==0){setTimeout(function(){if(page==7){startButton(event);}},7700);}  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            }
+            if(page==8){
+              odiv.style.backgroundImage = "url('https://chang-yu-ling.github.io/V2/image/IN-FO UI new_13.jpg')";
+              odiv.style.backgroundRepeat = "no-repeat";
+              odiv.style.backgroundPosition = "0px 0px";
+              odiv.style.backgroundSize = "100% 100%";
+              //>>>>>>>>>>>>>>>>>>>>>語音撥放 第9題<<<<<<<<<<<<<<<<<
+              if(sound>0){document.getElementById(sound).pause();}
+              sound=sound+1;
+              document.getElementById(sound).play(); 
+              //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+              //>>>>>>>>>>>>>>>>>>>>>語音辨識 第9題<<<<<<<<<<<<<<<<<
+              if(iden==1){startButton(event);setTimeout(function(){if(page==8){startButton(event);}},7200);}
+              if(iden==0){setTimeout(function(){if(page==8){startButton(event);}},7200);}
+              //if(iden==1){startButton(event);identifying=0;}
+              //if(iden==0){setTimeout(function(){if(page==8){startButton(event);}},7700);}  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            }
+            if(page==9){
+              setTimeout(function(){document.location.href="https://chang-yu-ling.github.io/V2/code/p6_BackFrontRESULT.html?"+final_transcript;},2000);
+              //startButton(event);
+              //document.location.href="https://chang-yu-ling.github.io/V2/code/n6_result.html?"+final_transcript;
+            }
+          }
+        }
+      }
+      //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    </script>  
+
+    <!-------------------设置背景图片-------------------> 
+    <div id="ant"> 
+      <label id="infoBox"style="position: absolute; left: 45%; top: 45%;background-color: transparent;border:2px blue none"></label>
+      <!-- <BR> &nbsp; -->
+      <input type="button" value=""style="width:16.5%;height:8%;position:relative; left: 32%;top: 56.96%;background-color:transparent;border:2px blue none" onclick="Control('re');"/>
+
+      <input  type="button" id="bt" value=""style="width:16.5%;height:8%;position:relative; left: 33%;top: 56.96%;background-color:transparent;border:2px blue none"onclick="Control('next');"/>
+
+
+      <!--  
+<BR><BR>  
+<input type="button" id="bt" value="查看演示"style="background-color: transparent;width:230px;height:95px;border:2px blue none"/>
+-->
+    </div>
+
+    <!-------------------選擇待辨識語言-------------------------------->
+    <!--        
+辨識語言：
+-->
+    <select  id="langCombo"style="display:none; absolute; left: 103; top: 1773;background-color:1; transparent;border:2px blue none">
+      <option value="cmn-Hant-TW"></option>  <!--中文(台灣)-->
+      <option value="en-US"></option><!--英文(美國)-->
+    </select>
+
+    <!-------------------開始辨識鍵-------------------------------->
+    <input id="startStopButton" type="button" value=""style="display:none; position: absolute; left: 103; top: 1873;background-color:1; transparent;border:2px blue none" onclick="startButton(event)"/>
+    <!--
+<label id="infoBox"></label>
+-->
+    <!-------------------語音撥放-------------------------------->    
+    <audio id="1" width="360" height="270" >
+      <source src="https://chang-yu-ling.github.io/sound/1.mp3" type="audio/mp3">
+      您的瀏覽器不支援此 HTML5 影片標籤
+    </audio>
+    <audio id="2" width="360" height="270" >
+      <source src="https://chang-yu-ling.github.io/sound/2.mp3" type="audio/mp3">
+      您的瀏覽器不支援此 HTML5 影片標籤
+    </audio>
+    <audio id="3" width="360" height="270" >
+      <source src="https://chang-yu-ling.github.io/sound/3.MP3" type="audio/mp3">
+      您的瀏覽器不支援此 HTML5 影片標籤
+    </audio>
+    <audio id="4" width="360" height="270" >
+      <source src="https://chang-yu-ling.github.io/sound/4.MP3" type="audio/mp3">
+      您的瀏覽器不支援此 HTML5 影片標籤
+    </audio>
+    <audio id="5" width="360" height="270" >
+      <source src="https://chang-yu-ling.github.io/sound/5.MP3" type="audio/mp3">
+      您的瀏覽器不支援此 HTML5 影片標籤
+    </audio>
+    <audio id="6" width="360" height="270" >
+      <source src="https://chang-yu-ling.github.io/sound/6.MP3" type="audio/mp3">
+      您的瀏覽器不支援此 HTML5 影片標籤
+    </audio>
+    <audio id="7" width="360" height="270" >
+      <source src="https://chang-yu-ling.github.io/sound/7.MP3" type="audio/mp3">
+      您的瀏覽器不支援此 HTML5 影片標籤
+    </audio>
+    <audio id="8" width="360" height="270" >
+      <source src="https://chang-yu-ling.github.io/sound/8.MP3" type="audio/mp3">
+      您的瀏覽器不支援此 HTML5 影片標籤
+    </audio>
+    <audio id="9" width="360" height="270" >
+      <source src="https://chang-yu-ling.github.io/sound/9.MP3" type="audio/mp3">
+      您的瀏覽器不支援此 HTML5 影片標籤
+    </audio>
+    <audio id="10" width="360" height="270" >
+      <source src="https://chang-yu-ling.github.io/sound/10.MP3" type="audio/mp3">
+      您的瀏覽器不支援此 HTML5 影片標籤
+    </audio>
+    <audio id="11" width="360" height="270" >
+      <source src="https://chang-yu-ling.github.io/sound/11.mp3" type="audio/mp3">
+      您的瀏覽器不支援此 HTML5 影片標籤
+    </audio>
+    <audio id="12" width="360" height="270" >
+      <source src="https://chang-yu-ling.github.io/sound/2.mp3" type="audio/mp3">
+      您的瀏覽器不支援此 HTML5 影片標籤
+    </audio>
+    <!--
+<input type="button" value="再說一次" onclick="Control('re');">
+<input type="button" value="下一題" onclick="Control('next');">
+<BR/><BR/><BR/>
+-->
+    <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@語音撥放@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+    <!-------------------症狀回答(完整版)-------------------------------->    
+
+
+    <!--      
+症狀回答：
+--> 
+    <textarea input  id="textBox" type="text" cols="60" rows="5" value=""style="display:none; position: absolute; left: 103; top: 1973;background-color:1; transparent;border:2px blue none"></textarea>
+    <!--////////////////////////////顯示辨識address///////////////-->
+    <!-- <textarea input  id="address" type="text" cols="60" rows="5" value=""></textarea><BR/>-->
+    <!--////////////////////////////顯示辨識address///////////////-->
+
+    <!--///////////////////顯示可點選之連結處address///////////////-->
+    <!-- <h2 id="address" onclick="getValue()"> 衛教連結</h2><BR/>-->
+    <!--///////////////////顯示可點選之連結處address///////////////-->
+
+    <!------------------衛教連結鍵-------------------------------->
+    <input id="address" type='button'  value='' onclick='getValue()'style="display:none; position: absolute; left: 103; top: 2073;background-color:1;transparent;border:2px blue none" />
+
+    <!-------------------症狀回答(片段版)-------------------------------->   
+    <!--///////////////////////////////待去除///////////////-->
+
+    <!--      
+片段辨識：
+-->
+
+    <input id="tempBox" type="text" size="60" value="" style="display:none; position: absolute; left: 103; top: 2173;background-color:1;transparent;border:2px blue none"/>
+
+    <!--///////////////////////////////待去除///////////////-->    
+  </body>
+</html>  
