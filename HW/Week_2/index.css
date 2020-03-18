@@ -1,0 +1,104 @@
+body{
+//background-color:red;
+background: #f9f0cd ;
+overflow: hidden;
+}
+
+/*main_div==================================*/
+div{
+padding-top:20px;
+width:23.1333236%;
+height:100%;
+background: #efb875;
+top:0px;left:0px;
+position:absolute;
+
+font-family:"Adobe 黑体 Std R";
+font-size:35px;
+color:#725d3d;
+}
+
+/*main_list==================================*/
+div.list{
+width:100%;
+height:auto;
+background: #efb875;
+top:150px;left:0px;
+position:absolute;
+
+line-height: 15px;
+}
+div.list_seiect{
+width:100%;
+height:auto;
+background: #efb875;
+//top:150px;left:0px;
+position:absolute;
+}
+
+
+img{
+padding-top:10px;
+mix-blend-mode: multiply;
+}
+img.cat_foot{
+margin-left:25px;
+}
+img.cat_face{
+padding-top:20px;
+margin:5px;
+margin-left:15px
+
+}
+img.line_top{
+width:100%;
+}
+img.arrow{
+float:right;
+margin-right:20px
+}
+
+button{
+text-align:left;
+width:100%;
+font-family:"Adobe 黑体 Std R";
+font-size:28px;
+color:#ffffff;
+background-color:transparent;
+border:none;
+}
+
+button:hover {
+color:#000000;
+}
+button:hover .list_sub{
+  display:block;
+}
+
+/*sub_list==================================*/
+.list_sub{
+width:80%;
+height:auto;
+background: #8c6239;
+top:100px;left:100%;
+position:absolute;
+
+line-height: 30px;
+padding:20px;
+
+padding-left:0px;
+padding-right:0px;
+
+opacity: .8;
+display:none;
+}
+
+.list_sub button{
+text-align:left;
+width:100%;
+font-family:"microsoft YaHei UI light";
+font-size:24px;
+color:#000000;
+background-color:transparent;
+border:none;
+}

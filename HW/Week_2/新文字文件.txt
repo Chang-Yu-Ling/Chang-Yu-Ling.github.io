@@ -1,0 +1,5 @@
+button{
+font-family:"Adobe 繁黑體 Std B", "Adobe 黑体 Std R", "Adobe 明體 Std L";
+font-size:36pt;
+color:#725d3d;
+}
