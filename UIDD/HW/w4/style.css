@@ -8,7 +8,7 @@ Released for free under the Creative Commons Attribution License
 body {
 	margin: 0;
 	padding: 0;
-	background: #FFFFFF url(images/img01.jpg) repeat-x left top;
+	background: #FFFFFF url(https://chang-yu-ling.github.io/images/img01.jpg) repeat-x left top;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: #7F7F81;
@@ -162,7 +162,7 @@ img.aligncenter {
 	height: 49px;
 	margin: 0 auto;
 	padding: 0;
-	background: url(images/img02.jpg) repeat-x left bottom;
+	background: url(https://chang-yu-ling.github.io/images/img02.jpg) repeat-x left bottom;
 }
 
 #menu ul {
@@ -202,7 +202,7 @@ img.aligncenter {
 	width: 1000px;
 	height: 260px;
 	margin: 0px auto;
-	background: url(images/img05.jpg) no-repeat left top;
+	background: url(https://chang-yu-ling.github.io/images/img05.jpg) no-repeat left top;
 }
 
 /* Page */
@@ -211,7 +211,7 @@ img.aligncenter {
 	width: 1000px;
 	margin: 0 auto;
 	padding: 0;
-	background: url(images/img03.jpg) no-repeat left top;
+	background: url(https://chang-yu-ling.github.io/images/img03.jpg) no-repeat left top;
 }
 
 #page-bgtop {
@@ -300,7 +300,7 @@ img.aligncenter {
 #sidebar li li {
 	padding-left: 15px;
 	line-height: 35px;
-	background: url(images/img07.jpg) no-repeat left 14px;
+	background: url(https://chang-yu-ling.github.io/images/img07.jpg) no-repeat left 14px;
 	border-bottom: 1px solid #EFF4F5;
 }
 
@@ -316,7 +316,7 @@ img.aligncenter {
 	height: 38px;
 	margin-bottom: 20px;
 	padding: 12px 0 0 15px;
-	background: url(images/img08.jpg) no-repeat left top;
+	background: url(https://chang-yu-ling.github.io/images/img08.jpg) no-repeat left top;
 	letter-spacing: -1px;
 	font-size: 24px;
 	color: #FFFFFF;
@@ -365,7 +365,7 @@ img.aligncenter {
 	width: 1000px;
 	height: 55px;
 	margin: 0px auto 40px auto;
-	background: #EAEAEA url(images/img04.jpg) no-repeat left top;
+	background: #EAEAEA url(https://chang-yu-ling.github.io/images/img04.jpg) no-repeat left top;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
