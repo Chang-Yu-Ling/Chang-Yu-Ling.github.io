@@ -1,0 +1,554 @@
+ *{
+        padding:0;
+        margin:0;
+    }
+    body{
+        overflow: hidden;
+	//background-image:url(./res/img/About-us.png);
+        background-size:cover;
+        background-repeat: no-repeat;
+        height:100vh;
+    }
+/*    插入背景圖片    */
+    .p01{
+        background-image:url(./res/img/About-us.png);
+        background-size:cover;
+	
+        background-repeat: no-repeat;
+        height:100vh;
+	//text-align:center;
+	//align-items:center;
+	//vertical-align:middle;
+    }
+.p01_d{
+        height:80%;//100vh;
+	width:80%;//100vw;
+
+	background-color:white;
+	opacity: .6;
+	border-radius:25px;
+	////border:  5px solid red;
+
+	position:relative;
+	top:10%;left:10%;
+	
+	z-index:1;
+
+
+	//padding-top:5%;
+	//text-align:center;
+        //background-image:url(./res/img/透明底圖.png);
+	//opacity: .6;
+	//background-size:contain;	
+        //background-repeat: no-repeat;
+   	//margin:auto;
+    }
+    .p02{
+        background-image:url(./res/img/About-us.png);
+        background-size:cover;
+        background-repeat: no-repeat;
+        height:100vh;
+	//display: flex;
+	
+    //display: inline-block;
+    }
+
+.p02_d{
+        height:80%;//100vh;
+	width:80%;//100vw;
+
+	//background-color:white;
+	//opacity: .6;
+	border-radius:25px;
+	////border:  5px solid blue;
+
+	position:relative;
+	top:10%;left:10%;
+	background-color:transparent;
+
+
+	//padding-top:5%;
+	//text-align:center;
+        //background-image:url(./res/img/透明底圖.png);
+	//opacity: .6;
+	//background-size:contain;	
+        //background-repeat: no-repeat;
+   	//margin:auto;
+    }
+.p02_1{
+        height:80%;//100vh;
+	width:48%;//100vw;
+
+	background-color:white;
+	opacity: .8;
+	border-radius:25px;
+	////border:  5px solid blue;
+
+	position:relative;
+	top:-70.5%;left:25%;
+	//background-color:transparent;
+
+	background-image:url(./res/img/people/3-1.png);
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	//mix-blend-mode: overlay;
+	background-position:left bottom;
+	z-index: 60;	
+    }
+.p02_2{
+        height:80%;//100vh;
+	width:48%;//100vw;
+
+	background-color:white;
+	opacity: .8;
+	border-radius:25px;
+	////border:  5px solid blue;
+
+	position:relative;
+	top:-149.5%;left:25%;
+	//background-color:transparent;
+
+	background-image:url(./res/img/people/3-2.png);
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	//mix-blend-mode: overlay;
+	background-position:left bottom;
+	z-index: 60;	
+    }
+.p02_3{
+        height:80%;//100vh;
+	width:48%;//100vw;
+
+	background-color:white;
+	opacity: .8;
+	border-radius:25px;
+	////border:  5px solid blue;
+
+	position:relative;
+	top:-229.5%;left:25%;
+	//background-color:transparent;
+
+	background-image:url(./res/img/people/3-3.png);
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	//mix-blend-mode: overlay;
+	background-position:left bottom;
+	z-index: 60;	
+    }
+.p02_4{
+        height:80%;//100vh;
+	width:48%;//100vw;
+
+	background-color:white;
+	opacity: .9;
+	border-radius:25px;
+	////border:  5px solid blue;
+
+	position:relative;
+	top:-310.5%;left:25%;
+	//background-color:transparent;
+
+	background-image:url(./res/img/people/3-4.png);
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	//mix-blend-mode: overlay;
+	background-position:left bottom;
+	z-index: 60;	
+    }
+.p02_5{
+        height:80%;//100vh;
+	width:48%;//100vw;
+
+	background-color:white;
+	opacity: .8;
+	border-radius:25px;
+	////border:  5px solid blue;
+
+	position:relative;
+	top:-390.5%;left:25%;
+	//background-color:transparent;
+
+	background-image:url(./res/img/people/3-5.png);
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	//mix-blend-mode: overlay;
+	background-position:left bottom;
+	z-index: 60;	
+    }
+
+
+/*    插入導覽列     */
+    .nav{
+        position: fixed;
+        top:50%;
+        left:0px;
+        cursor:pointer;
+//border-radius:25px;
+	////border:  5px solid blue;
+    }
+    li{
+        width:10px;
+        height:10px; 
+        margin: 10px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px rgba(0,0,0,0.5) inset,-1px -1px 1px rgba(0,0,0,0.5) inset;
+        list-style-type: none;
+
+	
+    }
+.name_g{
+	position:relative;
+	top:-10%;left:-1%;
+	color:ghostwhite;
+        text-shadow:0px 0px 15px black;
+    }
+.photo_li{
+	position:absolute;
+	max-width: 17%;
+	top:50%;left:100%;
+	color:ghostwhite;
+        //text-shadow:0px 0px 15px black;
+	hight:20%;
+	top:50%;left:20%;
+    }
+.w{
+
+	border-radius:0px;
+	////border:  5px solid red;
+}
+/*==============================================*/
+div.left, div.right{
+    display: inline-block;
+}
+div.left{
+	position:relative;
+	top:0%;left:3%;
+	color:#000000;
+	width:40%;hight:80%;
+        //text-shadow:0px 0px 5px black;
+	font-size:1em;
+	font-family:"microsoft YaHei UI regular";
+	
+	border-radius:0px;
+	////border:  5px solid red;
+	
+	align-items:center;
+	text-align:center;
+    }
+.about_us{
+	position:relative;
+	top:-3%;//left:15%;
+	color:ghostwhite;
+	//max-width:60%;
+        text-shadow:0px 0px 15px black;
+    }
+.intro{
+	position:relative;
+	padding-top:8%;//left:3%;
+	color:#000000;
+	//width:40%;hight:80%;
+        //text-shadow:0px 0px 5px black;
+	font-size:0.8em;
+	font-family:"microsoft YaHei UI regular";
+	text-align:left;
+    }
+.intro_line{
+	position:relative;
+	top:5%;//left:3%;
+	color:#725d3d;
+	//width:40%;hight:auto%;
+        //text-shadow:0px 0px 5px black;
+	font-size:1em;
+	font-family:"microsoft YaHei UI regular";
+	overflow:hidden;
+    }
+
+.follow_us{
+	position:relative;
+	padding-top:8%;//left:12%;
+	color:black;
+	//max-width:60%;
+        text-shadow:0px 0px 15px ghostwhite;
+    }
+/*==============================================*/
+div.right{
+	position:relative;
+	//bottom:50%;left:45%;
+	bottom:50%;left:0%;
+	coloSSr:#000000;
+	width:55%;
+	hight:100vh;
+        //text-shadow:0px 0px 5px black;
+	font-size:1em;
+	font-family:"microsoft YaHei UI regular";
+	
+	border-radius:0px;
+	////border:  5px solid red;
+	
+	opacity: 1;
+	
+	align-items:center;
+	text-align:center;
+	
+	background-image:url(./res/img/團體照.png);
+	background-position:center bottom;
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	mix-blend-mode: multiply;
+    }
+div.right1{
+	position:relative;
+	bottom:50%;left:45%;
+	bottom:66%;left:43%;
+	coloSSr:#000000;
+	width:55%;
+	hight:100vh;
+        //text-shadow:0px 0px 5px black;
+	font-size:1em;
+	font-family:"microsoft YaHei UI regular";
+	
+	border-radius:0px;
+	////border:  5px solid red;
+	
+	opacity: 0.6;
+	
+	align-items:center;
+	text-align:center;
+	
+	background-image:url(./res/img/star_1.png);
+	background-position:center bottom;
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	mix-blend-mode: multiply;
+z-index:99;    
+    }
+.photo_star{
+	position:relative;
+	top:-200%;left:-140%;
+	width:10%;height:10%;   
+	z-index:99;    
+    }
+/*==============================================*/
+div.a, div.b, div.c, div.d, div.e{
+	background-color:white;
+    	display: inline-block;
+    	position:relative;
+	top:0%;margin-left:0.5%;
+	color:#000000;
+	width:17.9%;hight:80%;
+        //text-shadow:0px 0px 5px black;
+	font-size:1em;
+	font-family:"microsoft YaHei UI regular";
+	
+	border-radius:25px;
+	////border:  5px solid blue;
+	
+	align-items:center;
+	text-align:center;
+	opacity: 1;
+
+	overflow:auto
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	mix-blend-mode: multiply;
+	background-position:right bottom;	
+    	z-index:-100;
+      }
+.intro_p,.intro_w,.intro_i{
+	position:relative;
+	top:25%;left:5%;
+	color:	#FFD700;//yellow;//#FFD700;//blue;//gold;
+	//max-width:60%;
+        text-shadow:0px 0px 15px white;
+	opacity: 1;
+	font-size:1.5em;
+	text-align:left;
+    }
+.intro_w{	
+	font-size:1em;
+
+    }
+.intro_i{	
+	font-size:1em;
+	left:55%;
+	color:	#000000;
+
+    }
+/*===================================*/
+div.a{
+  	background-image:url(./res/img/people/2-1.png);
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	mix-blend-mode: multiply;
+	background-position:right bottom;
+	z-index: 5;
+      }
+.a_s{
+  	display:none;
+	height:100%;//100vh;
+	width:330%;//100vw;
+	opacity: 1;
+	background-color:white;
+	opacity: 1;
+	border-radius:25px;
+	////border:  5px solid black;
+
+	background-image:url(./res/img/people/3-1.png);
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	//mix-blend-mode: overlay;
+	background-position:left bottom;
+	z-index: 10;
+
+	position:relative;
+	top:-15%;left:110%;
+}
+/*div.a:hover {  	
+	opacity: 0.1;
+}*/
+div.a:hover .a_s{
+  	display:block;
+	z-index:10;
+	opacity: 1;
+}
+
+
+div.b{
+  	background-image:url(./res/img/people/2-2.png);
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	mix-blend-mode: multiply;
+	background-position:right bottom;
+	z-index: -2;
+      }
+.b_s{
+  	display:none;
+	height:100%;//100vh;
+	width:330%;//100vw;
+
+	background-color:white;
+	opacity: 1;
+	border-radius:25px;
+	////border:  5px solid green;	
+
+	background-image:url(./res/img/people/3-2.png);
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	mix-blend-mode: overlay;
+	background-position:left bottom;
+	z-index: 9;
+
+	position:relative;
+	top:-11%;left:-5%;
+}
+div.b:hover .b_s{
+  	display:block;
+	z-index:9;
+}
+
+
+div.c{
+  	background-image:url(./res/img/people/2-3.png);
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	mix-blend-mode: multiply;
+	background-position:right bottom;
+	z-index: -3;
+      }
+.c_s{
+  	display:none;
+	height:100%;//100vh;
+	width:330%;//100vw;
+
+	background-color:white;
+	opacity: 1;
+	border-radius:25px;
+	////border:  5px solid green;
+
+	background-image:url(./res/img/people/3-3.png);
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	mix-blend-mode: overlay;
+	background-position:left bottom;
+	z-index: 8;
+
+	position:relative;
+	top:-12%;left:-120%;
+}
+div.c:hover .c_s{
+  	display:block;
+	z-index:8;
+}
+
+
+div.d{
+  	background-image:url(./res/img/people/2-4.png);
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	mix-blend-mode: multiply;
+	background-position:right bottom;
+	z-index: -1;
+      }
+.d_s{
+  	display:none;
+	height:100%;//100vh;
+	width:330%;//100vw;
+
+	background-color:white;
+	opacity: 1;
+	border-radius:25px;
+	////border:  5px solid green;
+
+	background-image:url(./res/img/people/3-4.png);
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	mix-blend-mode: overlay;
+	background-position:left bottom;
+	z-index: 7;	
+
+	position:relative;
+	top:-11.5%;left:-230%;
+}
+div.d:hover .d_s{
+  	display:block;
+	z-index:7;
+}
+
+
+div.e{
+  	background-image:url(./res/img/people/2-5.png);
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	mix-blend-mode: multiply;
+	background-position:right bottom;
+	z-index: 1;
+      }
+.e_s{
+  	display:none;
+	height:100%;//100vh;
+	width:330%;//100vw;
+
+	background-color:white;
+	opacity: 1;
+	border-radius:25px;
+	////border:  5px solid green;
+
+	background-image:url(./res/img/people/3-5.png);
+        background-size:contain;//cover;
+        background-repeat: no-repeat;
+	mix-blend-mode: overlay;
+	background-position:left bottom;
+	z-index: 6;	
+
+	position:relative;
+	top:-11.5%;left:-345%;
+}
+div.e:hover .e_s{
+  	display:block;
+	z-index:6;
+}
+
+div.p02_e:hover {
+  	visibility="visible";
+}

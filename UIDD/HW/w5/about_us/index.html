@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <META NAME="Author" CONTENT="ARTER">
+  <meta charset="utf-8" />
+  <title>最基本的空白網頁</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+    	<script src="./res/js/main.js"></script>  
+	     
+  	<!--<script src="https://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>	  	
+  	 CSS 樣式 -->
+	<link rel="stylesheet" type="text/css" href="./index.css">
+
+  <!-- JavaScript -->
+  <script>  
+    	function Visib_A1()
+	{
+	document.getElementById("over1").style.visibility="visible";
+	}
+	function Visib_A0()
+	{
+	document.getElementById("over1").style.visibility="hidden";
+	}  
+    	function Visib_B1()
+	{
+	document.getElementById("over2").style.visibility="visible";
+	}
+	function Visib_B0()
+	{
+	document.getElementById("over2").style.visibility="hidden";
+	}
+  
+    	function Visib_C1()
+	{
+	document.getElementById("over3").style.visibility="visible";
+	}
+	function Visib_C0()
+	{
+	document.getElementById("over3").style.visibility="hidden";
+	}
+  
+    	function Visib_D1()
+	{
+	document.getElementById("over4").style.visibility="visible";
+	}
+	function Visib_D0()
+	{
+	document.getElementById("over4").style.visibility="hidden";
+	}
+  
+    	function Visib_E1()
+	{
+	document.getElementById("over5").style.visibility="visible";
+	}
+	function Visib_E0()
+	{
+	document.getElementById("over5").style.visibility="hidden";
+	}
+
+
+
+  </script>
+</head>
+<body>
+  <!-- 網頁內文 -->
+<div class="container">
+    <div class="nav">
+        <ul>
+            <li style="background-color:#46dd46;color:white;"><!--img id="photo_li" src="./res/img/list_1.png" --></li>
+            <li style="background-color:#46dd46;color:white;"><!--img id="photo_li" src="./res/img/list_2.png"--></li>
+       	    <li style="background-color:#46dd46;color:white;visibility: hidden;"><img id="photo_li" src="./res/img/list_2.png"></li>
+        
+	</ul><!--div id='w' style="top:10%;"><img id="photo_li" src="./res/img/list_1.png" style="top:5%;" ><br><img id="photo_li" src="./res/img/list_2.png"></div-->
+
+    </div>
+
+    <div class="p01">
+	<div  class="p01_d">
+	      <h1 class="name_g" style="visibility: hidden;">團隊名稱</h1>
+	      <div class="left">
+	      	<h1 class="about_us">關於我們</h1>
+	      	<h1 class="intro_line">___________________________________________________________________________________</h1>
+	      	<!--<img id="about_us" src="./res/img/line.png">	-->
+	      	<h1 class="intro">The News Lens 設立於2020年3月。我們是一群對於現今信用卡資訊有很多想法的人。我們到銀行進行訪談，了解目前相關的問題以及機會點。有一直在媒體產業的編輯，有多年在海外各地工作的專業經理人，還有對於網路技術有熱情的開發者，以及一群對於我們這個夢想有興趣，願意一起幫忙的實習生、朋友以及許多外稿作者。
+
+我們夢想中的媒體是除了陳述事實之外，還能夠提供多元、不同方向的觀點，並為智慧手機、平板、電腦等不同平台提供各自適合閱讀內容。也讓社交網路世代的使用者，能夠更輕鬆的分享、討論和參與他們有興趣的議題。</h1>		
+	      	<h1 class="follow_us">follow us</h1><br><br><br><br><br>
+	      </div>
+	      <div class="right">
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br
+	      	<!--<img id="photo_g" src="./res/img/團體照.png">-->
+	      </div>
+		<!--<div class="right1">
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	      	<!--<img id="photo_g" src="./res/img/團體照.png">
+	      </div>-->
+	</div>
+    </div>	
+	
+	
+    <div class="p02">
+	<h1 class="name_g" style="position:fixed;top:3%;left:10%;">團隊名稱</h1>
+	<div  class="p01_d" style="background-color:transparent;display: flex;flex-wrap: space-between;text-align:center;">
+	       <div  class="a"  onMouseOver ="Visib_A1()" onMouseOut="Visib_A0()">			
+			<h1 class="intro_w" style="position:relative;top:21%;left:10%;">組長</h1>	
+			<h1 class="intro_p" style="position:relative;top:21%;left:10%;">劉珊妮</h1>
+			<h1 class="intro_w" style="position:relative;top:21%;left:10%;">工程師</h1>			
+			
+		</div>
+
+		<div  class="b" onMouseOver ="Visib_B1()" onMouseOut="Visib_B0()">
+			<h1 class="intro_p">張鈺鈴</h1>
+			<h1 class="intro_w">工程師</h1>	
+		</div>	
+		<div  class="c" onMouseOver ="Visib_C1()" onMouseOut="Visib_C0()">
+			<h1 class="intro_p">鄭致浩</h1>
+			<h1 class="intro_w">設計師</h1>	
+		</div>
+
+		<div  class="d" onMouseOver ="Visib_D1()" onMouseOut="Visib_D0()">
+			<h1 class="intro_p">林智平</h1>
+			<h1 class="intro_w">工程師</h1>
+		</div>
+
+		<div  class="e" onMouseOver ="Visib_E1()" onMouseOut="Visib_E0()">
+			<h1 class="intro_p">黃凱陽</h1>
+			<h1 class="intro_w">工程師</h1>
+		</div>
+	</div>	
+	<div  class="p02_1" id="over1" style="visibility: hidden;">			
+		<h1 class="intro_p">劉珊妮</h1>
+		<h1 class="intro_w">工程師</h1>
+		<h1 class="intro_i">工程師</h1>
+	</div>	
+	<div  class="p02_2" id="over2" style="visibility: hidden;">
+		<h1 class="intro_p">張鈺鈴</h1>
+		<h1 class="intro_w">工程師</h1>	
+		<h1 class="intro_i">在下電機系阿宅<br>
+唯一夢想發大財</h1>
+	</div>	
+	<div  class="p02_3" id="over3" style="visibility: hidden;">
+		<h1 class="intro_p">鄭致浩</h1>
+		<h1 class="intro_w">設計師</h1>
+		<h1 class="intro_i">媽媽叫我早點睡，我真的有聽話!! </h1>
+	</div>	
+	<div  class="p02_4" id="over4" style="visibility: hidden;">
+		<h1 class="intro_p">林智平</h1>
+		<h1 class="intro_w">工程師</h1>
+		<h1 class="intro_i">工程師</h1>
+	</div>	
+	<div  class="p02_5" id="over5" style="visibility: hidden;">
+		<h1 class="intro_p">黃凱陽</h1>
+		<h1 class="intro_w">工程師</h1>
+		<h1 class="intro_i">工程師</h1>
+	</div>
+    </div>
+    
+    
+</div>
+
+</body>
+</html>
