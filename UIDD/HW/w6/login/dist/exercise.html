@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>財貿雙全login</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./index.css">
+	<link rel="shortcut icon" href="./res/favicon.ico" />
+  </head>
+  <body>
+<!--========= first  ================================================================================-->
+<div id="out_1">
+<table id="first">
+	   	 <tr>
+    			<td style="text-align:right;font-weight:bold;">                                  <!--           logo         -->  
+				<img id="cash" src="./res/1st/logo-demo.png">
+
+    			</td>
+   	     	</tr>
+	   	 <tr>
+    			<td style="text-align:right;font-weight:bold;">                                   <!--        填資料表         -->  
+
+<!-- form [ajax-form] ajax取值 -->
+<form id="ajax-form">                                           <!--id="ajax-form",type="submit"// field name[html的]-->   
+  <input class="key" type="text" name="fName"  placeholder="Account"><br>
+  <input class="key" type="Password" name="lName"  placeholder="Password"><br>
+  <img id="forgot" src="./res/1st/forgot-button.png">
+<br>
+  <button id="login" type="submit" ><img id="log" src="./res/1st/login.png"></button>
+</form>		
+
+    			</td>
+   	     	</tr>
+	     	</table>	
+
+</div>
+<!--========= srcond  ================================================================================-->
+<!-- form [ajax-output] ajax回顯 -->
+<!--div id="out_2"-->
+<div id="out"><div id="ajax-lside">ㅡㅡ</div><div id="ajax-output"></div><div id="ajax-rside">ㅡㅡ</div></div>             <!--          歡迎詞         -->  
+<!--div-->
+<!--========= third  ================================================================================-->
+<!-- form [ajax-output] ajax回顯 -->
+<div id="out_3">
+<div id="out_sub">
+   <div id="out_c">                                                                              <!--          總  信用卡資料排版         --> 
+	<div id='card_base' >                                                           <!--          單一信用卡資料排版         -->  
+	    	<table>
+	   	 <tr>
+    			<td style="text-align:right;font-weight:bold;">
+			國內1.22%、國外2.22%<br>現金回饋無上限
+			</td>
+    			<td>
+			<img id="card" src="./res/3rd/card1.png">
+    			</td>
+   	     	</tr>
+	     	</table>	
+	</div>
+
+
+	<div id='card_base' >                             <!--       單一信用卡資料排版         -->  
+	     	<table>
+    	     	<tr>
+    			<td style="text-align:right;font-weight:bold;">
+			國內1%、國外2%<br>現金回饋無上限
+			</td>
+    			<td>
+			<img id="card" src="./res/3rd/card2.png">
+    			</td>
+   	    	 </tr>
+	    	 </table>		
+	</div>	
+
+
+	<div id='card_base' style="background-color:transparent;">             <!--       單一信用卡資料排版[預留卷軸用隱藏排版]         -->
+	     	<table>
+    	     	<tr>
+    			<td style="text-align:right;font-weight:bold;">
+			<br>
+			</td>
+    			<td>
+			<img id="card" style="opacity:0;" src="./res/3rd/card-base.png">
+    			</td>
+   	    	 </tr>
+	    	 </table>		
+	</div>
+
+   </div>
+
+	
+</div>                                                                              <!--       頁底         -->
+<div id="Header">123</div>                                     <!--       頭貼         -->                                    
+<img id="bottom" src="./res/3rd/bar.png">       <!--       頁底粉紅框         -->
+
+</div>
+ <!-- JavaScript -->
+  <script type="text/javascript">
+
+var URL = document.location.toString();
+var useragent = navigator.userAgent;
+useragent = useragent.toLowerCase();
+
+if( useragent.indexOf('iphone') != -1 ){;//alert("1");//iphone
+}
+else if( useragent.indexOf('ipad') != -1 || useragent.indexOf('ipod') != -1) {;//alert("2");//ipad
+}
+else if( useragent.indexOf('android') != -1 ) {
+if( ConsiderLimits() )
+{
+;//alert("3"); // android pad
+}else{
+;//alert("4"); // android phone
+}
+}
+else{
+alert("~歡迎使用電腦版網頁💻~\n☛ 但若能用手機開啟 直式 頁面，體驗會更佳~"); // PC
+}
+
+function ConsiderLimits() {
+if( screen.width >= 1024 && screen.height >= 600 )
+return 1;
+return 0;
+}
+alert("~歡迎光臨~\n帳號密碼目前未設定\n任意輸入即可登入~");
+</script>
+    <script src="./exercise.js"></script>
+  </body>
+</html>

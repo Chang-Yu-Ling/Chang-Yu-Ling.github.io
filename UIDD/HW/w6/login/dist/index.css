@@ -1,0 +1,341 @@
+/*============  first  ==============================================================================*/
+
+ *{
+        padding:0;
+        margin:0;
+    }
+    body{
+        overflow: hidden;
+	background-image:url(./res/1st/base.png);
+        background-size:cover;
+        background-repeat: no-repeat;
+        height:100vh;
+	
+    }
+/*============  first  ==============================================================================*/
+/*------------------------------底紙-----------------------------*/
+        #out_1{                                                                 
+	position:absolute;//relative;//absolute;	
+	top:0%;left:0%;
+	width:100%;
+	//max-width:500px;
+	height:100%;
+
+	//background-color:white;
+    	//text-align: center;
+	//display:none;
+	//z-index:2;
+           }
+
+/*------------------------------排版表-----------------------------*/
+#first{                                                                               
+	position:relative;	
+	top:0%;left:0%;
+	height:80%;
+	border-radius: 20px;
+	rules:"none";
+	border:0;
+	//border-style:solid;border-width:3px;
+	text-align:center;
+	}
+td{              
+	width:50%;  
+	height:80%;
+	//border-style:solid;border-width:3px;
+
+	font-size:1.8em;
+
+	}
+/*------------------------------login form-----------------------------*/
+ #cash{
+	position:relative;//absolute;	
+	top:0%;right:5%;
+	max-height:30%;
+	min-height:250px;
+	width:70%;
+   }
+   #ajax-form{
+	position:relative;//absolute;	
+	top:-30%;left:10%;	
+	height:20%;width:80%;
+         }
+   .key{
+	border-radius: 50px;
+	margin-bottom:3.5%;
+	position:relative;//absolute;	
+	top:0%;left:0%;	
+	height:100%;width:100%;
+	border-style:double;
+	border-color:#FF6347;
+	font-size:1.3em;
+	padding-left:20px;
+	color:#000000;
+	font-family:Marmelad-Regular;
+	font-style:oblique;
+	font-weight:bold;
+    	text-align: center;
+   }
+/*-----------------holdplace字體設定------------------------*/
+/*webkit瀏覽器專用*/
+   .key::-webkit-input-placeholder { color: #F08080; }
+/*Firefox 4-18瀏覽器專用*/
+   .keyinput::-moz-placeholder { color: #F08080; }
+/*Firefox 19+瀏覽器專用*/
+   .keyinput::-moz-placeholder{color:#F08080;}
+/*IE10瀏覽器專用*/
+.demo-2:-ms-input-placeholder{color: #F08080;}
+/*----------------------------------------------------*/
+   #forgot{
+	position:relative;//absolute;	
+	top:0%;left:-35%;
+	//height:10%;
+	width:20%;
+
+	z-index:2;
+
+   }
+   #login{
+	border-radius: 50px;
+	position:relative;//absolute;	
+	//bottom:-250%;
+	left:-35%;
+	//height:10%;
+	width:20%;
+   }
+   #log{
+	//border-radius: 50px;
+	//position:absolute;//relative;//absolute;	//top:200%;left:25%;
+	//height:10%;
+	width:100%;
+   }
+/*============  second  ==============================================================================*/
+/*------------------------------底紙-----------------------------*/
+ #out_2{
+	position:absolute;//relative;//absolute;	
+	top:0%;left:0%;
+	width:100%;
+	height:100%;
+
+	//background-color:white;
+    	//text-align: center;
+	display:none;
+	//z-index:2;
+           }
+
+@font-face {                                                   /*特殊字體*/
+  font-family: VariableFont;
+  src: url('./res/font/font_1/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {                                                   /*特殊字體*/
+  font-family: Marmelad-Regular;
+  src: url('./res/font/font_2/Marmelad-Regular.ttf') format('truetype');
+}
+
+        #out{
+	position:absolute;
+	top:49%;%;lef0%;
+	width:100%;	
+	//max-width:500px;
+    	text-align: center;
+	display:none;
+	z-index:2;
+           }
+
+/*------------------------------ajax-out-----------------------------*/
+#ajax-output, #ajax-rside, #ajax-lside{
+    display: inline-block;
+}
+   #ajax-output{
+	position:absolute;
+	//top:-150%;//%;left:20%;
+	width:60%;
+    	text-align: center;
+	//color:blue;
+	font-family:VariableFont;
+	border-color:#FFFFFF;
+	border-style:solid;
+	border-width:3px;
+	font-style:italic;
+	font-size:1em;
+	padding-top:2%;
+	padding-bottom:2%;
+
+	z-index:2;
+   }
+   #ajax-lside{
+	position:absolute;
+	top:50%;
+		left:6%;
+	width:10%;
+    	text-align: center;
+	color:#FFFFFF;
+	font-family:VariableFont;
+		padding-top:2%;
+	z-index:3;
+   }
+       #ajax-rside{
+	position:absolute;
+	top:50%;
+		right:6%;
+	width:10%;
+    	text-align: center;
+	color:#FFFFFF;
+	font-family:VariableFont;
+		padding-top:2%;
+	z-index:3;
+   }
+
+/*============  third  ==============================================================================*/
+/*------------------------------頁面底部-----------------------------*/
+   #bottom{
+	position:absolute;
+	bottom:0%;
+	left:0%;
+	width:100%;
+    	text-align: center;
+
+	//display:none;
+
+	z-index:3;
+   }
+#Header{
+	position:absolute;
+	bottom:2.227%;
+	left:40.4%;
+	width:18.25vw;	
+	height:18.25vw;
+
+    	text-align: center;
+	line-height:18.25vw;
+
+	//display:none;
+	border-style:solid;
+
+	border-radius: 50%;
+	z-index:4;
+
+
+	color:	#FFFFFF;//#990099;//#FFB6C1;
+	font-family:VariableFont;
+	border-color:#BC8F8F;//#FA8072;//#FFFFFF;
+	background-color:#BC8F8F;//#FA8072;
+	border-style:solid;
+	border-width:3px;
+	font-style:italic;
+	font-size:2em;
+
+   }
+
+#card_base{                       /*粉紅卡*/                                              
+	position:relative;
+	background-color:#FFB6C1;
+	margin-top:10%;
+	top:0%;left:5%;	
+	border-radius: 20px;
+border-radius: 20px;
+white-space:nowrap;
+font-family:Arial Black;
+                }	
+/*------------------------------排版表-----------------------------*/
+table{
+	height:80%;
+	border-radius: 20px;
+	rules:"none";
+	border:0;
+	}
+td{
+	width:50%;  
+	height:80%;
+	font-size:1.8em;
+	}
+      #card{
+	position:relative;
+	top:0%;left:3%;
+	width:150%;
+       }
+
+              #out_c{                                          /*總放置信用卡資料處*/
+	position:absolute;
+	top:5%;left:0%;
+
+	width:100%;
+	background-color:transparent;
+	z-index:2;
+           }
+/*------------------------------底紙-----------------------------*/
+        #out_3{
+	position:absolute;
+	top:0%;left:0%;
+	width:100%;
+	height:100%;
+	background-color:white;
+    	text-align: center;
+	display:none;
+	//z-index:2;   	
+	//max-width:500px;
+
+    }
+
+        #out_sub{
+	position:absolute;
+	top:0%;left:0%;
+	width:100%;
+	height:100%;
+	background-color:white;
+    	text-align: center;
+	display:none;
+	z-index:2;
+overflow-x:hidden;
+overflow-y:auto;       
+    }
+
+/*==================================橫式排版============================================*/
+/*@media screen and (min-width: 1000px) {//orientation: portrait) {
+  	#out_1,#out_2{
+	top:0%;left:0%;
+	width:100%;
+	height:100%;
+	}
+}
+*//*(orientation: landscape) {*/
+@media screen and (min-width: 1100px) {
+  	#out_1,#out_3{
+	top:0%;left:35%;
+	width:30%;
+	//height:100%;
+	}
+	#out{
+	left:35%;
+	width:30%;
+	}
+	td{
+	font-size:1em;
+	}
+ #ajax-output{
+	font-size:0.7em;
+   }	
+#Header{                  /*頭貼*/
+	bottom:1%;
+	left:40.4%;
+	width:5.4vw;	
+	height:5.4vw;
+	border-style:solid;
+	font-size:1em;
+font-family:Arial Black;
+
+   }
+}
+@media screen and (max-width: 1000px) {
+#Header{	
+	bottom:1.55%;
+	left:40.4%;
+	width:18.25vw;	
+	height:18.25vw;
+
+	border-style:solid;
+	font-size:2em;
+
+font-family:Arial Black;
+
+   }
+}
