@@ -61,9 +61,11 @@ http://pmqa.hosp.ncku.edu.tw/home
  
  * 個項目的實測結果如下方動畫呈現
 
-比對<br>`病歷號 + 生日`  |  驗證碼  |  我不是機器人驗證    `移動`  |  我不是機器人驗證    `時間`
---------------|-----|-----| ----|------------------------
-![](https://i.imgur.com/2hiUhja.gif)  |  ![](https://i.imgur.com/OydAbrc.gif)  |  ![](https://i.imgur.com/F8nqsjN.gif)  |  ![](https://i.imgur.com/YQGm2Ig.gif)    
+比對<br>`病歷號 + 生日`| 驗證碼  | 我不是機器人驗證    `移動`| 我不是機器人驗證    `時間`
+
+--------------|:-----:|-----:| ----:|------------------------
+
+![](https://i.imgur.com/2hiUhja.gif)   | ![](https://i.imgur.com/OydAbrc.gif) | ![](https://i.imgur.com/F8nqsjN.gif)| ![](https://i.imgur.com/YQGm2Ig.gif)     
 
 <!--
 #### 1. 登錄者的 `病歷號 + 出生年(西元年)月日` 比對
