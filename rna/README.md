@@ -35,6 +35,7 @@ http://pmqa.hosp.ncku.edu.tw/home
 >  -------|------------------------
 > 垂直方向  |  移動距離需大於登入鍵高度(如下圖)
 > 水平方向  | 不計(即水平移動距離再大，也無法起動登入)    
+>
 >![](https://i.imgur.com/42Ipnpw.png)
 > * 使用 `觸控` 的載具(如:手機、平板)
 >螢幕觸控　可以啟動登入
@@ -60,9 +61,10 @@ http://pmqa.hosp.ncku.edu.tw/home
  
  * 個項目的實測結果如下方動畫呈現
 
-比對<br>`病歷號 + 生日`| 驗證碼  | 我不是機器人驗證    `移動`| 我不是機器人驗證    `時間`
+比對<br>`病歷號 + 生日`  |  驗證碼  |  我不是機器人驗證    `移動`  |  我不是機器人驗證    `時間`
 --------------|:-----:|-----:| ----:|------------------------
-![](https://i.imgur.com/2hiUhja.gif)   | ![](https://i.imgur.com/OydAbrc.gif) | ![](https://i.imgur.com/F8nqsjN.gif)| ![](https://i.imgur.com/YQGm2Ig.gif)     
+![](https://i.imgur.com/2hiUhja.gif)  |  ![](https://i.imgur.com/OydAbrc.gif)  |  ![](https://i.imgur.com/F8nqsjN.gif)  |  ![](https://i.imgur.com/YQGm2Ig.gif)    
+
 <!--
 #### 1. 登錄者的 `病歷號 + 出生年(西元年)月日` 比對
 >![](https://i.imgur.com/2hiUhja.gif)
@@ -73,6 +75,7 @@ http://pmqa.hosp.ncku.edu.tw/home
 #### 4. 「我不是機器人」驗證(時間)
 >![](https://i.imgur.com/YQGm2Ig.gif)
 -->
+
 :::success
 ##### :zap::zap: **以上測試環境**
 
