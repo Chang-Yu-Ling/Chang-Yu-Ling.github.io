@@ -45,11 +45,13 @@ http://pmqa.hosp.ncku.edu.tw/home
 > 秒數計算  |  結果
 >  -------|------------------------
 > 大於４秒  |  可以啟動登入
-> 小於４秒  | 無法登入    
+> 小於４秒  | 無法登入 
+'''
 :::success
 ##### :zap::zap: **結論** 
 * 上述4個資安建置的項目 需 `同時符合` 才可登入
 :::
+'''
 
 ## <資訊安全實測>
  * 測試用帳密:
@@ -60,10 +62,6 @@ http://pmqa.hosp.ncku.edu.tw/home
  
  * 個項目的實測結果如下方動畫呈現
 
-比對<br>`病歷號 + 生日`| 驗證碼  | 我不是機器人驗證    `移動`| 我不是機器人驗證    `時間`
---------------|:-----:|-----:| ----:|------------------------
-![](https://i.imgur.com/2hiUhja.gif)   | ![](https://i.imgur.com/OydAbrc.gif) | ![](https://i.imgur.com/F8nqsjN.gif)| ![](https://i.imgur.com/YQGm2Ig.gif)     
-<!--
 #### 1. 登錄者的 `病歷號 + 出生年(西元年)月日` 比對
 >![](https://i.imgur.com/2hiUhja.gif)
 #### 2. 驗證碼
@@ -72,12 +70,12 @@ http://pmqa.hosp.ncku.edu.tw/home
 >![](https://i.imgur.com/F8nqsjN.gif)
 #### 4. 「我不是機器人」驗證(時間)
 >![](https://i.imgur.com/YQGm2Ig.gif)
--->
+'''
 :::success
 ##### :zap::zap: **以上測試環境**
 
 * 瀏覽器： Google Chrome 網路瀏覽器
 * 裝置　：微軟Windows 10 專業版64位元
 :::
-
+'''
 
