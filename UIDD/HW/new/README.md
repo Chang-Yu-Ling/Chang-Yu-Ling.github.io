@@ -30,7 +30,7 @@ node ser.js
 * 登入流程
 > 網址：http://luffy.ee.ncku.edu.tw:9999/home.html
 > 
-> 輸入網址    |  點選登入　 | 選擇登入方式 | 輸入帳號/密碼|點選登入
+> 輸入網址    |  點選登入　 | 選擇登入方式 | 輸入帳號/密碼 | 點選登入
 > --------------|------------------------|------------------------|------------------------|------------------------|------------------------
 > ![](https://i.imgur.com/06BzNmr.png)     |![](https://i.imgur.com/JHWvIUK.png)|![](https://i.imgur.com/SQPEGOz.png)|![](https://i.imgur.com/5xPdnfg.png)|![](https://i.imgur.com/V37YRpX.png)
 
