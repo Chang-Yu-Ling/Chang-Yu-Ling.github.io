@@ -17,7 +17,7 @@ node ser.js
 
 ## <檔案結構>
 #### 1.  tree ~/home_3/ 
-‵‵‵
+```
 /home_3/
 ├── Card_key.json         ＼
 ├── notice.json
@@ -40,7 +40,7 @@ node ser.js
     │   └── img
     ├── talk.css
     └── talk.js           ／
-‵‵‵    
+``` 
 
 > 
 > 輸入狀態    |  結果
