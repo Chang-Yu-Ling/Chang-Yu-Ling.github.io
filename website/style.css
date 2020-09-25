@@ -97,7 +97,7 @@ body {
 }
 /* set main background */
 #main_bg{  /* out */
-	padding:1100 0px 1100 0px;
+	padding:1170 0px 1170 0px;
 	background: #fdfdfd ;
 	width:960px;
 	position: absolute;
@@ -110,7 +110,7 @@ body {
 	-moz-box-shadow: 0px 0px 15px 0px #AAAAAA;
 }
 #mid_bg{  /* in */
-	padding:1100 0px 1100 0px;
+	padding:1170 0px 1170 0px;
 	background: #fdfdda ;
 	width:450px;
 	position: absolute;
@@ -138,7 +138,7 @@ body {
 }
 /* Post_topic (Page Main Mid Post Post_topic) */
 .post_topic{
-	background: url(res/img/topic.PNG) no-repeat right bottom;
+	background: url(res/img/topic.png) no-repeat right bottom;
 	background-size: 100% 60%;
 }
 
@@ -260,7 +260,7 @@ a:hover {
 .sidebar li li {
 	margin: 0px 15px;
 	padding: 8px 0px;
-	background: url(res/img/sidebar_line.PNG) no-repeat left bottom;
+	background: url(res/img/sidebar_line.png) no-repeat left bottom;
 	background-size: 100% 3%;
 }
 
