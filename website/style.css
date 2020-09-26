@@ -97,7 +97,7 @@ body {
 }
 /* set main background */
 #main_bg{  /* out */
-	padding:1170 0px 1170 0px;
+	padding:inherit 0px inherit 0px;
 	background: #fdfdfd ;
 	width:960px;
 	position: absolute;
@@ -110,7 +110,7 @@ body {
 	-moz-box-shadow: 0px 0px 15px 0px #AAAAAA;
 }
 #mid_bg{  /* in */
-	padding:1170 0px 1170 0px;
+	padding:inherit 0px inherit 0px;
 	background: #fdfdda ;
 	width:450px;
 	position: absolute;
