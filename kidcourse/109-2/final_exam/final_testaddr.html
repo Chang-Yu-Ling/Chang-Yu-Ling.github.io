@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" charset="utf-8">
+<title>期末考109試題連結</title>
+<style type="text/css">  
+  /*禁止選中文字*/  
+  body{  
+  -moz-user-select: none; /*火狐*/  
+  -webkit-user-select: none; /*webkit瀏覽器*/  
+  -ms-user-select: none; /*IE10*/  
+  -khtml-user-select: none; /*早期瀏覽器*/  
+  user-select: none;  
+  }  
+  </style> 
+</head>
+<body>
+<script src="addr.js"> </script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+  <!-- JavaScript -->
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script><!-- IP -->
+  <script>
+/*if(returnCitySN["cip"]+','+returnCitySN["cname"]=="140.116.164.190,台湾省"||returnCitySN["cip"]+','+returnCitySN["cname"]=="140.116.164.184,台湾省"||returnCitySN["cip"]=="192.168.1.235"){
+  ;
+}else{
+  alert("請同學連接VPN");
+  window.location.reload();
+}*/
+
+function submitit(){
+applicant=document.getElementById("d1").value;
+user=(document.getElementById("d2").value).toLowerCase();
+mail=document.getElementById("d3").value;
+document.getElementById("d4").value=student.get(user);
+document.getElementById("d5").value=returnCitySN["cip"]+','+returnCitySN["cname"];
+var dd = new Date();
+document.getElementById("d6").value=dd.toString();
+
+    
+    Email.send({
+    Host : "smtp.gmail.com",
+    Username : "robot.kidlab@gmail.com",
+    Password : "ncvxlnhubomggtid",
+    To : mail,
+    From : "robot.kidlab@gmail.com",
+    Subject : "期末考試題連結",
+    Body : "<!DOCTYPE html><html lang='zh-TW'><head></head><body>Dear  "+applicant+",<br><br>你的期末考試題連結為<br>"+student.get(user)+"<br><br>請點網址進入試題並 \'直接作答\'，<br><br>此郵件為系統自動寄出，不做回覆，<br>如有任何問題歡迎來信至<a href='mailto:course.KIDLAB@gmail.com'>助教信箱</a><br><br>BR,<br>robot TA</body></html>"
+}).then(
+  message => alert(message)
+);
+    
+document.getElementById("change").submit();
+alert("期末考資訊郵件已寄出！！！");
+    
+} 
+      
+
+  </script>
+  
+    <h1>期末考109試題連結</h1>
+期末考試題傳送門，<BR><BR>
+請填寫以下資料，<BR>並點選<B style="color:red;"> 確定 </B>將資料送出：<BR><BR>系統信箱 會自動寄出<B style="color:red;">期末考109試題連結</B>到下方自行填入的信箱<BR><BR>
+<form method="POST" id="change" ><!--action="final_testaddr.php">-->
+姓名：<input type="text" id="d1" name="T1" size="28"><br><br>
+學號：<input type="text" id="d2" name="T2" size="28" placeholder="(英文小寫)"><br><br>
+信箱：<input type="text" id="d3" name="T3" size="28"><br><br>
+<input type="text" id="d4" name="T4" size="28" style="display:none;" value="" >
+<input type="text" id="d5" name="T5" size="28" style="display:none;" value="" >
+<input type="text" id="d6" name="T6" size="28" style="display:none;" value="" >
+<input type="submit" value="確定" name="B1" onClick="javascript:submitit();">
+</form>
+
+<script type='text/javascript'> //==禁止F12===============
+  //這段js要放在頁面最下方  
+  var h = window.innerHeight,w=window.innerWidth;  
+  //禁用右鍵 （防止右鍵檢視原始碼）  
+  window.oncontextmenu=function(){return false;}  
+  //在本網頁的任何鍵盤敲擊事件都是無效操作 （防止F12和shift+ctrl+i調起開發者工具）  
+  /*window.onkeydown = window.onkeyup = window.onkeypress = function () {  
+      window.event.returnValue = false;  
+      return false;  
+  }  */
+  //如果使用者在工具欄調起開發者工具，那麼判斷瀏覽器的可視高度和可視寬度是否有改變，如有改變則關閉本頁面  
+  window.onresize = function () {  
+      if (h != window.innerHeight||w!=window.innerWidth){  
+          window.close();  
+          window.location = "about:blank";  
+      }  
+  }  
+  /*好吧，你的開發者工具是單獨的視窗顯示，不會改變原來網頁的高度和寬度， 
+  但是你只要修改頁面元素我就重新載入一次資料,讓你無法修改頁面元素（不支援IE9以下瀏覽器）*/  
+  if(window.addEventListener){  
+  window.addEventListener("DOMCharacterDataModified", function(){window.location.reload();}, true);  
+  window.addEventListener("DOMAttributeNameChanged", function(){window.location.reload();}, true);  
+  window.addEventListener("DOMCharacterDataModified", function(){window.location.reload();}, true);  
+  window.addEventListener("DOMElementNameChanged", function(){window.location.reload();}, true);  
+  window.addEventListener("DOMNodeInserted", function(){window.location.reload();}, true);  
+  window.addEventListener("DOMNodeInsertedIntoDocument", function(){window.location.reload();}, true);  
+  window.addEventListener("DOMNodeRemoved", function(){window.location.reload();}, true);  
+  window.addEventListener("DOMNodeRemovedFromDocument", function(){window.location.reload();}, true);  
+  window.addEventListener("DOMSubtreeModified", function(){window.location.reload();}, true);  
+  }  
+  //壓縮後的程式碼  
+  //var h=window.innerHeight,w=window.innerWidth;window.oncontextmenu=function(){return!1},window.onkeydown=window.onkeyup=window.onkeypress=function(){return window.event.returnValue=!1,!1},window.onresize=function(){(h!=window.innerHeight||w!=window.innerWidth)&&(window.close(),window.location="about:blank")},window.addEventListener&&(window.addEventListener("DOMCharacterDataModified",function(){window.location.reload()},!0),window.addEventListener("DOMAttributeNameChanged",function(){window.location.reload()},!0),window.addEventListener("DOMCharacterDataModified",function(){window.location.reload()},!0),window.addEventListener("DOMElementNameChanged",function(){window.location.reload()},!0),window.addEventListener("DOMNodeInserted",function(){window.location.reload()},!0),window.addEventListener("DOMNodeInsertedIntoDocument",function(){window.location.reload()},!0),window.addEventListener("DOMNodeRemoved",function(){window.location.reload()},!0),window.addEventListener("DOMNodeRemovedFromDocument",function(){window.location.reload()},!0),window.addEventListener("DOMSubtreeModified",function(){window.location.reload()},!0))  
+  </script>
+
+</body>
+</html>
